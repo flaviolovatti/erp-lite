@@ -1,0 +1,20 @@
+CREATE VIEW VIEW_FIN_TOTAL_PAGAMENTOS_DIA(
+	ID_CONTA_CAIXA,
+    DATA_PAGAMENTO,
+    TOTAL)
+AS
+select
+  pagamento.ID_CONTA_CAIXA, pagamento.DATA_PAGAMENTO, SUM(pagamento.VALOR_PAGO) AS TOTAL
+from
+  FIN_PARCELA_PAGAMENTO pagamento
+
+inner join FIN_PARCELA_PAGAR pagar on 
+	pagamento.ID_FIN_PARCELA_PAGAR = pagar.ID
+inner join FIN_LANCAMENTO_PAGAR lancamento on 
+	pagar.ID_FIN_LANCAMENTO_PAGAR = lancamento.ID
+inner join FIN_DOCUMENTO_ORIGEM doc_origem on 
+	lancamento.ID_FIN_DOCUMENTO_ORIGEM = doc_origem.ID
+inner join EMPRESA emp on 
+	doc_origem.ID_EMPRESA = emp.ID_EMPRESA
+	
+group by pagamento.ID_CONTA_CAIXA, DATA_PAGAMENTO;

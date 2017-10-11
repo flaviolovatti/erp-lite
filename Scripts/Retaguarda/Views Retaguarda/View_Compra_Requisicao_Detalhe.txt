@@ -1,0 +1,15 @@
+﻿CREATE OR REPLACE VIEW view_compra_requisicao_detalhe AS 
+ SELECT cr.id,
+    cr.id_compra_requisicao,
+    cr.id_produto,
+    pr.Nome,
+    pr.Gtin,
+    pr.valor_venda,
+    cr.quantidade,
+    cr.quantidade_cotada,
+    cr.item_cotado
+   FROM compra_requisicao_detalhe cr
+   JOIN Produto pr On pr.id = cr.id_produto;
+
+ALTER TABLE public.view_compra_requisicao_detalhe
+  OWNER TO postgres;

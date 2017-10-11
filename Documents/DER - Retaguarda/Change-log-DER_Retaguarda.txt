@@ -1,0 +1,168 @@
+{*******************************************************************************
+Title: T2Ti ERP Lite
+Description: Change-log-DER_Retaguarda
+
+The MIT License
+
+Copyright: Copyright (C) 2017 T2Ti.COM
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+       The author may be contacted at:
+           t2ti.com@gmail.com</p>
+
+@author Albert Eije
+@version 1.0
+*******************************************************************************}
+
+{******************************************************************************
+|* T2Ti ERP Lite - DER Retaguarda
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso (tabela/campo/relacionamento)
+[*]     : Recurso modificado/melhorado (tabela/campo/relacionamento)
+[-]     : Remoção de recurso (tabela/campo/relacionamento)
+
+
+Versão 1.0.0.9 - 06/07/2017
+-----------------------------
+[-] Tabela NFE_CABECALHO. Reinserido o campo: INDICADOR_FORMA_PAGAMENTO.
+[*] Tabelas NFE e CTE. Campos que tinham FPC foram alterados para FCP - referente ao Fundo de Combate a Pobreza.
+[+] Tabela UNIDADE_CONVERSAO. Incluído o campo ACAO.
+[*] Tabela CEST. Campo ITEM alterado para VARCHAR.
+
+
+Versão 1.0.0.8 - 22/06/2017
+-----------------------------
+[+] Tabela CONTABIL_CONTA adicionada. Para compatibilidade nos lançamentos do bloco financeiro.
+
+
+Versão 1.0.0.7 - 14/06/2017
+-----------------------------
+[+] Tabela CTE_CABECALHO. Adicionados os campos: VERSAO_APLICATIVO, DATA_HORA_PROCESSAMENTO,
+	NUMERO_PROTOCOLO, DIGEST_VALUE, CODIGO_STATUS_RESPOSTA, DESCRICAO_MOTIVO_RESPOSTA,
+	JUSTIFICATIVA_CANCELAMENTO. [OK-http://www.t2ti.com/ead2/mod/forum/discuss.php?d=2308]
+[*] Tabela NFE_DETALHE_IMPOSTO_ICMS. Campo VALOR_BS_ICMS_UF_DESTINO alterado para VALOR_BC_ICMS_UF_DESTINO.
+[-] Tabela NFE_CABECALHO. Campo CONSUMIDOR_PRESENCA removido.
+[*] Campos CPF. Algumas tabelas da região CTE estavam com o campo CPF como integer. Alterados para Varchar(11). [OK-http://www.t2ti.com/ead2/mod/forum/discuss.php?d=2308]
+[*] Tabela NFE_DETALHE. Campo CEST alterado para varchar(10).
+[+] Tabela PRODUTO. Campo CEST incluído. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2330]
+[*]	Tabela CTE_INF_NF_TRANSPORTE_LACRE. Campo ID_CTE_INFORMACAO_NF_TRANSPORTE alterado para ID_CTE_INFORMACAO_NF_TRANSP. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2333]
+
+	
+Versão 1.0.0.6 - 02/06/2017
+-----------------------------
+[+] Tabela CLIENTE. Adicionados os campos: BLOQUEADO, DIAS_BLOQUEIO. [http://www.t2ti.com/ead2/mod/forum/discuss.php?d=2256]
+[+] Tabela CONTA_CAIXA. Adicionados os campos: LIMITE_COBRANCA_JURO. [http://www.t2ti.com/ead2/mod/forum/discuss.php?d=2256]
+[-] Tabela NFCE_CONFIGURACAO_2 removida.
+[+] Tabela NFE_DETALHE. Adicionados os campos: INDICADOR_ESCALA_RELEVANTE, CNPJ_FABRICANTE, CODIGO_BENEFICIO_FISCAL.
+[+] NFE_DETALHE_RASTRO. Adicionados os campos: CODIGO_AGREGACAO.
+[+] Tabela NFE_CABECALHO. Adicionados os campos: URL_CHAVE.
+[+] Adicionado relacionamento entre as tabelas NFE_CABECALHO e PRODUTO_LOTE. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2216]
+
+
+
+Versão 1.0.0.5 - 24/05/2017
+-----------------------------
+[+] Tabela NFCE_CONFIGURACAO. Adicionados os campos: CODIGO_CSC, ID_TOKEN_CSC, CERTIFICADO_DIGITAL_SERIE, CERTIFICADO_DIGITAL_CAMINHO, 
+	CERTIFICADO_DIGITAL_SENHA, TIPO_EMISSAO, FORMATO_IMPRESSAO_DANFE, PROCESSO_EMISSAO, VERSAO_PROCESSO_EMISSAO, CAMINHO_LOGOMARCA, 
+	SALVAR_XML, CAMINHO_SALVAR_XML, CAMINHO_SCHEMAS, CAMINHO_ARQUIVO_DANFE, CAMINHO_SALVAR_PDF, WEBSERVICE_UF, WEBSERVICE_AMBIENTE, 
+	WEBSERVICE_PROXY_HOST, WEBSERVICE_PROXY_PORTA, WEBSERVICE_PROXY_USUARIO, WEBSERVICE_PROXY_SENHA, WEBSERVICE_VISUALIZAR, 
+	EMAIL_SERVIDOR_SMTP, EMAIL_PORTA, EMAIL_USUARIO, EMAIL_SENHA, EMAIL_ASSUNTO, EMAIL_AUTENTICA_SSL, EMAIL_TEXTO.
+[+] Tabela CTE_CONFIGURACAO adicionada.
+[+] Tabelas FIN_CLIENTE_GRUPO_CAB, FIN_CLIENTE_GRUPO_DET adicionadas. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2125]
+[+] Tabela REGIAO adicionada. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2221]
+[+] Adicionado relacionamento entre as tabelas REGIAO e CEP. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2221]
+[+] Adicionado relacionamento entre as tabelas REGIAO e VENDEDOR. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2221]
+[+] Adicionado relacionamento entre as tabelas REGIAO e CLIENTE. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2221]
+[+] Adicionado relacionamento entre as tabelas TABELA_PRECO e VENDEDOR. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2221]
+[+] Adicionado relacionamento entre as tabelas TABELA_PRECO e COMISSAO_OBJETIVO. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2221]
+[+] Tabela TABELA_PRECO. Adicionados os campos: METODO_UTILIZACAO, COMISSAO_VENDEDOR. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2221]
+[+] Tabela ADM_MODULO. Adicionados os campos: ATIVO. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2229]. 
+[+] Tabela FIN_LANCAMENTO_PAGAR. Adicionados os campos: HASH_MODULO_LCTO [http://t2ti.com/ead2/mod/forum/discuss.php?d=2229]. 
+[+] Tabela FIN_LANCAMENTO_RECEBER. Adicionados os campos: HASH_MODULO_LCTO [http://t2ti.com/ead2/mod/forum/discuss.php?d=2229]. 
+[+] Tabela CEST adicionada. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2216]
+[+] Adicionado relacionamento entre as tabelas CONTA_CAIXA e FIN_TIPO_RECEBIMENTO [http://t2ti.com/ead2/mod/forum/discuss.php?d=2228].
+[+] Adicionado relacionamento entre as tabelas FIN_TIPO_RECEBIMENTO e VENDA_CONDICOES_PAGAMENTO [http://t2ti.com/ead2/mod/forum/discuss.php?d=2228].
+[+] Tabela TRIBUT_ICMS_UF. Adicionados os campos: FCP. [http://t2ti.com/ead2/mod/forum/discuss.php?d=2235]
+[+] Adicionado relacionamento entre as tabelas EMPRESA e VENDA_ORCAMENTO_CABECALHO [http://t2ti.com/ead2/mod/forum/discuss.php?d=2244].
+[+] Adicionado relacionamento entre as tabelas EMPRESA e VENDA_CABECALHO [http://t2ti.com/ead2/mod/forum/discuss.php?d=2244].
+
+
+
+Versão 1.0.0.4 - 19/05/2017
+-----------------------------
+[-] Tabela TABELA_PRECO. Removido o autorelacionamento.
+[+] Adicionado relacionamento entre as tabelas TABELA_PRECO e CLIENTE.
+[+] Tabela CONTA_CAIXA. Adicionados os campos: TAXA_MULTA, TAXA_JURO, DESCONTO_MAXIMO_PERMITIDO.
+[+] Adicionado relacionamento entre as tabelas EMPRESA_PRODUTO e ESTOQUE_GRADE.
+[+] Tabela NFE_CABECALHO. Adicionados os campos: VERSAO_APLICATIVO, DATA_HORA_PROCESSAMENTO,
+	NUMERO_PROTOCOLO, DIGEST_VALUE, CODIGO_STATUS_RESPOSTA, DESCRICAO_MOTIVO_RESPOSTA,
+	JUSTIFICATIVA_CANCELAMENTO, VALOR_ICMS_FPC_UF_DESTINO, VALOR_ICMS_INTER_UF_DESTINO, VALOR_ICMS_INTER_UF_REMETENTE,
+	QRCODE.
+[+] Tabela NFE_DETALHE. Adicionados os campos: CEST.
+[+] Tabela NFE_DETALHE_IMPOSTO_ICMS. Adicionados os campos: VALOR_BS_ICMS_UF_DESTINO, PERCENTUAL_FPC_UF_DESTINO,
+	ALIQUOTA_INTERNA_UF_DESTINO, ALIQUOTA_INTERESTADUAL_UFS, PERCENTUAL_PROVISORIO_PARTILHA, VALOR_ICMS_FPC_UF_DESTINO,
+	VALOR_ICMS_INTER_UF_DESTINO, VALOR_ICMS_INTER_UF_REMETENTE.
+[+] Tabela NFE_DET_ESPECIFICO_COMBUSTIVEL. Adicionados os campos: NUMERO_IDENTIFICACAO_BICO, NUMERO_IDENTIFICACAO_BOMBA,
+	NUMERO_IDENTIFICACAO_TANQUE, VALOR_ENCERRANTE_INICIO, VALOR_ENCERRANTE_FIM.
+
+
+
+Versão 1.0.0.3 - 07/05/2017
+-----------------------------
+[-] Tabela CTE_CABECALHO. Removidos os campos: FORMA_PAGAMENTO, CHAVE_REFERENCIADO.
+[+] Tabela CTE_CABECALHO. Adicionados os campos: VALOR_BC_UF_FIM,
+	PERCENTUAL_FPC_UF_FIM, ALIQUOTA_ICMS_UF_FIM, ALIQUOTA_INTERESTADUAL_UF_FIM, PERCENTUAL_PARTILHA_UF_FIM,
+	VALOR_ICMS_FPC_UF_FIM, VALOR_ICMS_PARTILHA_UF_FIM, VALOR_ICMS_PARTILHA_UF_INI, VALOR_CARGA_AVERBACAO,
+	INDICADOR_CTE_GLOBALIZADO, INDICADOR_PAPEL_TOMADOR.
+[+] Tabela CTE_EMITENTE. Adicionados os campos: IEST.
+[-] Tabela CTE_RODOVIARIO. Removidos os campos: DATA_PREVISTA_ENTREGA, INDICADOR_LOTACAO, CIOT.
+
+
+
+Versão 1.0.0.2 - 07/05/2017
+-----------------------------
+[-] Tabela NFE_CABECALHO. Removido o campo: INDICADOR_FORMA_PAGAMENTO.
+[+] Tabela NFE_CABECALHO. Adicionados os campos: INDICADOR_PRESENCA, VALOR_FPC, VALOR_FPC_ST,
+	VALOR_FPC_ST_RETIDO, VALOR_IPI_DEVOLVIDO.
+[+] Tabela NFE_DETALHE_RASTRO adicionada.
+[-] Tabela NFE_DET_ESPECIFICO_MEDICAMENTO. Removidos os campos: NUMERO_LOTE, QUANTIDADE_LOTE,
+	DATA_FABRICACAO, DATA_VALIDADE.
+[+] Tabela NFE_DET_ESPECIFICO_MEDICAMENTO. Adicionado o campo: CODIGO_PRODUTO_ANVISA.
+[-] Tabela NFE_DET_ESPECIFICO_COMBUSTIVEL. Removido o campo: PERCENTUAL_GAS_NATURAL.
+[+] Tabela NFE_DET_ESPECIFICO_COMBUSTIVEL. Adicionados os campos: DESCRICAO_PRODUTO_ANP,
+	PERCENTUAL_PETROLEO, PERCENTUAL_NACIONAL, PERCENTUAL_IMPORTADO, VALOR_PARTIDA.
+[+] Tabela NFE_DETALHE_IMPOSTO_ICMS. Adicionados os campos: PERCENTUAL_FPC, VALOR_FPC,
+	VALOR_BC_FPC_ST, PERCENTUAL_BC_FPC_ST, VALOR_FPC_ST, VALOR_BC_FPC, FPC_CONSUMIDOR_FINAL,
+	VALOR_BC_FPC_RETIDO, PERCENTUAL_BC_FPC_RETIDO, VALOR_FPC_RETIDO, VALOR_BC_FPC_UF_DESTINO.
+[+] Tabela NFE_FORMA_PAGAMENTO. Adicionados os campos: CARTAO_TIPO_INTEGRACAO, TROCO.
+
+
+
+Versão 1.0.0.1 - 18/04/2017
+-----------------------------
+Primeira versão do DER

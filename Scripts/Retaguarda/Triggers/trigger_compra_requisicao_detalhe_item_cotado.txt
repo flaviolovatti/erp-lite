@@ -1,0 +1,16 @@
+CREATE OR REPLACE FUNCTION cota_item_req_na_compra()
+	returns trigger as $cota_item_req_na_compra$
+BEGIN
+
+	IF NEW.QUANTIDADE = NEW.QUANTIDADE_COTADA THEN
+	    SET NEW.ITEM_COTADO = 'S';
+	END IF;
+
+	RETURN NEW;
+END;
+
+$cota_item_req_na_compra$ LANGUAGE plpgsql;
+
+CREATE TRIGGER compra_req_detalhe_item_cotado BEFORE UPDATE 
+ON compra_requisicao_detalhe
+FOR EACH ROW EXECUTE PROCEDURE cota_item_req_na_compra();

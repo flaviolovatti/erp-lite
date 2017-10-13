@@ -1,0 +1,130 @@
+20/10/2016 20:05:49:	ACBrFramework.ACBrException: ECF deve estar em Estado de "Venda", "Pagamento" ou "Não Fiscal"
+   em ACBrFramework.TEFD.ACBrTEFD.CheckResult(Int32 ret) na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\TEFD\ACBrTEFD.cs:linha 717
+   em ACBrFramework.TEFD.ACBrTEFD.CRT(Decimal valor, String indiceFPG_ECF, String documentoVinculado, Int32 moeda) na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\TEFD\ACBrTEFD.cs:linha 625
+   em PafEcf.View.EfetuaPagamento.botaoSim_Click(Object sender, EventArgs e) na c:\Projetos\T2Ti ERP 2.0\C#\Frente de Caixa\PAF-ECF\View\EfetuaPagamento.cs:linha 423
+20/10/2016 20:06:28:	ACBrFramework.ACBrException: Unable to open file "C:\Arquivos de programas\Microsoft Visual Studio 10.0\Common7\IDE\TEF\ACBr_TEF_DIAL_001.tef"
+   em ACBrFramework.TEFD.ACBrTEFD.CheckResult(Int32 ret) na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\TEFD\ACBrTEFD.cs:linha 717
+   em ACBrFramework.TEFD.ACBrTEFD.CRT(Decimal valor, String indiceFPG_ECF, String documentoVinculado, Int32 moeda) na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\TEFD\ACBrTEFD.cs:linha 625
+   em PafEcf.View.EfetuaPagamento.botaoSim_Click(Object sender, EventArgs e) na c:\Projetos\T2Ti ERP 2.0\C#\Frente de Caixa\PAF-ECF\View\EfetuaPagamento.cs:linha 423
+26/10/2016 01:06:43:	ACBrFramework.ACBrException: Unable to open file "C:\Arquivos de programas\Microsoft Visual Studio 10.0\Common7\IDE\TEF\ACBr_TEF_DIAL_001.tef"
+   em ACBrFramework.TEFD.ACBrTEFD.CheckResult(Int32 ret) na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\TEFD\ACBrTEFD.cs:linha 717
+   em ACBrFramework.TEFD.ACBrTEFD.CRT(Decimal valor, String indiceFPG_ECF, String documentoVinculado, Int32 moeda) na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\TEFD\ACBrTEFD.cs:linha 625
+   em PafEcf.View.EfetuaPagamento.botaoSim_Click(Object sender, EventArgs e) na c:\Projetos\T2Ti ERP 2.0\C#\Frente de Caixa\PAF-ECF\View\EfetuaPagamento.cs:linha 423
+26/10/2016 01:09:00:	System.Exception: O índice estava fora do intervalo. Ele deve ser não-negativo e menor que o tamanho da coleção.
+Nome do parâmetro: index
+   em PafEcf.Controller.VendaController.CancelaVenda(EcfVendaCabecalhoDTO pEcfVendaCabecalho) na c:\Projetos\T2Ti ERP 2.0\C#\Frente de Caixa\PAF-ECF\Controller\VendaController.cs:linha 293
+   em PafEcf.View.Caixa.CancelaCupom() na c:\Projetos\T2Ti ERP 2.0\C#\Frente de Caixa\PAF-ECF\View\Caixa.cs:linha 1750
+10/07/2017 15:26:42:	NHibernate.HibernateException: Could not create the driver from NHibernate.Driver.FirebirdClientDriver. ---> System.Reflection.TargetInvocationException: Uma exceção foi acionada pelo destino de uma chamada. ---> System.ArgumentException: Não foi possível localizar o Provedor de Dados .Net Framework solicitado. Talvez ele não esteja instalado.
+   em System.Data.Common.DbProviderFactories.GetFactory(String providerInvariantName)
+   em NHibernate.Driver.ReflectionBasedDriver..ctor(String providerInvariantName, String driverAssemblyName, String connectionTypeName, String commandTypeName)
+   em NHibernate.Driver.FirebirdClientDriver..ctor()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   em System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   em System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   em System.Activator.CreateInstance(Type type)
+   em NHibernate.Bytecode.ActivatorObjectsFactory.CreateInstance(Type type)
+   em NHibernate.Connection.ConnectionProvider.ConfigureDriver(IDictionary`2 settings)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em NHibernate.Connection.ConnectionProvider.ConfigureDriver(IDictionary`2 settings)
+   em NHibernate.Connection.ConnectionProvider.Configure(IDictionary`2 settings)
+   em NHibernate.Connection.ConnectionProviderFactory.NewConnectionProvider(IDictionary`2 settings)
+   em NHibernate.Cfg.SettingsFactory.BuildSettings(IDictionary`2 properties)
+   em NHibernate.Cfg.Configuration.BuildSettings()
+   em NHibernate.Cfg.Configuration.BuildSessionFactory()
+   em PafEcf.NHibernate.NHibernateHelper.GetSessionFactory() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\NHibernate\NHibernateHelper.cs:linha 26
+10/07/2017 15:26:43:	System.Exception: Could not create the driver from NHibernate.Driver.FirebirdClientDriver. Uma exceção foi acionada pelo destino de uma chamada.
+   em PafEcf.Controller.R01Controller.ConsultaR01(String pFiltro) na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Controller\R01Controller.cs:linha 66
+   em PafEcf.Util.Sessao.PopulaObjetosPrincipais() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Util\Sessao.cs:linha 61
+10/07/2017 15:33:12:	NHibernate.HibernateException: Could not create the driver from NHibernate.Driver.MySqlDataDriver. ---> System.Reflection.TargetInvocationException: Uma exceção foi acionada pelo destino de uma chamada. ---> System.ArgumentException: Não foi possível localizar o Provedor de Dados .Net Framework solicitado. Talvez ele não esteja instalado.
+   em System.Data.Common.DbProviderFactories.GetFactory(String providerInvariantName)
+   em NHibernate.Driver.ReflectionBasedDriver..ctor(String providerInvariantName, String driverAssemblyName, String connectionTypeName, String commandTypeName)
+   em NHibernate.Driver.MySqlDataDriver..ctor()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   em System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   em System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   em System.Activator.CreateInstance(Type type)
+   em NHibernate.Bytecode.ActivatorObjectsFactory.CreateInstance(Type type)
+   em NHibernate.Connection.ConnectionProvider.ConfigureDriver(IDictionary`2 settings)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em NHibernate.Connection.ConnectionProvider.ConfigureDriver(IDictionary`2 settings)
+   em NHibernate.Connection.ConnectionProvider.Configure(IDictionary`2 settings)
+   em NHibernate.Connection.ConnectionProviderFactory.NewConnectionProvider(IDictionary`2 settings)
+   em NHibernate.Cfg.SettingsFactory.BuildSettings(IDictionary`2 properties)
+   em NHibernate.Cfg.Configuration.BuildSettings()
+   em NHibernate.Cfg.Configuration.BuildSessionFactory()
+   em PafEcf.NHibernate.NHibernateHelper.GetSessionFactory() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\NHibernate\NHibernateHelper.cs:linha 26
+10/07/2017 15:33:13:	System.Exception: Could not create the driver from NHibernate.Driver.MySqlDataDriver. Uma exceção foi acionada pelo destino de uma chamada.
+   em PafEcf.Controller.R01Controller.ConsultaR01(String pFiltro) na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Controller\R01Controller.cs:linha 66
+   em PafEcf.Util.Sessao.PopulaObjetosPrincipais() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Util\Sessao.cs:linha 61
+10/07/2017 15:39:38:	NHibernate.MappingException: could not instantiate id generator: sequence ---> NHibernate.MappingException: Dialect does not support sequences
+   em NHibernate.Dialect.Dialect.GetSequenceNextValString(String sequenceName)
+   em NHibernate.Id.SequenceGenerator.Configure(IType type, IDictionary`2 parms, Dialect dialect)
+   em NHibernate.Id.IdentifierGeneratorFactory.Create(String strategy, IType type, IDictionary`2 parms, Dialect dialect)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em NHibernate.Id.IdentifierGeneratorFactory.Create(String strategy, IType type, IDictionary`2 parms, Dialect dialect)
+   em NHibernate.Mapping.SimpleValue.CreateIdentifierGenerator(Dialect dialect, String defaultCatalog, String defaultSchema, RootClass rootClass)
+   em NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   em NHibernate.Cfg.Configuration.BuildSessionFactory()
+   em PafEcf.NHibernate.NHibernateHelper.GetSessionFactory() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\NHibernate\NHibernateHelper.cs:linha 26
+10/07/2017 16:05:16:	ACBrFramework.ACBrException: Não existe nenhum Comprovante Não Fiscal cadastrado como: "SUPRIMENTO" 
+   em ACBrFramework.ECF.ACBrECF.CheckResult(Int32 ret) na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\Serial\ECF\ACBrECF.cs:linha 5206
+   em ACBrFramework.ECF.ACBrECF.Suprimento(Decimal valor, String obs, String DescricaoCNF, String DescricaoFPG, Int32 indicebmp) na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\Serial\ECF\ACBrECF.cs:linha 5152
+   em PafEcf.Util.ECFUtil.Suprimento(Decimal Valor, String Descricao) na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Util\ECFUtil.cs:linha 158
+10/07/2017 16:05:22:	System.Exception: could not delete collection: [PafEcf.DTO.EcfMovimentoDTO.ListaEcfSuprimento#1][SQL: UPDATE ecf_suprimento SET ID_ECF_MOVIMENTO = null WHERE ID_ECF_MOVIMENTO = ?p0] Column 'ID_ECF_MOVIMENTO' cannot be null
+   em PafEcf.Controller.EcfMovimentoController.GravaEcfMovimento(EcfMovimentoDTO pEcfMovimento) na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Controller\EcfMovimentoController.cs:linha 120
+   em PafEcf.View.IniciaMovimento.Confirma() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\IniciaMovimento.cs:linha 176
+10/07/2017 16:05:35:	System.Exception: Conversão especificada não é válida.
+   em PafEcf.Controller.LogssController.AtualizarQuantidades() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Controller\LogssController.cs:linha 154
+   em PafEcf.Util.PAFUtil.GravarR06(String pSimbolo) na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Util\PAFUtil.cs:linha 1141
+10/07/2017 16:08:55:	System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em PafEcf.View.Caixa.VendeItem() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\Caixa.cs:linha 1516
+   em PafEcf.View.Caixa.IniciaVendaDeItens() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\Caixa.cs:linha 1280
+10/07/2017 16:09:21:	System.InvalidOperationException: O objeto nulo deve ter um valor.
+   em System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   em System.Nullable`1.get_Value()
+   em PafEcf.View.Caixa.CancelaCupom() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\Caixa.cs:linha 1722
+10/07/2017 16:13:12:	System.InvalidOperationException: O objeto nulo deve ter um valor.
+   em System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   em System.Nullable`1.get_Value()
+   em PafEcf.View.Caixa.CancelaCupom() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\Caixa.cs:linha 1722
+10/07/2017 16:13:53:	ACBrFramework.ACBrException: Erro retornado pela Impressora: SwedaSTX
+
+Erro (0058) Comando ou operação inválida!
+   em ACBrFramework.ECF.ACBrECF.CheckResult(Int32 ret) na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\Serial\ECF\ACBrECF.cs:linha 5206
+   em ACBrFramework.ECF.ACBrECF.CancelaCupom() na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\Serial\ECF\ACBrECF.cs:linha 4165
+   em PafEcf.Util.ECFUtil.CancelaCupom() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Util\ECFUtil.cs:linha 200
+10/07/2017 16:13:54:	System.InvalidOperationException: O objeto nulo deve ter um valor.
+   em System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   em System.Nullable`1.get_Value()
+   em PafEcf.View.Caixa.CancelaCupom() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\Caixa.cs:linha 1722
+10/07/2017 20:45:34:	System.Exception: O índice estava fora do intervalo. Ele deve ser não-negativo e menor que o tamanho da coleção.
+Nome do parâmetro: index
+   em PafEcf.Controller.VendaController.CancelaVenda(EcfVendaCabecalhoDTO pEcfVendaCabecalho) na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Controller\VendaController.cs:linha 291
+   em PafEcf.View.Caixa.CancelaCupom() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\Caixa.cs:linha 1727
+10/07/2017 20:45:59:	ACBrFramework.ACBrException: Erro retornado pela Impressora: SwedaSTX
+
+Erro (0058) Comando ou operação inválida!
+   em ACBrFramework.ECF.ACBrECF.CheckResult(Int32 ret) na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\Serial\ECF\ACBrECF.cs:linha 5206
+   em ACBrFramework.ECF.ACBrECF.CancelaCupom() na c:\Componentes\C#\ACBrFramework\ACBrFramework.Net\ACBrFramework.Net\Serial\ECF\ACBrECF.cs:linha 4165
+   em PafEcf.Util.ECFUtil.CancelaCupom() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Util\ECFUtil.cs:linha 200
+10/07/2017 20:46:03:	System.Exception: O índice estava fora do intervalo. Ele deve ser não-negativo e menor que o tamanho da coleção.
+Nome do parâmetro: index
+   em PafEcf.Controller.VendaController.CancelaVenda(EcfVendaCabecalhoDTO pEcfVendaCabecalho) na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Controller\VendaController.cs:linha 291
+   em PafEcf.View.Caixa.CancelaCupom() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\Caixa.cs:linha 1727
+11/07/2017 11:25:58:	System.ArgumentOutOfRangeException: count deve ser não-negativo.
+Nome do parâmetro: count
+   em System.String.CtorCharCount(Char c, Int32 count)
+   em PafEcf.Util.PAFUtil.GravarR02R03() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Util\PAFUtil.cs:linha 904
+11/07/2017 11:26:01:	System.ArgumentException: Não é possível criar uma lista filho para o campo FECHAMENTO.
+   em System.Windows.Forms.BindingContext.EnsureListManager(Object dataSource, String dataMember)
+   em System.Windows.Forms.DataGridView.DataGridViewDataConnection.SetDataConnection(Object dataSource, String dataMember)
+   em System.Windows.Forms.DataGridView.set_DataSource(Object value)
+   em PafEcf.View.EncerraMovimento.TotalizaFechamento() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\EncerraMovimento.cs:linha 215
+   em PafEcf.View.EncerraMovimento.FormCreate() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\EncerraMovimento.cs:linha 82
+   em PafEcf.View.EncerraMovimento..ctor() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\View\EncerraMovimento.cs:linha 65
+   em PafEcf.Util.ECFUtil.ReducaoZ() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Util\ECFUtil.cs:linha 124
+11/07/2017 11:26:01:	System.Exception: Conversão especificada não é válida.
+   em PafEcf.Controller.LogssController.AtualizarQuantidades() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Controller\LogssController.cs:linha 154
+   em PafEcf.Util.ECFUtil.ReducaoZ() na C:\ERP Lite\Fonte\C#\Frente de Caixa\PAF-ECF\Util\ECFUtil.cs:linha 139

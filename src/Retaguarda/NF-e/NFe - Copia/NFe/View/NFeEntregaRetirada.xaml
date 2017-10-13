@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="NFe.View.NFeEntregaRetirada"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:exp="clr-namespace:ExportarParaArquivo.Control;assembly=ExportarParaArquivo"             
+             xmlns:expfmt="clr-namespace:ExportarParaArquivo;assembly=ExportarParaArquivo"                          
+             xmlns:local="clr-namespace:NFe.View"             
+             xmlns:util="clr-namespace:NFe.Util"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"             
+			 xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <util:MoedaFormat x:Key="moedaFormat"/>
+    </UserControl.Resources>
+
+    <dxlc:LayoutControl x:Name="layoutItems" Orientation="Vertical" Background="Transparent">
+
+        <dxlc:LayoutGroup View="GroupBox" Header="Dados para Entrega" Orientation="Vertical" dxlc:LayoutControl.AllowHorizontalSizing="True"
+							  IsCollapsible="True">
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="CPF/CNPJ:">
+                    <dxe:TextEdit x:Name="tbCpfCnpj" Text="{Binding NFeSelected.NfeLocalEntrega.CpfCnpj}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Logradouro:">
+                    <dxe:TextEdit Name="tbLogradouro" Text="{Binding NFeSelected.NfeLocalEntrega.Logradouro}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Número:">
+                    <dxe:TextEdit x:Name="tbNumero" Text="{Binding NFeSelected.NfeLocalEntrega.Numero}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="Complemento:">
+                    <dxe:TextEdit Name="tbComplemento" Text="{Binding NFeSelected.NfeLocalEntrega.Complemento}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Bairro:">
+                    <dxe:TextEdit Name="tbBairro" Text="{Binding NFeSelected.NfeLocalEntrega.Bairro}"/>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="Cód. IBGE:">
+                    <dxe:TextEdit x:Name="tbIBGE" Text="{Binding NFeSelected.NfeLocalEntrega.CodigoMunicipio}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Município:">
+                    <dxe:TextEdit Name="tbMunicipio" Text="{Binding NFeSelected.NfeLocalEntrega.NomeMunicipio}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="UF:">
+                    <dxe:TextEdit Name="tbUF" Text="{Binding NFeSelected.NfeLocalEntrega.Uf}"/>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+        </dxlc:LayoutGroup>
+
+        <dxlc:LayoutGroup View="GroupBox" Header="Dados para Retirada" Orientation="Vertical" dxlc:LayoutControl.AllowHorizontalSizing="True"
+							  IsCollapsible="True">
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="CPF/CNPJ:">
+                    <dxe:TextEdit x:Name="tbCpfCnpj2" Text="{Binding NFeSelected.NfeLocalRetirada.CpfCnpj}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Logradouro:">
+                    <dxe:TextEdit Name="tbLogradouro2" Text="{Binding NFeSelected.NfeLocalRetirada.Logradouro}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Número:">
+                    <dxe:TextEdit x:Name="tbNumero2" Text="{Binding NFeSelected.NfeLocalRetirada.Numero}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="Complemento:">
+                    <dxe:TextEdit Name="tbComplemento2" Text="{Binding NFeSelected.NfeLocalRetirada.Complemento}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Bairro:">
+                    <dxe:TextEdit Name="tbBairro2" Text="{Binding NFeSelected.NfeLocalRetirada.Bairro}"/>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="Cód. IBGE:">
+                    <dxe:TextEdit x:Name="tbIBGE2" Text="{Binding NFeSelected.NfeLocalRetirada.CodigoMunicipio}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Município:">
+                    <dxe:TextEdit Name="tbMunicipio2" Text="{Binding NFeSelected.NfeLocalRetirada.NomeMunicipio}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="UF:">
+                    <dxe:TextEdit Name="tbUF2" Text="{Binding NFeSelected.NfeLocalRetirada.Uf}"/>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+        </dxlc:LayoutGroup>
+
+
+    </dxlc:LayoutControl>
+
+</UserControl>

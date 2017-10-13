@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="NFe.View.NFeDestinatario"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:exp="clr-namespace:ExportarParaArquivo.Control;assembly=ExportarParaArquivo"             
+             xmlns:expfmt="clr-namespace:ExportarParaArquivo;assembly=ExportarParaArquivo"                          
+             xmlns:local="clr-namespace:NFe.View"             
+             xmlns:util="clr-namespace:NFe.Util"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"             
+			 xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <util:MoedaFormat x:Key="moedaFormat"/>
+    </UserControl.Resources>
+
+    <dxlc:LayoutControl x:Name="layoutItems" Orientation="Vertical" Background="Transparent">
+
+        <dxlc:LayoutGroup View="GroupBox" Header="Dados do Destinatário" Orientation="Vertical" dxlc:LayoutControl.AllowHorizontalSizing="True"
+							  IsCollapsible="True">
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="Nome/Razão Social:">
+                    <dxe:TextEdit Name="tbNomeRazaoSocial" Text="{Binding NFeSelected.NfeDestinatario.Nome}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Fantasia:">
+                    <dxe:TextEdit Name="tbFantasia" Text="{Binding NFeSelected.NfeDestinatario.Fantasia}"/>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="CPF/CNPJ:">
+                    <dxe:TextEdit x:Name="tbCpfCnpj" Text="{Binding NFeSelected.NfeDestinatario.CpfCnpj}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Email:">
+                    <dxe:TextEdit
+							Text="{Binding NFeSelected.NfeDestinatario.Email}"
+							x:Name="tbEmail"
+							EditValue="{Binding Mail}"
+							MaskType="RegEx"
+							Mask="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+							MaskIgnoreBlank="False">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="CEP:">
+                    <dxe:TextEdit x:Name="tbCEP" Text="{Binding NFeSelected.NfeDestinatario.Cep}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Logradouro:">
+                    <dxe:TextEdit Name="tbLogradouro" Text="{Binding NFeSelected.NfeDestinatario.Logradouro}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Número:">
+                    <dxe:TextEdit x:Name="tbNumero" Text="{Binding NFeSelected.NfeDestinatario.Numero}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="Complemento:">
+                    <dxe:TextEdit Name="tbComplemento" Text="{Binding NFeSelected.NfeDestinatario.Complemento}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Bairro:">
+                    <dxe:TextEdit Name="tbBairro" Text="{Binding NFeSelected.NfeDestinatario.Bairro}"/>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="Cód. IBGE:">
+                    <dxe:TextEdit x:Name="tbIBGE" Text="{Binding NFeSelected.NfeDestinatario.CodigoMunicipio}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Município:">
+                    <dxe:TextEdit Name="tbMunicipio" Text="{Binding NFeSelected.NfeDestinatario.NomeMunicipio}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="UF:">
+                    <dxe:TextEdit Name="tbUF" Text="{Binding NFeSelected.NfeDestinatario.Uf}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Telefone:">
+                    <dxe:TextEdit Name="tbTelefone" Text="{Binding NFeSelected.NfeDestinatario.Telefone}"/>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutItem Label="Inscrição Estadual:">
+                    <dxe:TextEdit x:Name="tbInscricaoEstadual" Text="{Binding NFeSelected.NfeDestinatario.Iest}"
+							MaskType="Numeric">
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Código do Regime Tributário:">
+                    <dxe:ComboBoxEdit Name="cbStatus" ShowSizeGrip="True" Text="{Binding NFeSelected.Crt}">
+                        <dxe:ComboBoxEditItem Content="1 - Simples Nacional"/>
+                        <dxe:ComboBoxEditItem Content="2 - Simples Nacional - Excesso"/>
+                        <dxe:ComboBoxEditItem Content="3 - Regime Normal"/>
+                    </dxe:ComboBoxEdit>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+        </dxlc:LayoutGroup>
+
+    </dxlc:LayoutControl>
+
+</UserControl>

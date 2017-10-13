@@ -1,0 +1,393 @@
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.exe.config
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.exe
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.pdb
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.csprojResolveAssemblyReference.cache
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\App.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\NFe_MarkupCompile.cache
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.g.resources
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.Properties.Resources.resources
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.csproj.GenerateResource.Cache
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.exe
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.pdb
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\App.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\NFe_Content.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NPOI.dll
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NRtfTree.dll
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\Ionic.Zip.dll
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\SearchWindow.exe
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\NFe_MarkupCompile.lref
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\themes\generic.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFePrincipal.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFePrincipal.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\Botoes\BarraExterna.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\Botoes\BarraInterna.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeMenu.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\RibbonControlsLibrary.dll
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\RibbonControlsLibrary.pdb
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\RibbonControlsLibrary.xml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\Microsoft.Windows.Shell.xml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeMenu.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\Botoes\BarraExterna.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\Botoes\BarraInterna.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeView.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeView.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDados.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDados.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDadosBasicos.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDadosBasicos.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDestinatario.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDestinatario.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeCupomVinculado.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeCupomVinculado.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeEntregaRetirada.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeEntregaRetirada.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeTransporte.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeTransporte.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeFatura.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeProduto.g.cs
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeFatura.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeProduto.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Classes.dll
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Servicos.dll
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Utils.dll
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Wsdl.dll
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Classes.pdb
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Servicos.pdb
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Utils.pdb
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Wsdl.pdb
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\Util\InputBoxWindow.baml
+C:\Projetos\T2Ti ERP 2.0\C#\Retaguarda\NFe\NFe\obj\Debug\Util\InputBoxWindow.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.csprojResolveAssemblyReference.cache
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\Util\InputBoxWindow.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFePrincipal.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\App.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\Util\InputBoxWindow.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeCupomVinculado.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDados.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDadosBasicos.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDestinatario.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeEntregaRetirada.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeFatura.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeMenu.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFePrincipal.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\Botoes\BarraExterna.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\Botoes\BarraInterna.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeProduto.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeTransporte.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeView.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\App.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\NFe_Content.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\NFe_MarkupCompile.cache
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\NFe_MarkupCompile.lref
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.exe
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.exe.config
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.exe
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Accordion.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Carousel.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Charts.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Controls.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Core.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Core.v17.1.Extensions.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.DataAccess.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.DemoBase.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Diagram.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Docking.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.DocumentViewer.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Gauges.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Grid.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Grid.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Grid.v17.1.Extensions.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Layout.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.LayoutControl.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Map.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.NavBar.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.PdfViewer.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.PivotGrid.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Printing.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.PrismAdapters.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.PropertyGrid.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.ReportDesigner.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Ribbon.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.RichEdit.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Scheduler.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.SpellChecker.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Spreadsheet.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.DXStyle.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.HybridApp.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.LightGray.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.MetropolisDark.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.MetropolisLight.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2007Black.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2007Blue.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2007Silver.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2010Black.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2010Blue.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2010Silver.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2013.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2013DarkGray.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2013LightGray.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2016Black.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2016Colorful.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2016ColorfulSE.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2016DarkGraySE.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2016White.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Office2016WhiteSE.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.Seven.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.TouchlineDark.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Themes.VS2010.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.TreeMap.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NPOI.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NRtfTree.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\SearchWindow.exe
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Data.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Charts.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.CodeParser.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\System.Windows.Interactivity.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.DataAccess.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpo.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.RichEdit.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.DemoData.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.DemoData.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Images.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Diagram.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Map.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Pdf.v17.1.Drawing.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.PivotGrid.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.XtraCharts.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.XtraReports.v17.1.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.XtraGauges.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Office.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.XtraScheduler.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.SpellChecker.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Spreadsheet.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.TreeMap.v17.1.Core.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\Ionic.Zip.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\Microsoft.Windows.Shell.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Accordion.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Carousel.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Charts.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Controls.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Core.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Diagram.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Docking.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.DocumentViewer.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Gauges.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Grid.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Grid.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Layout.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.LayoutControl.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Map.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.NavBar.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.PdfViewer.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.PivotGrid.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Printing.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.PropertyGrid.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.ReportDesigner.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Ribbon.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.RichEdit.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Scheduler.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.SpellChecker.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.Spreadsheet.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpf.TreeMap.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Classes.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Servicos.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Utils.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Wsdl.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\RibbonControlsLibrary.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\RibbonControlsLibrary.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Data.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\System.Windows.Interactivity.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.DataAccess.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Xpo.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.RichEdit.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Diagram.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Map.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Pdf.v17.1.Drawing.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.PivotGrid.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.XtraCharts.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.XtraReports.v17.1.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.XtraGauges.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Office.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.XtraScheduler.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.SpellChecker.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.Spreadsheet.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DevExpress.TreeMap.v17.1.Core.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\Microsoft.Windows.Shell.xml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.Charts.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.Charts.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.Charts.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.Charts.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.Controls.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.Controls.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.Controls.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.Controls.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.Core.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.Core.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.Core.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.Core.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.Docking.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.Docking.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.Docking.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.Docking.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.Gauges.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.Gauges.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.Gauges.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.Gauges.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.NavBar.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.NavBar.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.NavBar.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.NavBar.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.PdfViewer.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.PdfViewer.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.PdfViewer.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.PdfViewer.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.Printing.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.Printing.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.Printing.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.Printing.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.PropertyGrid.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.PropertyGrid.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.PropertyGrid.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.PropertyGrid.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.ReportDesigner.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.Scheduler.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.Scheduler.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.Scheduler.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.Scheduler.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.SpellChecker.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.SpellChecker.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.SpellChecker.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.SpellChecker.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpf.Spreadsheet.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpf.Spreadsheet.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpf.Spreadsheet.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpf.Spreadsheet.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.DataAccess.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.DataAccess.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.DataAccess.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.DataAccess.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Xpo.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Xpo.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Xpo.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Xpo.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.RichEdit.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.RichEdit.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.RichEdit.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.RichEdit.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Diagram.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Diagram.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Diagram.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Diagram.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Map.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Map.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Map.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Map.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.PivotGrid.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.PivotGrid.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.PivotGrid.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.PivotGrid.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.XtraCharts.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.XtraCharts.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.XtraCharts.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.XtraCharts.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.XtraReports.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.XtraReports.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.XtraReports.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.XtraReports.v17.1.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.XtraGauges.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.XtraGauges.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.XtraGauges.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.XtraGauges.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Office.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\de\DevExpress.Spreadsheet.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\es\DevExpress.Spreadsheet.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ja\DevExpress.Spreadsheet.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\ru\DevExpress.Spreadsheet.v17.1.Core.resources.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\themes\generic.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeCupomVinculado.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDados.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDadosBasicos.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeDestinatario.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeEntregaRetirada.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeFatura.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeMenu.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\Botoes\BarraExterna.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\Botoes\BarraInterna.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeProduto.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeTransporte.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\View\NFeView.baml
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.g.resources
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.Properties.Resources.resources
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\obj\Debug\NFe.csproj.GenerateResource.Cache
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DFe.Classes.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DFe.Utils.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Classes.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Danfe.Base.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Danfe.Nativo.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Servicos.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Utils.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\GraphicsPrinter.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Wsdl.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\zxing.dll
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DFe.Classes.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\DFe.Utils.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Danfe.Base.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Danfe.Nativo.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\GraphicsPrinter.pdb
+C:\ERP Lite\Fonte\C#\Retaguarda\NFe\NFe\bin\Debug\NFe.Wsdl.XmlSerializers.dll

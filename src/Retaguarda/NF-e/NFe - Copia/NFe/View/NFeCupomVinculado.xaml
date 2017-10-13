@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="NFe.View.NFeCupomVinculado"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:exp="clr-namespace:ExportarParaArquivo.Control;assembly=ExportarParaArquivo"             
+             xmlns:expfmt="clr-namespace:ExportarParaArquivo;assembly=ExportarParaArquivo"                          
+             xmlns:local="clr-namespace:NFe.View"             
+             xmlns:util="clr-namespace:NFe.Util"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <util:MoedaFormat x:Key="moedaFormat"/>
+    </UserControl.Resources>
+    
+
+        <dxlc:LayoutControl x:Name="layoutItems" Orientation="Vertical" Background="Transparent">
+
+            <dxlc:LayoutGroup>
+
+                <dxlc:LayoutGroup Orientation="Vertical">
+
+                    <dxlc:LayoutGroup>
+                        <dxlc:LayoutGroup View="GroupBox" Header="Inserir Cupom Fiscal Vinculado" Orientation="Vertical" dxlc:LayoutControl.AllowHorizontalSizing="True"
+                                          IsCollapsible="True">
+                            <dxlc:LayoutItem Label="Modelo do documento fiscal:" IsRequired="False">
+                                <dxe:TextEdit Name="tbModeloDocumentoFiscal" />
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem Label="Data de emissão:" IsRequired="False">
+                                <dxe:DateEdit x:Name="dpDataEmissao" AllowNullInput="True" />
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem Label="Nr. ordem ECF:">
+                                <dxe:TextEdit x:Name="tbNrOrdemECF"
+                                    MaskType="Numeric">
+                                </dxe:TextEdit>
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem Label="COO:">
+                                <dxe:TextEdit x:Name="tbCOO"
+                                    MaskType="Numeric">
+                                </dxe:TextEdit>
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem Label="Nr. caixa:">
+                                <dxe:TextEdit x:Name="tbNrCaixa"
+                                    MaskType="Numeric">
+                                </dxe:TextEdit>
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem Label="Nr. série ECF:">
+                                <dxe:TextEdit x:Name="tbNrSerieECF"
+                                    MaskType="Numeric">
+                                </dxe:TextEdit>
+                            </dxlc:LayoutItem>
+                        </dxlc:LayoutGroup>
+                        
+                    </dxlc:LayoutGroup>
+
+                <dxlc:LayoutGroup View="GroupBox" Header="Cupons Vinculados Incluídos" Orientation="Vertical" IsCollapsible="True">
+
+                        <dxlc:LayoutItem>
+                            <StackPanel DockPanel.Dock="top" HorizontalAlignment="Right" Orientation="Horizontal"  Margin="0,5,0,0" >
+                                <Button Name="btSalvar" Width="100" Click="btSalvar_Click">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                        <Image Source="/Images/internos/inserir.png" Height="16" Width="16"></Image>
+                                        <TextBlock Text="Incluir" Margin="3,0,0,0" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                                <Button Name="btExcluir" Width="100" Click="btExcluir_Click">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="/Images/internos/excluir.png" Height="16" Width="16"></Image>
+                                        <TextBlock Text="Excluir" Margin="3,0,0,0" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem>
+                            <DataGrid Name="dataGrid" AutoGenerateColumns="false" IsReadOnly="True"
+                              CanUserAddRows="False" CanUserDeleteRows="False"
+                              ItemsSource="{Binding NFeSelected.ListaNfeCupomFiscalReferenciado}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Modelo" Width="Auto" 
+                                                                Binding="{Binding Path=ModeloDocumentoFiscal}">
+                                        <DataGridTextColumn.CellStyle>
+                                            <Style>
+                                                <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+                                            </Style>
+                                        </DataGridTextColumn.CellStyle>
+                                    </DataGridTextColumn>
+                                    <DataGridTextColumn Header="Data" Width="Auto" 
+                                                                Binding="{Binding Path=DataEmissaoCupom,
+                                                                         StringFormat=dd/MM/yyyy}">
+
+                                    </DataGridTextColumn>
+                                    <DataGridTextColumn Header="Nr. Ordem ECF" Width="Auto" 
+                                                                Binding="{Binding Path=NumeroOrdemECF}">
+                                    </DataGridTextColumn>
+
+                                    <DataGridTextColumn Header="COO" Width="Auto" 
+                                                                Binding="{Binding Path=Coo}">
+                                    </DataGridTextColumn>
+
+                                    <DataGridTextColumn Header="Nr. Caixa" Width="Auto" 
+                                                                Binding="{Binding Path=NumeroCaixa}">
+                                    </DataGridTextColumn>
+                                    <DataGridTextColumn Header="Nr. Série ECF" Width="Auto" 
+                                                                Binding="{Binding Path=NumeroSerieEcf}">
+                                    </DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </dxlc:LayoutItem>
+                </dxlc:LayoutGroup>
+                </dxlc:LayoutGroup>
+            </dxlc:LayoutGroup>
+
+           
+        </dxlc:LayoutControl>
+        
+    
+
+
+</UserControl>

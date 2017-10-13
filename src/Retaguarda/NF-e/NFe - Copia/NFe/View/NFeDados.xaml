@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="NFe.View.NFeDados"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewBotoes="clr-namespace:NFe.View.Botoes"
+             mc:Ignorable="d" 
+             xmlns:exp="clr-namespace:ExportarParaArquivo.Control;assembly=ExportarParaArquivo"             
+             xmlns:expfmt="clr-namespace:ExportarParaArquivo;assembly=ExportarParaArquivo"                          
+             xmlns:local="clr-namespace:NFe.View"             
+             xmlns:util="clr-namespace:NFe.Util"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             d:DesignHeight="600" d:DesignWidth="1000" >
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Top" Grid.Column="0">
+            <viewBotoes:BarraInterna></viewBotoes:BarraInterna>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Right" Orientation="Horizontal"  Margin="0,5,0,0" >
+            <Button Name="btConsultar" Width="150" Click="btConsultar_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Source="/Images/internos/localizar.png" Height="16" Width="16"></Image>
+                    <TextBlock Text="Consultar Sefaz" Margin="3,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>            
+            <Button Name="btEnviar" Width="100" Click="btEnviar_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Source="/Images/internos/exportar.png" Height="16" Width="16"></Image>
+                    <TextBlock Text="Enviar" Margin="3,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="btImprimirDanfe" Width="100" Click="btImprimirDanfe_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Source="/Images/internos/imprimir.png" Height="16" Width="16"></Image>
+                    <TextBlock Text="DANFE" Margin="3,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="btInutilizar" Width="110" Click="btInutilizar_Click" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Source="/Images/botaoCancelar.png" Height="16" Width="16"></Image>
+                    <TextBlock Text="Inutilizar" Margin="3,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            
+        </StackPanel>
+
+        <dxlc:LayoutGroup View="Tabs">
+            <dxlc:LayoutItem  dxlc:LayoutControl.TabHeader="Dados NF-e" Name="tabDadosBasicos" >
+            </dxlc:LayoutItem>
+            
+            <dxlc:LayoutItem  dxlc:LayoutControl.TabHeader="Destinatário" Name="tabDestinatario">
+            </dxlc:LayoutItem>
+
+            <dxlc:LayoutItem  dxlc:LayoutControl.TabHeader="Cupons Fiscais Vinculados" Name="tabCupomVinculado">
+            </dxlc:LayoutItem>
+
+            <dxlc:LayoutItem  dxlc:LayoutControl.TabHeader="Entrega / Retirada" Name="tabEntregaRetirada">
+            </dxlc:LayoutItem>
+
+            <dxlc:LayoutItem  dxlc:LayoutControl.TabHeader="Produtos" Name="tabProdutos">
+            </dxlc:LayoutItem>
+
+            <dxlc:LayoutItem  dxlc:LayoutControl.TabHeader="Transporte" Name="tabTransporte">
+            </dxlc:LayoutItem>
+
+            <dxlc:LayoutItem  dxlc:LayoutControl.TabHeader="Cobrança" Name="tabCobranca">
+            </dxlc:LayoutItem>
+        </dxlc:LayoutGroup>
+        
+    </DockPanel>
+
+
+</UserControl>

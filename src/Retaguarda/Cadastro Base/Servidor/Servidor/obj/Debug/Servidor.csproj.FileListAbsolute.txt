@@ -28,3 +28,16 @@ C:\ERP Lite\Fonte\C#\Retaguarda\Servidor\Servidor\bin\Iesi.Collections.dll
 C:\ERP Lite\Fonte\C#\Retaguarda\Servidor\Servidor\bin\LinFu.DynamicProxy.dll
 C:\ERP Lite\Fonte\C#\Retaguarda\Servidor\Servidor\bin\NHibernate.ByteCode.LinFu.dll
 C:\ERP Lite\Fonte\C#\Retaguarda\Servidor\Servidor\bin\NHibernate.dll
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\Servidor.dll.config
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\Servidor.dll
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\Servidor.pdb
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\EntityFramework.dll
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\EntityFramework.SqlServer.dll
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\MySql.Data.dll
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\EntityFramework.xml
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\EntityFramework.SqlServer.xml
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\MySql.Data.xml
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\obj\Debug\Servidor.csprojResolveAssemblyReference.cache
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\obj\Debug\Servidor.csproj.CoreCompileInputs.cache
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\obj\Debug\Servidor.dll
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\obj\Debug\Servidor.pdb

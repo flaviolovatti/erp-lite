@@ -6,7 +6,7 @@ namespace ModelEF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("EMPRESA")]
+    [Table("public.EMPRESA")]
     public partial class EMPRESA
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

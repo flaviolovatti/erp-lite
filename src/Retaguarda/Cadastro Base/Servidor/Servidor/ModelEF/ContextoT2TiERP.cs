@@ -8,7 +8,7 @@ namespace ModelEF
     public partial class ContextoT2TiERP : DbContext
     {
         public ContextoT2TiERP()
-            : base("name=ContextoT2TiERP")
+            : base("name=ContextoERP")
         {
             this.Configuration.LazyLoadingEnabled = true;
         }

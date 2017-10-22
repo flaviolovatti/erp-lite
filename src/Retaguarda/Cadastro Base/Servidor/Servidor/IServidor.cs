@@ -16,8 +16,214 @@ namespace Servidor
     public interface IServidor
     {
 
+
+        #region === Comum ===
+
+        #region Usuario
         [OperationContract]
-        EMPRESA SelectObjetoEmpresa(string pFiltro);
+        Usuario SelectUsuario(String login, String senha);
+        #endregion
+
+        #region Empresa
+
+        [OperationContract]
+        Empresa SelectObjetoEmpresa(string pFiltro);
+        [OperationContract]
+        IList<Empresa> SelectEmpresa(Empresa empresa);
+        [OperationContract]
+        IList<Empresa> SelectEmpresaPagina(int primeiroResultado, 
+                                            int quantidadeResultados, 
+                                            Empresa empresa);
+        #endregion
+
+        #endregion
+
+        #region === Cadastros ===
+
+        #region EstadoCivil
+        [OperationContract]
+        void DeleteEstadoCivil(EstadoCivil estadoCivil);
+        [OperationContract]
+        EstadoCivil SalvarAtualizarEstadoCivil(EstadoCivil estadoCivil);
+        [OperationContract]
+        IList<EstadoCivil> SelectEstadoCivil(EstadoCivil estadoCivil);
+        [OperationContract]
+        IList<EstadoCivil> SelectEstadoCivilPagina(int primeiroResultado, 
+                                                    int quantidadeResultados, 
+                                                    EstadoCivil estadoCivil);
+        #endregion
+
+        #region AtividadeFornecedorCliente
+        [OperationContract]
+        void DeleteAtividadeFornecedorCliente(AtividadeFornecedorCliente atividadeFornecedorCliente);
+        [OperationContract]
+        AtividadeFornecedorCliente SalvarAtualizarAtividadeFornecedorCliente(AtividadeFornecedorCliente atividadeFornecedorCliente);
+        [OperationContract]
+        IList<AtividadeFornecedorCliente> SelectAtividadeFornecedorCliente(AtividadeFornecedorCliente atividadeFornecedorCliente);
+        [OperationContract]
+        IList<AtividadeFornecedorCliente> SelectAtividadeFornecedorClientePagina(int primeiroResultado, 
+                                                                                int quantidadeResultados, 
+                                                                                AtividadeFornecedorCliente atividadeFornecedorCliente);
+        #endregion
+
+        #region Cargo
+        [OperationContract]
+        void DeleteCargo(Cargo cargo);
+        [OperationContract]
+        Cargo SalvarAtualizarCargo(Cargo cargo);
+        [OperationContract]
+        IList<Cargo> SelectCargo(Cargo cargo);
+        [OperationContract]
+        IList<Cargo> SelectCargoPagina(int primeiroResultado, 
+                                        int quantidadeResultados, 
+                                        Cargo cargo);
+        #endregion
+        
+        #region OperadoraPlanoSaude
+        [OperationContract]
+        void DeleteOperadoraPlanoSaude(OperadoraPlanoSaude operadoraPlanoSaude);
+        [OperationContract]
+        OperadoraPlanoSaude SalvarAtualizarOperadoraPlanoSaude(OperadoraPlanoSaude operadoraPlanoSaude);
+        [OperationContract]
+        IList<OperadoraPlanoSaude> SelectOperadoraPlanoSaude(OperadoraPlanoSaude operadoraPlanoSaude);
+        [OperationContract]
+        IList<OperadoraPlanoSaude> SelectOperadoraPlanoSaudePagina(int primeiroResultado, 
+                                                                    int quantidadeResultados,
+                                                                    OperadoraPlanoSaude operadoraPlanoSaude);
+        #endregion
+
+        #region Pais
+        [OperationContract]
+        void DeletePais(Pais pais);
+        [OperationContract]
+        Pais SalvarAtualizarPais(Pais pais);
+        [OperationContract]
+        IList<Pais> SelectPais(Pais pais);
+        [OperationContract]
+        IList<Pais> SelectPaisPagina(int primeiroResultado, 
+                                        int quantidadeResultados, 
+                                        Pais pais);
+        #endregion
+
+        #region Produto
+        [OperationContract]
+        void DeleteProduto(Produto produto);
+        [OperationContract]
+        Produto SalvarAtualizarProduto(Produto produto);
+        [OperationContract]
+        IList<Produto> SelectProduto(Produto produto);
+        [OperationContract]
+        Produto SelectProdutoId(Produto produto);
+        [OperationContract]
+        IList<Produto> SelectProdutoPagina(int primeiroResultado, 
+                                            int quantidadeResultados,
+                                            Produto produto);
+        #endregion
+
+        #region ProdutoSubGrupo
+        [OperationContract]
+        void DeleteProdutoSubGrupo(ProdutoSubGrupo produtoSubGrupo);
+        [OperationContract]
+        ProdutoSubGrupo SalvarAtualizarProdutoSubGrupo(ProdutoSubGrupo produtoSubGrupo);
+        [OperationContract]
+        IList<ProdutoSubGrupo> SelectProdutoSubGrupo(ProdutoSubGrupo produtoSubGrupo);
+        [OperationContract]
+        IList<ProdutoSubGrupo> SelectProdutoSubGrupoPagina(int primeiroResultado, 
+                                                            int quantidadeResultados, 
+                                                            ProdutoSubGrupo produtoSubGrupo);
+        #endregion
+
+        #region ProdutoMarca
+        [OperationContract]
+        void DeleteProdutoMarca(ProdutoMarca produtoMarca);
+        [OperationContract]
+        ProdutoMarca SalvarAtualizarProdutoMarca(ProdutoMarca produtoMarca);
+        [OperationContract]
+        IList<ProdutoMarca> SelectProdutoMarca(ProdutoMarca produtoMarca);
+        [OperationContract]
+        IList<ProdutoMarca> SelectProdutoMarcaPagina(int primeiroResultado, 
+                                                        int quantidadeResultados, 
+                                                        ProdutoMarca produtoMarca);
+        #endregion
+
+        #region Almoxarifado
+        [OperationContract]
+        void DeleteAlmoxarifado(Almoxarifado almoxarifado);
+        [OperationContract]
+        Almoxarifado SalvarAtualizarAlmoxarifado(Almoxarifado almoxarifado);
+        [OperationContract]
+        IList<Almoxarifado> SelectAlmoxarifado(Almoxarifado almoxarifado);
+        [OperationContract]
+        IList<Almoxarifado> SelectAlmoxarifadoPagina(int primeiroResultado, 
+                                                        int quantidadeResultados, 
+                                                        Almoxarifado almoxarifado);
+        #endregion
+
+        #region Pessoa
+        [OperationContract]
+        void DeletePessoa(Pessoa pessoa);
+        [OperationContract]
+        Pessoa SalvarAtualizarPessoa(Pessoa pessoa);
+        [OperationContract]
+        IList<Pessoa> SelectPessoa(Pessoa pessoa);
+        [OperationContract]
+        IList<Pessoa> SelectPessoaPagina(int primeiroResultado, 
+                                            int quantidadeResultados, 
+                                            Pessoa pessoa);
+        #endregion
+
+        #region Banco
+        [OperationContract]
+        void DeleteBanco(Banco banco);
+        [OperationContract]
+        Banco SalvarAtualizarBanco(Banco banco);
+        [OperationContract]
+        IList<Banco> SelectBanco(Banco banco);
+        [OperationContract]
+        IList<Banco> SelectBancoPagina(int primeiroResultado, 
+                                        int quantidadeResultados, 
+                                        Banco banco);
+        #endregion
+
+        #region Contador
+        [OperationContract]
+        IList<Contador> SelectContador(Contador contador);
+        [OperationContract]
+        IList<Contador> SelectContadorPagina(int primeiroResultado, 
+                                                int quantidadeResultados, 
+                                                Contador contador);
+        #endregion
+
+        #region UnidadeProduto
+        [OperationContract]
+        void DeleteUnidadeProduto(UnidadeProduto unidadeProduto);
+        [OperationContract]
+        UnidadeProduto SalvarAtualizarUnidadeProduto(UnidadeProduto unidadeProduto);
+        [OperationContract]
+        IList<UnidadeProduto> SelectUnidadeProduto(UnidadeProduto unidadeProduto);
+        [OperationContract]
+        IList<UnidadeProduto> SelectUnidadeProdutoPagina(int primeiroResultado, 
+                                                            int quantidadeResultados,
+                                                            UnidadeProduto unidadeProduto);
+        #endregion
+
+        #region Colaborador
+        [OperationContract]
+        int DeleteColaborador(Colaborador colaborador);
+        [OperationContract]
+        Colaborador SalvarAtualizarColaborador(Colaborador colaborador);
+        [OperationContract]
+        IList<Colaborador> SelectColaborador(Colaborador colaborador);
+        [OperationContract]
+        IList<Colaborador> SelectColaboradorPagina(int primeiroResultado, 
+                                                    int quantidadeResultados,
+                                                    Colaborador colaborador);
+        #endregion
+
+        #endregion
+
+
+
         /*
                 #region === Comum ===
 

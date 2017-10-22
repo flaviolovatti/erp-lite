@@ -17,31 +17,824 @@ namespace Servidor
     // NOTE: In order to launch WCF Test Client for testing this service, please Select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class ServiceServidor : IServidor
     {
+        #region === Comum ===
 
-        public EMPRESA SelectObjetoEmpresa(string pFiltro)
+        #region Empresa
+
+        public Empresa SelectObjetoEmpresa(string pFiltro)
         {
             try
             {
-                IList<EMPRESA> Resultado = null;
-                var ctx = new ContextoT2TiERP();
+
+                Empresa Resultado = null;
+                var ctx = new ContextoERP();
                 ctx.Configuration.ProxyCreationEnabled = false;
                 ctx.Configuration.LazyLoadingEnabled = false;
+
                 using (ctx)
                 {
-                    var empresas =
-                    (from p in ctx.EMPRESA
-                     select p).Take(5);
 
-                    Resultado = empresas.ToList();
+                    Resultado = ctx.empresas.Where(x => x.id.Equals(pFiltro)).FirstOrDefault();
+
+                    /*
+                    var empresa =
+                    from p in ctx.empresas
+                    where p.id.Equals(pFiltro)
+                    select p;
+
+                    Resultado = empresa.FirstOrDefault(); */
                 }
 
-                return Resultado.FirstOrDefault();
+                return Resultado;
+                
             }
             catch (Exception ex)
             {
                 throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
             }
         }
+
+        public IList<Empresa> SelectEmpresa(Empresa empresa)
+        {
+            try
+            {
+                IList<Empresa> Resultado = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.ProxyCreationEnabled = false;
+                ctx.Configuration.LazyLoadingEnabled = false;
+
+                using (ctx)
+                {
+
+                    Resultado = ctx.empresas.Where(x => x.id == empresa.id).ToArray();
+
+                }
+
+                return Resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        public IList<Empresa> SelectEmpresaPagina(int primeiroResultado, int quantidadeResultados, Empresa empresa)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        #endregion
+
+        #region Usuario
+        public Usuario SelectUsuario(String login, String senha)
+        {
+            try
+            {
+                Usuario Resultado = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.ProxyCreationEnabled = false;
+                ctx.Configuration.LazyLoadingEnabled = false;
+
+                using (ctx)
+                {
+
+                    Resultado = ctx.usuarios.Where(u => u.login == login && u.senha == senha).FirstOrDefault();
+
+                }
+
+                return Resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+        #endregion
+
+        #endregion
+
+        #region === Cadastros ===
+
+        #region EstadoCivil
+        public void DeleteEstadoCivil(EstadoCivil estadoCivil)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        public EstadoCivil SalvarAtualizarEstadoCivil(EstadoCivil estadoCivil)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        public IList<EstadoCivil> SelectEstadoCivil(EstadoCivil estadoCivil)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        public IList<EstadoCivil> SelectEstadoCivilPagina(int primeiroResultado, int quantidadeResultados, EstadoCivil estadoCivil)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region AtividadeFornecedorCliente
+        public void DeleteAtividadeFornecedorCliente(AtividadeFornecedorCliente atividadeFornecedorCliente)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        public AtividadeFornecedorCliente SalvarAtualizarAtividadeFornecedorCliente(AtividadeFornecedorCliente atividadeFornecedorCliente)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        public IList<AtividadeFornecedorCliente> SelectAtividadeFornecedorCliente(AtividadeFornecedorCliente atividadeFornecedorCliente)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        public IList<AtividadeFornecedorCliente> SelectAtividadeFornecedorClientePagina(int primeiroResultado, int quantidadeResultados, AtividadeFornecedorCliente atividadeFornecedorCliente)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        #endregion
+
+        #region Cargo
+        public void DeleteCargo(Cargo cargo)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Cargo SalvarAtualizarCargo(Cargo cargo)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Cargo> SelectCargo(Cargo cargo)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Cargo> SelectCargoPagina(int primeiroResultado, int quantidadeResultados, Cargo cargo)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region OperadoraPlanoSaude
+        public void DeleteOperadoraPlanoSaude(OperadoraPlanoSaude operadoraPlanoSaude)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public OperadoraPlanoSaude SalvarAtualizarOperadoraPlanoSaude(OperadoraPlanoSaude operadoraPlanoSaude)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<OperadoraPlanoSaude> SelectOperadoraPlanoSaude(OperadoraPlanoSaude operadoraPlanoSaude)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<OperadoraPlanoSaude> SelectOperadoraPlanoSaudePagina(int primeiroResultado, int quantidadeResultados, OperadoraPlanoSaude operadoraPlanoSaude)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region Pais
+        public void DeletePais(Pais pais)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Pais SalvarAtualizarPais(Pais pais)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Pais> SelectPais(Pais pais)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Pais> SelectPaisPagina(int primeiroResultado, int quantidadeResultados, Pais pais)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region Produto
+        public void DeleteProduto(Produto produto)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Produto SalvarAtualizarProduto(Produto produto)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Produto> SelectProduto(Produto produto)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Produto SelectProdutoId(Produto produto)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Produto> SelectProdutoPagina(int primeiroResultado, int quantidadeResultados, Produto produto)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region ProdutoSubGrupo
+        public void DeleteProdutoSubGrupo(ProdutoSubGrupo produtoSubGrupo)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public ProdutoSubGrupo SalvarAtualizarProdutoSubGrupo(ProdutoSubGrupo produtoSubGrupo)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<ProdutoSubGrupo> SelectProdutoSubGrupo(ProdutoSubGrupo produtoSubGrupo)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<ProdutoSubGrupo> SelectProdutoSubGrupoPagina(int primeiroResultado, int quantidadeResultados, ProdutoSubGrupo produtoSubGrupo)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region ProdutoMarca
+        public void DeleteProdutoMarca(ProdutoMarca produtoMarca)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public ProdutoMarca SalvarAtualizarProdutoMarca(ProdutoMarca produtoMarca)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<ProdutoMarca> SelectProdutoMarca(ProdutoMarca produtoMarca)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<ProdutoMarca> SelectProdutoMarcaPagina(int primeiroResultado, int quantidadeResultados, ProdutoMarca produtoMarca)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region Almoxarifado
+        public void DeleteAlmoxarifado(Almoxarifado almoxarifado)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Almoxarifado SalvarAtualizarAlmoxarifado(Almoxarifado almoxarifado)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Almoxarifado> SelectAlmoxarifado(Almoxarifado almoxarifado)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Almoxarifado> SelectAlmoxarifadoPagina(int primeiroResultado, int quantidadeResultados, Almoxarifado almoxarifado)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region Contador
+
+        public IList<Contador> SelectContador(Contador contador)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Contador> SelectContadorPagina(int primeiroResultado, int quantidadeResultados, Contador contador)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region Pessoa
+        public void DeletePessoa(Pessoa pessoa)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Pessoa SalvarAtualizarPessoa(Pessoa pessoa)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Pessoa> SelectPessoa(Pessoa pessoa)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Pessoa> SelectPessoaPagina(int primeiroResultado, int quantidadeResultados, Pessoa pessoa)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region Banco
+        public void DeleteBanco(Banco banco)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Banco SalvarAtualizarBanco(Banco banco)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Banco> SelectBanco(Banco banco)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Banco> SelectBancoPagina(int primeiroResultado, int quantidadeResultados, Banco banco)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+        #endregion
+
+        #region UnidadeProduto
+        public void DeleteUnidadeProduto(UnidadeProduto unidadeProduto)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public UnidadeProduto SalvarAtualizarUnidadeProduto(UnidadeProduto unidadeProduto)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<UnidadeProduto> SelectUnidadeProduto(UnidadeProduto unidadeProduto)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<UnidadeProduto> SelectUnidadeProdutoPagina(int primeiroResultado, int quantidadeResultados, UnidadeProduto unidadeProduto)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region Colaborador
+        public int DeleteColaborador(Colaborador colaborador)
+        {
+            try
+            {
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Colaborador SalvarAtualizarColaborador(Colaborador colaborador)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Colaborador> SelectColaborador(Colaborador colaborador)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Colaborador> SelectColaboradorPagina(int primeiroResultado, int quantidadeResultados, Colaborador colaborador)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #endregion
+
         /*
                 #region === Comum ===
 

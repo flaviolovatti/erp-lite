@@ -1398,6 +1398,15 @@
     <Content Include="ProjetoComponenteSpedContribuicoes\ProjetoComponenteSpedContribuicoes\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="ProjetoComponenteSpedContribuicoes\ProjetoComponenteSpedContribuicoes\obj\Debug\ProjetoComponenteSpedContribuicoes.csprojResolveAssemblyReference.cache" />
     <Content Include="packages.config" />
+    <Content Include="Web.config.backup.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.config.backup.Debug.xml">
+      <DependentUpon>Web.config.backup.xml</DependentUpon>
+    </Content>
+    <Content Include="Web.config.backup.Release.xml">
+      <DependentUpon>Web.config.backup.xml</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -916,8 +916,12 @@ namespace Servidor
             try
             {
                 var ctx = new ContextoERP();
-                ctx.bancoes.Add(banco);
-                ctx.SaveChanges();
+
+                using (ctx)
+                {
+                    ctx.bancoes.Add(banco);
+                    ctx.SaveChanges();
+                }
 
                 return banco;
             }

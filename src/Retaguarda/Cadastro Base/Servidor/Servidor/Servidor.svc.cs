@@ -1,13 +1,8 @@
 ﻿using ModelEF;
-using NHibernate;
-using Servidor.DAL;
 using Servidor.Model;
-using Servidor.NHibernate;
-using Servidor.Util;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.ServiceModel;
 
@@ -34,7 +29,7 @@ namespace Servidor
                 using (ctx)
                 {
 
-                    Resultado = ctx.empresas.Where(x => x.id.Equals(pFiltro)).FirstOrDefault();
+                    Resultado = ctx.empresas.Where(x => x.id.ToString().Equals(pFiltro)).FirstOrDefault();
 
                     /*
                     var empresa =
@@ -129,7 +124,10 @@ namespace Servidor
         {
             try
             {
-                
+                var ctx = new ContextoERP();
+                ctx.estado_civil.Attach(estadoCivil);
+                ctx.estado_civil.Remove(estadoCivil);
+                ctx.SaveChanges();
             }
             catch (Exception ex)
             {
@@ -142,7 +140,10 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.estado_civil.Add(estadoCivil);
+                ctx.SaveChanges();
+                return estadoCivil;
             }
             catch (Exception ex)
             {
@@ -155,7 +156,17 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<EstadoCivil> estadosCivis = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.ProxyCreationEnabled = false;
+                ctx.Configuration.LazyLoadingEnabled = false;
+
+                using (ctx)
+                {
+                    estadosCivis = ctx.estado_civil.Where(e => e.id == estadoCivil.id).ToList();
+                }
+
+                return estadosCivis;
             }
             catch (Exception ex)
             {
@@ -183,7 +194,11 @@ namespace Servidor
         {
             try
             {
-                
+                var ctx = new ContextoERP();
+                ctx.atividade_for_cli.Attach(atividadeFornecedorCliente);
+                ctx.atividade_for_cli.Remove(atividadeFornecedorCliente);
+                ctx.SaveChanges();
+
             }
             catch (Exception ex)
             {
@@ -196,7 +211,12 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.atividade_for_cli.Add(atividadeFornecedorCliente);
+                ctx.SaveChanges();
+
+                return atividadeFornecedorCliente;
+
             }
             catch (Exception ex)
             {
@@ -209,7 +229,21 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<AtividadeFornecedorCliente> atividadesFornecedorCliente = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.ProxyCreationEnabled = false;
+                ctx.Configuration.LazyLoadingEnabled = false;
+
+                using (ctx)
+                {
+
+                    atividadesFornecedorCliente = ctx.atividade_for_cli.Where(
+                        a => a.id == atividadeFornecedorCliente.id).ToList();
+
+                }
+
+                return atividadesFornecedorCliente;
+
             }
             catch (Exception ex)
             {
@@ -238,7 +272,11 @@ namespace Servidor
         {
             try
             {
-                
+                var ctx = new ContextoERP();
+                ctx.cargoes.Attach(cargo);
+                ctx.cargoes.Remove(cargo);
+                ctx.SaveChanges();
+
             }
             catch (Exception ex)
             {
@@ -250,7 +288,11 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.cargoes.Add(cargo);
+                ctx.SaveChanges();
+
+                return cargo;
             }
             catch (Exception ex)
             {
@@ -262,7 +304,19 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Cargo> cargos = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.ProxyCreationEnabled = false;
+                ctx.Configuration.LazyLoadingEnabled = false;
+
+                using (ctx)
+                {
+
+                    cargos = ctx.cargoes.Where(c => c.id == cargo.id).ToList();
+                }
+
+                return cargos;
+
             }
             catch (Exception ex)
             {
@@ -289,6 +343,11 @@ namespace Servidor
         {
             try
             {
+
+                var ctx = new ContextoERP();
+                ctx.operadora_plano_saude.Attach(operadoraPlanoSaude);
+                ctx.operadora_plano_saude.Remove(operadoraPlanoSaude);
+                ctx.SaveChanges();
                 
             }
             catch (Exception ex)
@@ -301,7 +360,11 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.operadora_plano_saude.Add(operadoraPlanoSaude);
+                ctx.SaveChanges();
+
+                return operadoraPlanoSaude;
             }
             catch (Exception ex)
             {
@@ -313,7 +376,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<OperadoraPlanoSaude> operadorasPlanoSaude = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.ProxyCreationEnabled = false;
+                ctx.Configuration.LazyLoadingEnabled = false;
+
+                using(ctx)
+                {
+                    operadorasPlanoSaude = ctx.operadora_plano_saude
+                        .Where(o => o.id == operadoraPlanoSaude.id).ToList();
+                }
+
+                return operadorasPlanoSaude;
             }
             catch (Exception ex)
             {
@@ -340,7 +414,11 @@ namespace Servidor
         {
             try
             {
-                
+                var ctx = new ContextoERP();
+                ctx.pais.Attach(pais);
+                ctx.pais.Remove(pais);
+                ctx.SaveChanges();
+
             }
             catch (Exception ex)
             {
@@ -352,7 +430,12 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.pais.Add(pais);
+                ctx.SaveChanges();
+
+                return pais;
+
             }
             catch (Exception ex)
             {
@@ -364,7 +447,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Pais> paises = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.ProxyCreationEnabled = false;
+                ctx.Configuration.LazyLoadingEnabled = false;
+
+                using (ctx)
+                {
+                    paises = ctx.pais.Where(p => p.id == pais.id).ToList();
+                }
+
+                return paises;
+
             }
             catch (Exception ex)
             {
@@ -391,7 +485,11 @@ namespace Servidor
         {
             try
             {
-                
+                var ctx = new ContextoERP();
+                ctx.produtoes.Attach(produto);
+                ctx.produtoes.Remove(produto);
+                ctx.SaveChanges();
+
             }
             catch (Exception ex)
             {
@@ -403,7 +501,12 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.produtoes.Add(produto);
+                ctx.SaveChanges();
+
+                return produto;
+
             }
             catch (Exception ex)
             {
@@ -415,7 +518,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Produto> produtos = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.ProxyCreationEnabled = false;
+                ctx.Configuration.LazyLoadingEnabled = false;
+
+                using (ctx)
+                {
+                    produtos = ctx.produtoes.Where(p => p.id == produto.id).ToList();
+                }
+
+                return produtos;
+
             }
             catch (Exception ex)
             {
@@ -427,7 +541,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                
+                var ctx = new ContextoERP();
+                ctx.Configuration.ProxyCreationEnabled = false;
+                ctx.Configuration.LazyLoadingEnabled = false;
+
+                using (ctx)
+                {
+                    produto = ctx.produtoes.Where(p => p.id == produto.id).FirstOrDefault();
+                }
+
+                return produto;
+
             }
             catch (Exception ex)
             {
@@ -454,6 +579,11 @@ namespace Servidor
         {
             try
             {
+
+                var ctx = new ContextoERP();
+                ctx.produto_subgrupo.Attach(produtoSubGrupo);
+                ctx.produto_subgrupo.Remove(produtoSubGrupo);
+                ctx.SaveChanges();
                 
             }
             catch (Exception ex)
@@ -466,7 +596,12 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.produto_subgrupo.Add(produtoSubGrupo);
+                ctx.SaveChanges();
+
+                return produtoSubGrupo;
+
             }
             catch (Exception ex)
             {
@@ -478,7 +613,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<ProdutoSubGrupo> produtosSubGrupo = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.ProxyCreationEnabled = false;
+                ctx.Configuration.LazyLoadingEnabled = false;
+
+                using (ctx)
+                {
+                    produtosSubGrupo = ctx.produto_subgrupo.Where(
+                        psg => psg.id == produtoSubGrupo.id).ToList();
+                }
+
+                return produtosSubGrupo;
             }
             catch (Exception ex)
             {
@@ -505,7 +651,12 @@ namespace Servidor
         {
             try
             {
-                
+
+                var ctx = new ContextoERP();
+                ctx.produto_marca.Attach(produtoMarca);
+                ctx.produto_marca.Remove(produtoMarca);
+                ctx.SaveChanges();
+
             }
             catch (Exception ex)
             {
@@ -517,7 +668,11 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.produto_marca.Add(produtoMarca);
+                ctx.SaveChanges();
+
+                return produtoMarca;
             }
             catch (Exception ex)
             {
@@ -529,7 +684,19 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<ProdutoMarca> produtosMarca = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    produtosMarca = ctx.produto_marca.Where(pm => pm.id == produtoMarca.id).ToList();
+                }
+
+                return produtosMarca;
+
             }
             catch (Exception ex)
             {
@@ -556,7 +723,10 @@ namespace Servidor
         {
             try
             {
-                
+                var ctx = new ContextoERP();
+                ctx.almoxarifadoes.Attach(almoxarifado);
+                ctx.almoxarifadoes.Remove(almoxarifado);
+                ctx.SaveChanges();
             }
             catch (Exception ex)
             {
@@ -568,7 +738,11 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.almoxarifadoes.Add(almoxarifado);
+                ctx.SaveChanges();
+
+                return almoxarifado;
             }
             catch (Exception ex)
             {
@@ -580,7 +754,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Almoxarifado> almoxarifados= null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    almoxarifados = ctx.almoxarifadoes.Where(a => a.id == almoxarifado.id).ToList();
+                }
+
+                return almoxarifados;
             }
             catch (Exception ex)
             {
@@ -608,7 +793,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Contador> contadores= null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    contadores  = ctx.contadors.Where(c => c.id == contador.id).ToList();
+                }
+
+                return contadores;
             }
             catch (Exception ex)
             {
@@ -635,7 +831,10 @@ namespace Servidor
         {
             try
             {
-                
+                var ctx = new ContextoERP();
+                ctx.pessoas.Attach(pessoa);
+                ctx.pessoas.Remove(pessoa);
+                ctx.SaveChanges();
             }
             catch (Exception ex)
             {
@@ -647,7 +846,11 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.pessoas.Add(pessoa);
+                ctx.SaveChanges();
+
+                return pessoa;
             }
             catch (Exception ex)
             {
@@ -659,7 +862,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Pessoa> pessoas = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    pessoas = ctx.pessoas.Where(p => p.id == pessoa.id).ToList();
+                }
+
+                return pessoas;
             }
             catch (Exception ex)
             {
@@ -686,7 +900,10 @@ namespace Servidor
         {
             try
             {
-
+                var ctx = new ContextoERP();
+                ctx.bancoes.Attach(banco);
+                ctx.bancoes.Remove(banco);
+                ctx.SaveChanges();
             }
             catch (Exception ex)
             {
@@ -698,7 +915,11 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.bancoes.Add(banco);
+                ctx.SaveChanges();
+
+                return banco;
             }
             catch (Exception ex)
             {
@@ -710,7 +931,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Banco> bancos = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    bancos = ctx.bancoes.Where(b => b.id == banco.id).ToList();
+                }
+
+                return bancos;
             }
             catch (Exception ex)
             {
@@ -736,7 +968,12 @@ namespace Servidor
         {
             try
             {
-                
+
+                var ctx = new ContextoERP();
+                ctx.unidade_produto.Attach(unidadeProduto);
+                ctx.unidade_produto.Remove(unidadeProduto);
+                ctx.SaveChanges();
+
             }
             catch (Exception ex)
             {
@@ -748,7 +985,11 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.unidade_produto.Add(unidadeProduto);
+                ctx.SaveChanges();
+
+                return unidadeProduto;
             }
             catch (Exception ex)
             {
@@ -760,7 +1001,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<UnidadeProduto> unidadeProdutos = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    unidadeProdutos = ctx.unidade_produto.Where(up => up.id == unidadeProduto.id).ToList();
+                }
+
+                return unidadeProdutos;
             }
             catch (Exception ex)
             {
@@ -787,6 +1039,11 @@ namespace Servidor
         {
             try
             {
+                var ctx = new ContextoERP();
+                ctx.colaboradors.Attach(colaborador);
+                ctx.colaboradors.Remove(colaborador);
+                ctx.SaveChanges();
+
                 return 0;
             }
             catch (Exception ex)
@@ -799,7 +1056,11 @@ namespace Servidor
         {
             try
             {
-                return null;
+                var ctx = new ContextoERP();
+                ctx.colaboradors.Add(colaborador);
+                ctx.SaveChanges();
+
+                return colaborador;
             }
             catch (Exception ex)
             {
@@ -811,7 +1072,18 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Colaborador> colaboradores = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    colaboradores = ctx.colaboradors.Where(c => c.id == colaborador.id).ToList();
+                }
+
+                return colaboradores;
             }
             catch (Exception ex)
             {

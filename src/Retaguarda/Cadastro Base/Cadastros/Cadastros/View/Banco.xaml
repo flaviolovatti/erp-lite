@@ -9,12 +9,29 @@
                 <viewBotoes:BarraInterna></viewBotoes:BarraInterna>
             </StackPanel>
             <Grid>
-                <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Text="{Binding BancoSelected.Codigo}" Height="23" Width="100" Margin="10,25,0,0"  />
-                <Label Content="Codigo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,6,0,0"  />
-                <TextBox VerticalAlignment="Top" Text="{Binding BancoSelected.Nome}" Height="23" Margin="118,25,10,0"  />
-                <Label Content="Nome" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,6,0,0"  />
-                <TextBox VerticalAlignment="Top" Text="{Binding BancoSelected.Url}" Height="23" Margin="10,76,10,0"  />
-                <Label Content="Url" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,57,0,0"  />
+                <TextBox 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Text="{Binding BancoSelected.codigo}" 
+                    Height="23" Width="100" Margin="10,25,0,0"  />
+                <Label Content="Codigo" 
+                       HorizontalAlignment="Left" 
+                       VerticalAlignment="Top" Margin="10,6,0,0"  />
+                <TextBox VerticalAlignment="Top" 
+                         Text="{Binding BancoSelected.nome}" 
+                         Height="23" Margin="118,25,10,0"  />
+                <Label Content="Nome" 
+                       HorizontalAlignment="Left" 
+                       VerticalAlignment="Top" Margin="118,6,0,0"  />
+                <TextBox 
+                    VerticalAlignment="Top" 
+                    Text="{Binding BancoSelected.url}" 
+                    Height="23" 
+                    Margin="10,76,10,0"  />
+                <Label Content="Url" 
+                       HorizontalAlignment="Left" 
+                       VerticalAlignment="Top" 
+                       Margin="10,57,0,0"  />
             </Grid>
         </DockPanel>
     </Grid>

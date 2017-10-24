@@ -28,7 +28,7 @@ namespace Servidor
 
                 using (ctx)
                 {
-
+                    
                     Resultado = ctx.empresas.Where(x => x.id.ToString().Equals(pFiltro)).FirstOrDefault();
 
                     /*
@@ -920,6 +920,15 @@ namespace Servidor
                 using (ctx)
                 {
                     ctx.bancoes.Add(banco);
+                    if(banco.id == 0)
+                    {
+                        ctx.Entry(banco).State = EntityState.Added;
+                    }
+                    else
+                    {
+                        ctx.Entry(banco).State = EntityState.Modified;
+                    }
+
                     ctx.SaveChanges();
                 }
 
@@ -1110,6 +1119,270 @@ namespace Servidor
         #endregion
 
         #endregion
+
+        #region === Tributação ===
+
+        #region Tribut_OperacaoFiscal
+        public int DeleteTribut_OperacaoFiscal(Tribut_OperacaoFiscal tribut_OperacaoFiscal)
+        {
+            try
+            {
+                int Resultado = -1;
+
+                var ctx = new ContextoERP();
+                ctx.tribut_operacao_fiscal.Attach(tribut_OperacaoFiscal);
+                ctx.tribut_operacao_fiscal.Remove(tribut_OperacaoFiscal);
+                ctx.SaveChanges();
+
+                return Resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Tribut_OperacaoFiscal SalvarAtualizarTribut_OperacaoFiscal(Tribut_OperacaoFiscal tribut_OperacaoFiscal)
+        {
+            try
+            {
+                var ctx = new ContextoERP();
+                ctx.tribut_operacao_fiscal.Add(tribut_OperacaoFiscal);
+                ctx.SaveChanges();
+
+                return tribut_OperacaoFiscal;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Tribut_OperacaoFiscal> SelectTribut_OperacaoFiscal(Tribut_OperacaoFiscal tribut_OperacaoFiscal)
+        {
+            try
+            {
+                IList<Tribut_OperacaoFiscal> operacoes_fiscais = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+                    operacoes_fiscais = ctx.tribut_operacao_fiscal
+                        .Where(opf => opf.id == tribut_OperacaoFiscal.id).ToList();
+                }
+
+                return operacoes_fiscais;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Tribut_OperacaoFiscal> SelectTribut_OperacaoFiscalPagina(int primeiroResultado, int quantidadeResultados, Tribut_OperacaoFiscal tribut_OperacaoFiscal)
+        {
+            return null;
+        }
+
+        #endregion
+
+        #region TributGrupoTributario
+        public void DeleteTribut_GrupoTributario(Tribut_GrupoTributario tribut_GrupoTributario)
+        {
+            try
+            {
+                var ctx = new ContextoERP();
+                ctx.tribut_grupo_tributario.Attach(tribut_GrupoTributario);
+                ctx.tribut_grupo_tributario.Remove(tribut_GrupoTributario);
+                ctx.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Tribut_GrupoTributario SalvarAtualizarTribut_GrupoTributario(Tribut_GrupoTributario tribut_GrupoTributario)
+        {
+            try
+            {
+                var ctx = new ContextoERP();
+                ctx.tribut_grupo_tributario.Attach(tribut_GrupoTributario);
+                ctx.tribut_grupo_tributario.Remove(tribut_GrupoTributario);
+                ctx.SaveChanges();
+
+                return tribut_GrupoTributario;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Tribut_GrupoTributario> SelectTribut_GrupoTributario(Tribut_GrupoTributario tribut_GrupoTributario)
+        {
+            try
+            {
+                IList<Tribut_GrupoTributario> grupos_tributarios = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+                    grupos_tributarios = ctx.tribut_grupo_tributario
+                        .Where(gt => gt.id == tribut_GrupoTributario.id).ToList();
+                }
+
+                return grupos_tributarios;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Tribut_GrupoTributario> SelectTribut_GrupoTributarioPagina(int primeiroResultado, int quantidadeResultados, Tribut_GrupoTributario tribut_GrupoTributario)
+        {
+            return null;
+        }
+
+
+        #endregion
+
+        #region Tribut_ICMSCustomCabecalho
+        public void DeleteTribut_ICMSCustomCabecalho(Tribut_ICMSCustomCabecalho tribut_ICMSCustomCabecalho)
+        {
+            try
+            {
+                var ctx = new ContextoERP();
+                ctx.tribut_icms_custom_cab.Attach(tribut_ICMSCustomCabecalho);
+                ctx.tribut_icms_custom_cab.Remove(tribut_ICMSCustomCabecalho);
+                ctx.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        public Tribut_ICMSCustomCabecalho SalvarAtualizarTribut_ICMSCustomCabecalho(Tribut_ICMSCustomCabecalho tribut_ICMSCustomCabecalho)
+        {
+            try
+            {
+                var ctx = new ContextoERP();
+                ctx.tribut_icms_custom_cab.Add(tribut_ICMSCustomCabecalho);
+                ctx.SaveChanges();
+
+                return tribut_ICMSCustomCabecalho;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+
+        public IList<Tribut_ICMSCustomCabecalho> SelectTribut_ICMSCustomCabecalho(Tribut_ICMSCustomCabecalho tribut_ICMSCustomCabecalho)
+        {
+            try
+            {
+                IList<Tribut_ICMSCustomCabecalho> cabecalhos = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+                    cabecalhos = ctx.tribut_icms_custom_cab
+                        .Where(cab => cab.id == tribut_ICMSCustomCabecalho.id).ToList();
+                }
+
+                return cabecalhos;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Tribut_ICMSCustomCabecalho> SelectTribut_ICMSCustomCabecalhoPagina(int primeiroResultado, int quantidadeResultados, Tribut_ICMSCustomCabecalho tribut_ICMSCustomCabecalho)
+        {
+            return null;
+        }
+
+
+        #endregion
+
+        /* A SER ANALISADO POSTERIORMENTE
+        #region ViewTributacaoCofins
+        public ViewTributacaoCofinsDTO SelectViewTributacaoCofins(ViewTributacaoCofinsDTO viewTributacaoCofins)
+        {
+            try
+            {
+                ViewTributacaoCofinsDTO Resultado = null;
+                using (ISession Session = NHibernateHelper.GetSessionFactory().OpenSession())
+                {
+                    NHibernateDAL<ViewTributacaoCofinsDTO> DAL = new NHibernateDAL<ViewTributacaoCofinsDTO>(Session);
+                    Resultado = DAL.SelectObjeto(viewTributacaoCofins);
+                }
+                return Resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region ViewTributacaoPis
+        public ViewTributacaoPisDTO SelectViewTributacaoPis(ViewTributacaoPisDTO viewTributacaoPis)
+        {
+            try
+            {
+                ViewTributacaoPisDTO Resultado = null;
+                using (ISession Session = NHibernateHelper.GetSessionFactory().OpenSession())
+                {
+                    NHibernateDAL<ViewTributacaoPisDTO> DAL = new NHibernateDAL<ViewTributacaoPisDTO>(Session);
+                    Resultado = DAL.SelectObjeto(viewTributacaoPis);
+                }
+                return Resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
+        #region ViewTributacaoIcms
+        public ViewTributacaoIcmsDTO SelectViewTributacaoIcms(ViewTributacaoIcmsDTO viewTributacaoIcms)
+        {
+            try
+            {
+                ViewTributacaoIcmsDTO Resultado = null;
+                using (ISession Session = NHibernateHelper.GetSessionFactory().OpenSession())
+                {
+                    NHibernateDAL<ViewTributacaoIcmsDTO> DAL = new NHibernateDAL<ViewTributacaoIcmsDTO>(Session);
+                    Resultado = DAL.SelectObjeto(viewTributacaoIcms);
+                }
+                return Resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+        */
+        #endregion
+
 
         /*
                 #region === Comum ===
@@ -6503,7 +6776,8 @@ namespace Servidor
 
                 #endregion 
         */
-
+        
+        /*
         #region Banco EF
         public void DeleteBancoEF(BANCO banco)
         {
@@ -6519,7 +6793,7 @@ namespace Servidor
                 throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
             }
         }
-
+        
 
         public BANCO SalvarAtualizarBancoEF(BANCO banco)
         {
@@ -6589,6 +6863,6 @@ namespace Servidor
             }
         }
         #endregion 
-
+    */
     }
 }

@@ -48,9 +48,9 @@ namespace Servidor.Model
             quadro_societario = new HashSet<quadro_societario>();
             setors = new HashSet<setor>();
             talonario_cheque = new HashSet<talonario_cheque>();
-            tribut_grupo_tributario = new HashSet<tribut_grupo_tributario>();
-            tribut_icms_custom_cab = new HashSet<tribut_icms_custom_cab>();
-            tribut_operacao_fiscal = new HashSet<tribut_operacao_fiscal>();
+            tribut_grupo_tributario = new HashSet<Tribut_GrupoTributario>();
+            tribut_icms_custom_cab = new HashSet<Tribut_ICMSCustomCabecalho>();
+            tribut_operacao_fiscal = new HashSet<Tribut_OperacaoFiscal>();
             venda_cabecalho = new HashSet<venda_cabecalho>();
             venda_condicoes_pagamento = new HashSet<venda_condicoes_pagamento>();
             venda_orcamento_cabecalho = new HashSet<venda_orcamento_cabecalho>();
@@ -252,13 +252,13 @@ namespace Servidor.Model
         public virtual ICollection<talonario_cheque> talonario_cheque { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tribut_grupo_tributario> tribut_grupo_tributario { get; set; }
+        public virtual ICollection<Tribut_GrupoTributario> tribut_grupo_tributario { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tribut_icms_custom_cab> tribut_icms_custom_cab { get; set; }
+        public virtual ICollection<Tribut_ICMSCustomCabecalho> tribut_icms_custom_cab { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tribut_operacao_fiscal> tribut_operacao_fiscal { get; set; }
+        public virtual ICollection<Tribut_OperacaoFiscal> tribut_operacao_fiscal { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<venda_cabecalho> venda_cabecalho { get; set; }

@@ -7,22 +7,23 @@ namespace Cadastros.Model
     public class ServicoCadastros : ServiceServidor
     {
 
-        [SearchWindowDataSource(typeof(ProdutoDTO), new string[] { "Id", "Nome" }, new string[] { "Id", "Nome" })]
-        public new IList<ProdutoDTO> SelectProduto(ProdutoDTO dtoPesquisa)
+        [SearchWindowDataSource(typeof(Produto), new string[] { "Id", "Nome" }, new string[] { "Id", "Nome" })]
+        public new IList<Produto> SelectProduto(Produto dtoPesquisa)
         {
             return base.SelectProduto(dtoPesquisa);
         }
 
+        /*
         [SearchWindowDataSource(typeof(CboDTO), new string[] { "Id", "Nome", "Codigo", "Codigo1994" }, new string[] { "Id", "Nome", "Codigo", "Codigo1994" })]
         public new IList<CboDTO> SelectCbo(CboDTO dtoPesquisa)
         {
             return base.SelectCbo(dtoPesquisa);
         }
-
-        [SearchWindowDataSource(typeof(AtividadeForCliDTO))]
-        public new IList<AtividadeForCliDTO> SelectAtividadeForCli(AtividadeForCliDTO atividadeforcli)
+        */
+        [SearchWindowDataSource(typeof(AtividadeFornecedorCliente))]
+        public new IList<AtividadeFornecedorCliente> SelectAtividadeFornecedorCliente(AtividadeFornecedorCliente atividadeforcli)
         {
-            return base.SelectAtividadeForCli(atividadeforcli);
+            return base.SelectAtividadeFornecedorCliente(atividadeforcli);
         }
 
         /*
@@ -33,8 +34,8 @@ namespace Cadastros.Model
         }
         */
 
-        [SearchWindowDataSource(typeof(EstadoCivilDTO))]
-        public new IList<EstadoCivilDTO> SelectEstadoCivil(EstadoCivilDTO estadocivil)
+        [SearchWindowDataSource(typeof(EstadoCivil))]
+        public new IList<EstadoCivil> SelectEstadoCivil(EstadoCivil estadocivil)
         {
             return base.SelectEstadoCivil(estadocivil);
         }
@@ -63,8 +64,8 @@ namespace Cadastros.Model
         }
         */
 
-        [SearchWindowDataSource(typeof(CargoDTO))]
-        public new IList<CargoDTO> SelectCargo(CargoDTO Cargo)
+        [SearchWindowDataSource(typeof(Cargo))]
+        public new IList<Cargo> SelectCargo(Cargo Cargo)
         {
             return base.SelectCargo(Cargo);
         }
@@ -102,40 +103,40 @@ namespace Cadastros.Model
         }
         */
 
-        [SearchWindowDataSource(typeof(ProdutoSubGrupoDTO))]
-        public new IList<ProdutoSubGrupoDTO> SelectProdutoSubGrupo(ProdutoSubGrupoDTO ProdutoSubGrupo)
+        [SearchWindowDataSource(typeof(ProdutoSubGrupo))]
+        public new IList<ProdutoSubGrupo> SelectProdutoSubGrupo(ProdutoSubGrupo ProdutoSubGrupo)
         {
             return base.SelectProdutoSubGrupo(ProdutoSubGrupo);
         }
 
-        [SearchWindowDataSource(typeof(ProdutoMarcaDTO))]
-        public new IList<ProdutoMarcaDTO> SelectProdutoMarca(ProdutoMarcaDTO ProdutoMarca)
+        [SearchWindowDataSource(typeof(ProdutoMarca))]
+        public new IList<ProdutoMarca> SelectProdutoMarca(ProdutoMarca ProdutoMarca)
         {
             return base.SelectProdutoMarca(ProdutoMarca);
         }
 
-        [SearchWindowDataSource(typeof(TributGrupoTributarioDTO))]
-        public new IList<TributGrupoTributarioDTO> SelectTributGrupoTributario(TributGrupoTributarioDTO TributGrupoTributario)
+        [SearchWindowDataSource(typeof(Tribut_GrupoTributario))]
+        public new IList<Tribut_GrupoTributario> SelectTribut_GrupoTributario(Tribut_GrupoTributario Tribut_GrupoTributario)
         {
-            return base.SelectTributGrupoTributario(TributGrupoTributario);
+            return base.SelectTribut_GrupoTributario(Tribut_GrupoTributario);
         }
 
-        [SearchWindowDataSource(typeof(AlmoxarifadoDTO))]
-        public new IList<AlmoxarifadoDTO> SelectAlmoxarifado(AlmoxarifadoDTO Almoxarifado)
+        [SearchWindowDataSource(typeof(Almoxarifado))]
+        public new IList<Almoxarifado> SelectAlmoxarifado(Almoxarifado Almoxarifado)
         {
             return base.SelectAlmoxarifado(Almoxarifado);
         }
 
-        [SearchWindowDataSource(typeof(UnidadeProdutoDTO))]
-        public new IList<UnidadeProdutoDTO> SelectUnidadeProduto(UnidadeProdutoDTO UnidadeProduto)
+        [SearchWindowDataSource(typeof(UnidadeProduto))]
+        public new IList<UnidadeProduto> SelectUnidadeProduto(UnidadeProduto UnidadeProduto)
         {
             return base.SelectUnidadeProduto(UnidadeProduto);
         }
 
-        [SearchWindowDataSource(typeof(TributIcmsCustomCabDTO))]
-        public new IList<TributIcmsCustomCabDTO> SelectTributIcmsCustomCab(TributIcmsCustomCabDTO TributIcmsCustomCab)
+        [SearchWindowDataSource(typeof(Tribut_ICMSCustomCabecalho))]
+        public new IList<Tribut_ICMSCustomCabecalho> SelectTribut_ICMSCustomCabecalho(Tribut_ICMSCustomCabecalho Tribut_ICMSCustomCabecalho)
         {
-            return base.SelectTributIcmsCustomCab(TributIcmsCustomCab);
+            return base.SelectTribut_ICMSCustomCabecalho(Tribut_ICMSCustomCabecalho);
         }
     }
 }

@@ -14,8 +14,8 @@ namespace Cadastros.ViewModel
     {
 
         #region Variáveis
-        public ObservableCollection<EstadoCivilDTO> ListaEstadoCivil { get; set; }
-        private EstadoCivilDTO _EstadoCivilSelected;
+        public ObservableCollection<EstadoCivil> ListaEstadoCivil { get; set; }
+        private EstadoCivil _EstadoCivilSelected;
         #endregion
 
         #region Construtor
@@ -23,7 +23,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                ListaEstadoCivil = new ObservableCollection<EstadoCivilDTO>();
+                ListaEstadoCivil = new ObservableCollection<EstadoCivil>();
                 IndiceNavegacao = 0;
                 QuantidadeCarregada = 0;
                 Filtro = "";
@@ -37,7 +37,7 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Infra
-        public EstadoCivilDTO EstadoCivilSelected
+        public EstadoCivil EstadoCivilSelected
         {
             get { return _EstadoCivilSelected; }
             set
@@ -78,17 +78,17 @@ namespace Cadastros.ViewModel
                     else if (pagina < 0 && IndiceNavegacao != 0)
                         IndiceNavegacao -= QuantidadePagina;
 
-                    EstadoCivilDTO EstadoCivil = new EstadoCivilDTO();
+                    EstadoCivil EstadoCivil = new EstadoCivil();
                     if (!Filtro.Trim().Equals(""))
                     {
-                        EstadoCivil.Nome = Filtro;
+                        EstadoCivil.nome = Filtro;
                     }
 
-                    IList<EstadoCivilDTO> ListaServ = Servico.SelectEstadoCivilPagina(IndiceNavegacao, true, QuantidadePagina, true, EstadoCivil);
+                    IList<EstadoCivil> ListaServ = Servico.SelectEstadoCivilPagina(IndiceNavegacao, true, QuantidadePagina, true, EstadoCivil);
 
                     ListaEstadoCivil.Clear();
 
-                    foreach (EstadoCivilDTO objAdd in ListaServ)
+                    foreach (EstadoCivil objAdd in ListaServ)
                     {
                         ListaEstadoCivil.Add(objAdd);
                     }
@@ -125,7 +125,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                EstadoCivilSelected = new EstadoCivilDTO();
+                EstadoCivilSelected = new EstadoCivil();
                 IsEditar = true;
             }
             catch (Exception ex)

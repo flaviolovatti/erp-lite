@@ -252,7 +252,7 @@ namespace Servidor.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<nfe_acesso_xml> nfe_acesso_xml { get; set; }
 
-        public virtual tribut_operacao_fiscal tribut_operacao_fiscal { get; set; }
+        public virtual Tribut_OperacaoFiscal tribut_operacao_fiscal { get; set; }
 
         public virtual venda_cabecalho venda_cabecalho { get; set; }
 

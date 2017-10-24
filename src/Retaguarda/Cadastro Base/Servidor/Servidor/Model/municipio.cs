@@ -31,7 +31,7 @@ namespace Servidor.Model
         [StringLength(2)]
         public string uf_sigla { get; set; }
 
-        public virtual uf uf { get; set; }
+        public virtual UF uf { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<transportadora_municipio> transportadora_municipio { get; set; }

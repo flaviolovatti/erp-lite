@@ -14,8 +14,8 @@ namespace Cadastros.ViewModel
     {
 
         #region Variáveis
-        public ObservableCollection<PaisDTO> ListaPais { get; set; }
-        private PaisDTO _PaisSelected;
+        public ObservableCollection<Pais> ListaPais { get; set; }
+        private Pais _PaisSelected;
         #endregion
 
         #region Construtor
@@ -23,7 +23,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                ListaPais = new ObservableCollection<PaisDTO>();
+                ListaPais = new ObservableCollection<Pais>();
                 IndiceNavegacao = 0;
                 QuantidadeCarregada = 0;
                 Filtro = "";
@@ -38,7 +38,7 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Infra
-        public PaisDTO PaisSelected
+        public Pais PaisSelected
         {
             get { return _PaisSelected; }
             set
@@ -79,17 +79,17 @@ namespace Cadastros.ViewModel
                     else if (pagina < 0 && IndiceNavegacao != 0)
                         IndiceNavegacao -= QuantidadePagina;
 
-                    PaisDTO Pais = new PaisDTO();
+                    Pais Pais = new Pais();
                     if (!Filtro.Trim().Equals(""))
                     {
-                        Pais.NomePtbr = Filtro;
+                        Pais.nome_ptbr = Filtro;
                     }
 
-                    IList<PaisDTO> ListaServ = Servico.SelectPaisPagina(IndiceNavegacao, true, QuantidadePagina, true, Pais);
+                    IList<Pais> ListaServ = Servico.SelectPaisPagina(IndiceNavegacao, true, QuantidadePagina, true, Pais);
 
                     ListaPais.Clear();
 
-                    foreach (PaisDTO objAdd in ListaServ)
+                    foreach (Pais objAdd in ListaServ)
                     {
                         ListaPais.Add(objAdd);
                     }
@@ -126,7 +126,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                PaisSelected = new PaisDTO();
+                PaisSelected = new Pais();
                 IsEditar = true;
             }
             catch (Exception ex)

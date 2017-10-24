@@ -33,6 +33,6 @@ namespace Servidor.Model
 
         public virtual tipo_receita_dipi tipo_receita_dipi { get; set; }
 
-        public virtual tribut_configura_of_gt tribut_configura_of_gt { get; set; }
+        public virtual Tribut_ConfiguraOperacaoFiscalGrupoTributario tribut_configura_of_gt { get; set; }
     }
 }

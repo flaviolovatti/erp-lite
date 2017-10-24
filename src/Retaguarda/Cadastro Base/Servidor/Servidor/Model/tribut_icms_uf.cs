@@ -7,7 +7,7 @@ namespace Servidor.Model
     using System.Data.Entity.Spatial;
 
     [Table("public.tribut_icms_uf")]
-    public partial class tribut_icms_uf
+    public partial class Tribut_ICMS_UF
     {
         public int id { get; set; }
 
@@ -54,6 +54,6 @@ namespace Servidor.Model
 
         public decimal? fcp { get; set; }
 
-        public virtual tribut_configura_of_gt tribut_configura_of_gt { get; set; }
+        public virtual Tribut_ConfiguraOperacaoFiscalGrupoTributario tribut_configura_of_gt { get; set; }
     }
 }

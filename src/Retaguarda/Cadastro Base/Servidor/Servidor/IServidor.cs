@@ -218,6 +218,64 @@ namespace Servidor
         #endregion
 
 
+        #region === Tributação ===
+
+        #region Tribut_OperacaoFiscal
+        [OperationContract]
+        int DeleteTribut_OperacaoFiscal(Tribut_OperacaoFiscal tribut_OperacaoFiscal);
+        [OperationContract]
+        Tribut_OperacaoFiscal SalvarAtualizarTribut_OperacaoFiscal(Tribut_OperacaoFiscal tribut_OperacaoFiscal);
+        [OperationContract]
+        IList<Tribut_OperacaoFiscal> SelectTribut_OperacaoFiscal(Tribut_OperacaoFiscal tribut_OperacaoFiscal);
+        [OperationContract]
+        IList<Tribut_OperacaoFiscal> SelectTribut_OperacaoFiscalPagina(int primeiroResultado, 
+                                                                        int quantidadeResultados, 
+                                                                        Tribut_OperacaoFiscal tribut_OperacaoFiscal);
+        #endregion
+
+        #region Tribut_GrupoTributario
+        [OperationContract]
+        void DeleteTribut_GrupoTributario(Tribut_GrupoTributario tribut_GrupoTributario);
+        [OperationContract]
+        Tribut_GrupoTributario SalvarAtualizarTribut_GrupoTributario(Tribut_GrupoTributario tribut_GrupoTributario);
+        [OperationContract]
+        IList<Tribut_GrupoTributario> SelectTribut_GrupoTributario(Tribut_GrupoTributario tribut_GrupoTributario);
+        [OperationContract]
+        IList<Tribut_GrupoTributario> SelectTribut_GrupoTributarioPagina(int primeiroResultado, 
+                                                                            int quantidadeResultados, 
+                                                                            Tribut_GrupoTributario tribut_GrupoTributario);
+        #endregion
+
+        #region Tribut_ICMSCustomCabecalho
+        [OperationContract]
+        void DeleteTribut_ICMSCustomCabecalho(Tribut_ICMSCustomCabecalho tributIcmsCustomCab);
+        [OperationContract]
+        Tribut_ICMSCustomCabecalho SalvarAtualizarTribut_ICMSCustomCabecalho(Tribut_ICMSCustomCabecalho tribut_ICMSCustomCabecalho);
+        [OperationContract]
+        IList<Tribut_ICMSCustomCabecalho> SelectTribut_ICMSCustomCabecalho(Tribut_ICMSCustomCabecalho tribut_ICMSCustomCabecalho);
+        [OperationContract]
+        IList<Tribut_ICMSCustomCabecalho> SelectTribut_ICMSCustomCabecalhoPagina(int primeiroResultado, 
+                                                                                    int quantidadeResultados, 
+                                                                                    Tribut_ICMSCustomCabecalho tribut_ICMSCustomCabecalho);
+        #endregion
+        
+        /* A SER ANALISADO POSTERIORMENTE 
+        #region ViewTributacaoCofins
+        [OperationContract]
+        ViewTributacaoCofinsDTO SelectViewTributacaoCofins(ViewTributacaoCofinsDTO viewTributacaoCofins);
+        #endregion
+
+        #region ViewTributacaoPis
+        [OperationContract]
+        ViewTributacaoPisDTO SelectViewTributacaoPis(ViewTributacaoPisDTO viewTributacaoPis);
+        #endregion
+
+        #region ViewTributacaoIcms
+        [OperationContract]
+        ViewTributacaoIcmsDTO SelectViewTributacaoIcms(ViewTributacaoIcmsDTO viewTributacaoIcms);
+        #endregion */
+
+        #endregion
 
         /*
                 #region === Comum ===
@@ -981,6 +1039,7 @@ namespace Servidor
                 #endregion
         */
 
+        /*
         #region Banco EF
         [OperationContract]
         void DeleteBancoEF(BANCO banco);
@@ -991,7 +1050,7 @@ namespace Servidor
         [OperationContract]
         IList<BANCO> SelectBancoPaginaEF(int primeiroResultado, int quantidadeResultados, BANCO banco);
         #endregion
-
+        */
 
     }
 

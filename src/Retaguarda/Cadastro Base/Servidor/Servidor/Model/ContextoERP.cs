@@ -291,17 +291,17 @@ namespace Servidor.Model
         public virtual DbSet<tipo_relacionamento> tipo_relacionamento { get; set; }
         public virtual DbSet<transportadora> transportadoras { get; set; }
         public virtual DbSet<transportadora_municipio> transportadora_municipio { get; set; }
-        public virtual DbSet<tribut_cofins_cod_apuracao> tribut_cofins_cod_apuracao { get; set; }
-        public virtual DbSet<tribut_configura_of_gt> tribut_configura_of_gt { get; set; }
-        public virtual DbSet<tribut_grupo_tributario> tribut_grupo_tributario { get; set; }
-        public virtual DbSet<tribut_icms_custom_cab> tribut_icms_custom_cab { get; set; }
-        public virtual DbSet<tribut_icms_custom_det> tribut_icms_custom_det { get; set; }
-        public virtual DbSet<tribut_icms_uf> tribut_icms_uf { get; set; }
+        public virtual DbSet<Tribut_CofinsCodigoApuracao> tribut_cofins_cod_apuracao { get; set; }
+        public virtual DbSet<Tribut_ConfiguraOperacaoFiscalGrupoTributario> tribut_configura_of_gt { get; set; }
+        public virtual DbSet<Tribut_GrupoTributario> tribut_grupo_tributario { get; set; }
+        public virtual DbSet<Tribut_ICMSCustomCabecalho> tribut_icms_custom_cab { get; set; }
+        public virtual DbSet<Tribut_ICMSCustomDetalhe> tribut_icms_custom_det { get; set; }
+        public virtual DbSet<Tribut_ICMS_UF> tribut_icms_uf { get; set; }
         public virtual DbSet<tribut_ipi_dipi> tribut_ipi_dipi { get; set; }
-        public virtual DbSet<tribut_iss> tribut_iss { get; set; }
-        public virtual DbSet<tribut_operacao_fiscal> tribut_operacao_fiscal { get; set; }
-        public virtual DbSet<tribut_pis_cod_apuracao> tribut_pis_cod_apuracao { get; set; }
-        public virtual DbSet<uf> ufs { get; set; }
+        public virtual DbSet<Tribut_ISS> tribut_iss { get; set; }
+        public virtual DbSet<Tribut_OperacaoFiscal> tribut_operacao_fiscal { get; set; }
+        public virtual DbSet<Tribut_PIS_CodigoApuracao> tribut_pis_cod_apuracao { get; set; }
+        public virtual DbSet<UF> ufs { get; set; }
         public virtual DbSet<unidade_conversao> unidade_conversao { get; set; }
         public virtual DbSet<UnidadeProduto> unidade_produto { get; set; }
         public virtual DbSet<Usuario> usuarios { get; set; }
@@ -5468,221 +5468,221 @@ namespace Servidor.Model
                 .WithOptional(e => e.transportadora)
                 .HasForeignKey(e => e.id_transportadora);
 
-            modelBuilder.Entity<tribut_cofins_cod_apuracao>()
+            modelBuilder.Entity<Tribut_CofinsCodigoApuracao>()
                 .Property(e => e.cst_cofins)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_cofins_cod_apuracao>()
+            modelBuilder.Entity<Tribut_CofinsCodigoApuracao>()
                 .Property(e => e.efd_tabela_435)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_cofins_cod_apuracao>()
+            modelBuilder.Entity<Tribut_CofinsCodigoApuracao>()
                 .Property(e => e.modalidade_base_calculo)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_cofins_cod_apuracao>()
+            modelBuilder.Entity<Tribut_CofinsCodigoApuracao>()
                 .Property(e => e.porcento_base_calculo)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_cofins_cod_apuracao>()
+            modelBuilder.Entity<Tribut_CofinsCodigoApuracao>()
                 .Property(e => e.aliquota_porcento)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_cofins_cod_apuracao>()
+            modelBuilder.Entity<Tribut_CofinsCodigoApuracao>()
                 .Property(e => e.aliquota_unidade)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_cofins_cod_apuracao>()
+            modelBuilder.Entity<Tribut_CofinsCodigoApuracao>()
                 .Property(e => e.valor_preco_maximo)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_cofins_cod_apuracao>()
+            modelBuilder.Entity<Tribut_CofinsCodigoApuracao>()
                 .Property(e => e.valor_pauta_fiscal)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_configura_of_gt>()
+            modelBuilder.Entity<Tribut_ConfiguraOperacaoFiscalGrupoTributario>()
                 .HasMany(e => e.tribut_cofins_cod_apuracao)
                 .WithRequired(e => e.tribut_configura_of_gt)
                 .HasForeignKey(e => e.id_tribut_configura_of_gt)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<tribut_configura_of_gt>()
+            modelBuilder.Entity<Tribut_ConfiguraOperacaoFiscalGrupoTributario>()
                 .HasMany(e => e.tribut_icms_uf)
                 .WithRequired(e => e.tribut_configura_of_gt)
                 .HasForeignKey(e => e.id_tribut_configura_of_gt)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<tribut_configura_of_gt>()
+            modelBuilder.Entity<Tribut_ConfiguraOperacaoFiscalGrupoTributario>()
                 .HasMany(e => e.tribut_ipi_dipi)
                 .WithRequired(e => e.tribut_configura_of_gt)
                 .HasForeignKey(e => e.id_tribut_configura_of_gt)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<tribut_configura_of_gt>()
+            modelBuilder.Entity<Tribut_ConfiguraOperacaoFiscalGrupoTributario>()
                 .HasMany(e => e.tribut_pis_cod_apuracao)
                 .WithRequired(e => e.tribut_configura_of_gt)
                 .HasForeignKey(e => e.id_tribut_configura_of_gt)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<tribut_grupo_tributario>()
+            modelBuilder.Entity<Tribut_GrupoTributario>()
                 .Property(e => e.origem_mercadoria)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_grupo_tributario>()
+            modelBuilder.Entity<Tribut_GrupoTributario>()
                 .HasMany(e => e.produtoes)
                 .WithOptional(e => e.tribut_grupo_tributario)
                 .HasForeignKey(e => e.id_grupo_tributario);
 
-            modelBuilder.Entity<tribut_grupo_tributario>()
+            modelBuilder.Entity<Tribut_GrupoTributario>()
                 .HasMany(e => e.tribut_configura_of_gt)
                 .WithRequired(e => e.tribut_grupo_tributario)
                 .HasForeignKey(e => e.id_tribut_grupo_tributario)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<tribut_icms_custom_cab>()
+            modelBuilder.Entity<Tribut_ICMSCustomCabecalho>()
                 .Property(e => e.origem_mercadoria)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_custom_cab>()
+            modelBuilder.Entity<Tribut_ICMSCustomCabecalho>()
                 .HasMany(e => e.produtoes)
                 .WithOptional(e => e.tribut_icms_custom_cab)
                 .HasForeignKey(e => e.id_tribut_icms_custom_cab);
 
-            modelBuilder.Entity<tribut_icms_custom_cab>()
+            modelBuilder.Entity<Tribut_ICMSCustomCabecalho>()
                 .HasMany(e => e.tribut_icms_custom_det)
                 .WithRequired(e => e.tribut_icms_custom_cab)
                 .HasForeignKey(e => e.id_tribut_icms_custom_cab)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.uf_destino)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.csosn_b)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.cst_b)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.modalidade_bc)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.aliquota)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.valor_pauta)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.valor_preco_maximo)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.mva)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.porcento_bc)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.modalidade_bc_st)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.aliquota_interna_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.aliquota_interestadual_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.porcento_bc_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.aliquota_icms_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.valor_pauta_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_custom_det>()
+            modelBuilder.Entity<Tribut_ICMSCustomDetalhe>()
                 .Property(e => e.valor_preco_maximo_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.uf_destino)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.csosn_b)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.cst_b)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.modalidade_bc)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.aliquota)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.valor_pauta)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.valor_preco_maximo)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.mva)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.porcento_bc)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.modalidade_bc_st)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.aliquota_interna_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.aliquota_interestadual_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.porcento_bc_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.aliquota_icms_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.valor_pauta_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.valor_preco_maximo_st)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_icms_uf>()
+            modelBuilder.Entity<Tribut_ICMS_UF>()
                 .Property(e => e.fcp)
                 .HasPrecision(18, 6);
 
@@ -5714,93 +5714,93 @@ namespace Servidor.Model
                 .Property(e => e.valor_pauta_fiscal)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_iss>()
+            modelBuilder.Entity<Tribut_ISS>()
                 .Property(e => e.modalidade_base_calculo)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_iss>()
+            modelBuilder.Entity<Tribut_ISS>()
                 .Property(e => e.porcento_base_calculo)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_iss>()
+            modelBuilder.Entity<Tribut_ISS>()
                 .Property(e => e.aliquota_porcento)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_iss>()
+            modelBuilder.Entity<Tribut_ISS>()
                 .Property(e => e.aliquota_unidade)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_iss>()
+            modelBuilder.Entity<Tribut_ISS>()
                 .Property(e => e.valor_preco_maximo)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_iss>()
+            modelBuilder.Entity<Tribut_ISS>()
                 .Property(e => e.valor_pauta_fiscal)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_iss>()
+            modelBuilder.Entity<Tribut_ISS>()
                 .Property(e => e.codigo_tributacao)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_operacao_fiscal>()
+            modelBuilder.Entity<Tribut_OperacaoFiscal>()
                 .HasMany(e => e.clientes)
                 .WithOptional(e => e.tribut_operacao_fiscal)
                 .HasForeignKey(e => e.id_operacao_fiscal);
 
-            modelBuilder.Entity<tribut_operacao_fiscal>()
+            modelBuilder.Entity<Tribut_OperacaoFiscal>()
                 .HasMany(e => e.nfe_cabecalho)
                 .WithOptional(e => e.tribut_operacao_fiscal)
                 .HasForeignKey(e => e.id_tribut_operacao_fiscal);
 
-            modelBuilder.Entity<tribut_operacao_fiscal>()
+            modelBuilder.Entity<Tribut_OperacaoFiscal>()
                 .HasMany(e => e.tribut_configura_of_gt)
                 .WithRequired(e => e.tribut_operacao_fiscal)
                 .HasForeignKey(e => e.id_tribut_operacao_fiscal)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<tribut_operacao_fiscal>()
+            modelBuilder.Entity<Tribut_OperacaoFiscal>()
                 .HasMany(e => e.tribut_iss)
                 .WithRequired(e => e.tribut_operacao_fiscal)
                 .HasForeignKey(e => e.id_tribut_operacao_fiscal)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<tribut_pis_cod_apuracao>()
+            modelBuilder.Entity<Tribut_PIS_CodigoApuracao>()
                 .Property(e => e.cst_pis)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_pis_cod_apuracao>()
+            modelBuilder.Entity<Tribut_PIS_CodigoApuracao>()
                 .Property(e => e.efd_tabela_435)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_pis_cod_apuracao>()
+            modelBuilder.Entity<Tribut_PIS_CodigoApuracao>()
                 .Property(e => e.modalidade_base_calculo)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tribut_pis_cod_apuracao>()
+            modelBuilder.Entity<Tribut_PIS_CodigoApuracao>()
                 .Property(e => e.porcento_base_calculo)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_pis_cod_apuracao>()
+            modelBuilder.Entity<Tribut_PIS_CodigoApuracao>()
                 .Property(e => e.aliquota_porcento)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_pis_cod_apuracao>()
+            modelBuilder.Entity<Tribut_PIS_CodigoApuracao>()
                 .Property(e => e.aliquota_unidade)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_pis_cod_apuracao>()
+            modelBuilder.Entity<Tribut_PIS_CodigoApuracao>()
                 .Property(e => e.valor_preco_maximo)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<tribut_pis_cod_apuracao>()
+            modelBuilder.Entity<Tribut_PIS_CodigoApuracao>()
                 .Property(e => e.valor_pauta_fiscal)
                 .HasPrecision(18, 6);
 
-            modelBuilder.Entity<uf>()
+            modelBuilder.Entity<UF>()
                 .Property(e => e.sigla)
                 .IsFixedLength();
 
-            modelBuilder.Entity<uf>()
+            modelBuilder.Entity<UF>()
                 .HasMany(e => e.municipios)
                 .WithRequired(e => e.uf)
                 .HasForeignKey(e => e.id_uf)

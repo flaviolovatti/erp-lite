@@ -9,10 +9,13 @@
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
+Debug/
 [Rr]elease/
 [Rr]eleases/
+Release/
 x64/
 build/
+/build/
 bld/
 [Bb]in/
 [Oo]bj/
@@ -189,4 +192,6 @@ git_stats/*
 *.ncrunchproject
 StyleCop.Cache
 bin
+bin/
 obj
+obj/

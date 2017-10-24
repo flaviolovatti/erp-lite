@@ -75,7 +75,7 @@ namespace Servidor.Model
 
         public virtual convenio convenio { get; set; }
 
-        public virtual tribut_operacao_fiscal tribut_operacao_fiscal { get; set; }
+        public virtual Tribut_OperacaoFiscal tribut_operacao_fiscal { get; set; }
 
         public virtual Pessoa pessoa { get; set; }
 

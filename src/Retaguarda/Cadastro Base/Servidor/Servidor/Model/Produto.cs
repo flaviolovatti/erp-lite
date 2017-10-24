@@ -209,13 +209,13 @@ namespace Servidor.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProdutoComboItem> produto_combo_item { get; set; }
 
-        public virtual tribut_grupo_tributario tribut_grupo_tributario { get; set; }
+        public virtual Tribut_GrupoTributario tribut_grupo_tributario { get; set; }
 
         public virtual ProdutoMarca produto_marca { get; set; }
 
         public virtual ProdutoSubGrupo produto_subgrupo { get; set; }
 
-        public virtual tribut_icms_custom_cab tribut_icms_custom_cab { get; set; }
+        public virtual Tribut_ICMSCustomCabecalho tribut_icms_custom_cab { get; set; }
 
         public virtual UnidadeProduto unidade_produto { get; set; }
 

@@ -14,8 +14,8 @@ namespace Cadastros.ViewModel
     {
 
         #region Variáveis
-        public ObservableCollection<OperadoraPlanoSaudeDTO> ListaOperadoraPlanoSaude { get; set; }
-        private OperadoraPlanoSaudeDTO _OperadoraPlanoSaudeSelected;
+        public ObservableCollection<OperadoraPlanoSaude> ListaOperadoraPlanoSaude { get; set; }
+        private OperadoraPlanoSaude _OperadoraPlanoSaudeSelected;
         #endregion
 
         #region Construtor
@@ -23,7 +23,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                ListaOperadoraPlanoSaude = new ObservableCollection<OperadoraPlanoSaudeDTO>();
+                ListaOperadoraPlanoSaude = new ObservableCollection<OperadoraPlanoSaude>();
                 IndiceNavegacao = 0;
                 QuantidadeCarregada = 0;
                 Filtro = "";
@@ -37,7 +37,7 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Infra
-        public OperadoraPlanoSaudeDTO OperadoraPlanoSaudeSelected
+        public OperadoraPlanoSaude OperadoraPlanoSaudeSelected
         {
             get { return _OperadoraPlanoSaudeSelected; }
             set
@@ -78,17 +78,17 @@ namespace Cadastros.ViewModel
                     else if (pagina < 0 && IndiceNavegacao != 0)
                         IndiceNavegacao -= QuantidadePagina;
 
-                    OperadoraPlanoSaudeDTO OperadoraPlanoSaude = new OperadoraPlanoSaudeDTO();
+                    OperadoraPlanoSaude OperadoraPlanoSaude = new OperadoraPlanoSaude();
                     if (!Filtro.Trim().Equals(""))
                     {
-                        OperadoraPlanoSaude.Nome = Filtro;
+                        OperadoraPlanoSaude.nome = Filtro;
                     }
 
-                    IList<OperadoraPlanoSaudeDTO> ListaServ = Servico.SelectOperadoraPlanoSaudePagina(IndiceNavegacao, true, QuantidadePagina, true, OperadoraPlanoSaude);
+                    IList<OperadoraPlanoSaude> ListaServ = Servico.SelectOperadoraPlanoSaudePagina(IndiceNavegacao, true, QuantidadePagina, true, OperadoraPlanoSaude);
 
                     ListaOperadoraPlanoSaude.Clear();
 
-                    foreach (OperadoraPlanoSaudeDTO objAdd in ListaServ)
+                    foreach (OperadoraPlanoSaude objAdd in ListaServ)
                     {
                         ListaOperadoraPlanoSaude.Add(objAdd);
                     }
@@ -125,7 +125,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                OperadoraPlanoSaudeSelected = new OperadoraPlanoSaudeDTO();
+                OperadoraPlanoSaudeSelected = new OperadoraPlanoSaude();
                 IsEditar = true;
             }
             catch (Exception ex)

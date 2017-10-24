@@ -14,8 +14,8 @@ namespace Cadastros.ViewModel
     {
 
         #region Variáveis
-        public ObservableCollection<PessoaDTO> ListaPessoa { get; set; }
-        private PessoaDTO _PessoaSelected;
+        public ObservableCollection<Pessoa> ListaPessoa { get; set; }
+        private Pessoa _PessoaSelected;
         #endregion
 
         #region Construtor
@@ -23,7 +23,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                ListaPessoa = new ObservableCollection<PessoaDTO>();
+                ListaPessoa = new ObservableCollection<Pessoa>();
                 IndiceNavegacao = 0;
                 QuantidadeCarregada = 0;
                 Filtro = "";
@@ -37,7 +37,7 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Infra
-        public PessoaDTO PessoaSelected
+        public Pessoa PessoaSelected
         {
             get { return _PessoaSelected; }
             set
@@ -78,17 +78,17 @@ namespace Cadastros.ViewModel
                     else if (pagina < 0 && IndiceNavegacao != 0)
                         IndiceNavegacao -= QuantidadePagina;
 
-                    PessoaDTO Pessoa = new PessoaDTO();
+                    Pessoa Pessoa = new Pessoa();
                     if (!Filtro.Trim().Equals(""))
                     {
-                        Pessoa.Nome = Filtro;
+                        Pessoa.nome = Filtro;
                     }
 
-                    IList<PessoaDTO> ListaServ = Servico.SelectPessoaPagina(IndiceNavegacao, true, QuantidadePagina, true, Pessoa);
+                    IList<Pessoa> ListaServ = Servico.SelectPessoaPagina(IndiceNavegacao, true, QuantidadePagina, true, Pessoa);
 
                     ListaPessoa.Clear();
 
-                    foreach (PessoaDTO objAdd in ListaServ)
+                    foreach (Pessoa objAdd in ListaServ)
                     {
                         ListaPessoa.Add(objAdd);
                     }
@@ -125,7 +125,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                PessoaSelected = new PessoaDTO();
+                PessoaSelected = new Pessoa();
                 IsEditar = true;
             }
             catch (Exception ex)

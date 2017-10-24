@@ -14,8 +14,8 @@ namespace Cadastros.ViewModel
     {
 
         #region Variáveis
-        public ObservableCollection<CargoDTO> ListaCargo { get; set; }
-        private CargoDTO _CargoSelected;
+        public ObservableCollection<Cargo> ListaCargo { get; set; }
+        private Cargo _CargoSelected;
         #endregion
 
         #region Construtor
@@ -23,7 +23,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                ListaCargo = new ObservableCollection<CargoDTO>();
+                ListaCargo = new ObservableCollection<Cargo>();
                 IndiceNavegacao = 0;
                 QuantidadeCarregada = 0;
                 Filtro = "";
@@ -37,7 +37,7 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Infra
-        public CargoDTO CargoSelected
+        public Cargo CargoSelected
         {
             get { return _CargoSelected; }
             set
@@ -78,17 +78,17 @@ namespace Cadastros.ViewModel
                     else if (pagina < 0 && IndiceNavegacao != 0)
                         IndiceNavegacao -= QuantidadePagina;
 
-                    CargoDTO Cargo = new CargoDTO();
+                    Cargo Cargo = new Cargo();
                     if (!Filtro.Trim().Equals(""))
                     {
-                        Cargo.Nome = Filtro;
+                        Cargo.nome = Filtro;
                     }
 
-                    IList<CargoDTO> ListaServ = Servico.SelectCargoPagina(IndiceNavegacao, true, QuantidadePagina, true, Cargo);
+                    IList<Cargo> ListaServ = Servico.SelectCargoPagina(IndiceNavegacao, true, QuantidadePagina, true, Cargo);
 
                     ListaCargo.Clear();
 
-                    foreach (CargoDTO objAdd in ListaServ)
+                    foreach (Cargo objAdd in ListaServ)
                     {
                         ListaCargo.Add(objAdd);
                     }
@@ -125,7 +125,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                CargoSelected = new CargoDTO();
+                CargoSelected = new Cargo();
                 IsEditar = true;
             }
             catch (Exception ex)
@@ -229,6 +229,7 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Pesquisas
+        /*
         public void PesquisarCbo()
         {
             try
@@ -248,6 +249,7 @@ namespace Cadastros.ViewModel
                 throw ex;
             }
         }
+        */
         #endregion       
 
     }

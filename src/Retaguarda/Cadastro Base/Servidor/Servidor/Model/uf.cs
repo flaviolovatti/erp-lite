@@ -7,10 +7,10 @@ namespace Servidor.Model
     using System.Data.Entity.Spatial;
 
     [Table("public.uf")]
-    public partial class uf
+    public partial class UF
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public uf()
+        public UF()
         {
             municipios = new HashSet<municipio>();
         }

@@ -14,8 +14,8 @@ namespace Cadastros.ViewModel
     {
 
         #region Variáveis
-        public ObservableCollection<UnidadeProdutoDTO> ListaUnidadeProduto { get; set; }
-        private UnidadeProdutoDTO _UnidadeProdutoSelected;
+        public ObservableCollection<UnidadeProduto> ListaUnidadeProduto { get; set; }
+        private UnidadeProduto _UnidadeProdutoSelected;
         #endregion
 
         #region Construtor
@@ -23,7 +23,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                ListaUnidadeProduto = new ObservableCollection<UnidadeProdutoDTO>();
+                ListaUnidadeProduto = new ObservableCollection<UnidadeProduto>();
                 IndiceNavegacao = 0;
                 QuantidadeCarregada = 0;
                 Filtro = "";
@@ -37,7 +37,7 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Infra
-        public UnidadeProdutoDTO UnidadeProdutoSelected
+        public UnidadeProduto UnidadeProdutoSelected
         {
             get { return _UnidadeProdutoSelected; }
             set
@@ -78,17 +78,17 @@ namespace Cadastros.ViewModel
                     else if (pagina < 0 && IndiceNavegacao != 0)
                         IndiceNavegacao -= QuantidadePagina;
 
-                    UnidadeProdutoDTO UnidadeProduto = new UnidadeProdutoDTO();
+                    UnidadeProduto UnidadeProduto = new UnidadeProduto();
                     if (!Filtro.Trim().Equals(""))
                     {
-                        UnidadeProduto.Sigla = Filtro;
+                        UnidadeProduto.sigla = Filtro;
                     }
 
-                    IList<UnidadeProdutoDTO> ListaServ = Servico.SelectUnidadeProdutoPagina(IndiceNavegacao, true, QuantidadePagina, true, UnidadeProduto);
+                    IList<UnidadeProduto> ListaServ = Servico.SelectUnidadeProdutoPagina(IndiceNavegacao, true, QuantidadePagina, true, UnidadeProduto);
 
                     ListaUnidadeProduto.Clear();
 
-                    foreach (UnidadeProdutoDTO objAdd in ListaServ)
+                    foreach (UnidadeProduto objAdd in ListaServ)
                     {
                         ListaUnidadeProduto.Add(objAdd);
                     }
@@ -125,7 +125,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                UnidadeProdutoSelected = new UnidadeProdutoDTO();
+                UnidadeProdutoSelected = new UnidadeProduto();
                 IsEditar = true;
             }
             catch (Exception ex)

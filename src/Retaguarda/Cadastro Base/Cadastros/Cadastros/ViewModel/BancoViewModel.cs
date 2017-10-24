@@ -14,8 +14,8 @@ namespace Cadastros.ViewModel
     {
 
         #region Variáveis
-        public ObservableCollection<BANCO> ListaBanco { get; set; }
-        private BancoDTO _BancoSelected;
+        public ObservableCollection<Banco> ListaBanco { get; set; }
+        private Banco _BancoSelected;
         #endregion
 
         #region Construtor
@@ -23,7 +23,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                ListaBanco = new ObservableCollection<BANCO>();
+                ListaBanco = new ObservableCollection<Banco>();
                 IndiceNavegacao = 0;
                 QuantidadeCarregada = 0;
                 Filtro = "";
@@ -37,7 +37,7 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Infra
-        public BancoDTO BancoSelected
+        public Banco BancoSelected
         {
             get { return _BancoSelected; }
             set
@@ -78,17 +78,17 @@ namespace Cadastros.ViewModel
                     else if (pagina < 0 && IndiceNavegacao != 0)
                         IndiceNavegacao -= QuantidadePagina;
 
-                    BANCO Banco = new BANCO();
+                    Banco Banco = new Banco();
                     if (!Filtro.Trim().Equals(""))
                     {
-                        Banco.NOME = Filtro;
+                        Banco.nome = Filtro;
                     }
 
-                    IList<BANCO> ListaServ = Servico.SelectBancoPaginaEF(IndiceNavegacao, true, QuantidadePagina, true, Banco);
+                    IList<Banco> ListaServ = Servico.SelectBancoPagina(IndiceNavegacao, true, QuantidadePagina, true, Banco);
 
                     ListaBanco.Clear();
 
-                    foreach (BANCO objAdd in ListaServ)
+                    foreach (Banco objAdd in ListaServ)
                     {
                         ListaBanco.Add(objAdd);
                     }
@@ -125,7 +125,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                BancoSelected = new BancoDTO();
+                BancoSelected = new Banco();
                 IsEditar = true;
             }
             catch (Exception ex)

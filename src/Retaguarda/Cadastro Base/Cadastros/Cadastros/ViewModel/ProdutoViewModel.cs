@@ -14,8 +14,8 @@ namespace Cadastros.ViewModel
     {
 
         #region Variáveis
-        public ObservableCollection<ProdutoDTO> ListaProduto { get; set; }
-        private ProdutoDTO _ProdutoSelected;
+        public ObservableCollection<Produto> ListaProduto { get; set; }
+        private Produto _ProdutoSelected;
         #endregion
 
         #region Construtor
@@ -23,7 +23,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                ListaProduto = new ObservableCollection<ProdutoDTO>();
+                ListaProduto = new ObservableCollection<Produto>();
                 IndiceNavegacao = 0;
                 QuantidadeCarregada = 0;
                 Filtro = "";
@@ -37,7 +37,7 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Infra
-        public ProdutoDTO ProdutoSelected
+        public Produto ProdutoSelected
         {
             get { return _ProdutoSelected; }
             set
@@ -78,17 +78,17 @@ namespace Cadastros.ViewModel
                     else if (pagina < 0 && IndiceNavegacao != 0)
                         IndiceNavegacao -= QuantidadePagina;
 
-                    ProdutoDTO Produto = new ProdutoDTO();
+                    Produto Produto = new Produto();
                     if (!Filtro.Trim().Equals(""))
                     {
-                        Produto.Nome = Filtro;
+                        Produto.nome = Filtro;
                     }
 
-                    IList<ProdutoDTO> ListaServ = Servico.SelectProdutoPagina(IndiceNavegacao, true, QuantidadePagina, true, Produto);
+                    IList<Produto> ListaServ = Servico.SelectProdutoPagina(IndiceNavegacao, true, QuantidadePagina, true, Produto);
 
                     ListaProduto.Clear();
 
-                    foreach (ProdutoDTO objAdd in ListaServ)
+                    foreach (Produto objAdd in ListaServ)
                     {
                         ListaProduto.Add(objAdd);
                     }
@@ -125,7 +125,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                ProdutoSelected = new ProdutoDTO();
+                ProdutoSelected = new Produto();
                 IsEditar = true;
             }
             catch (Exception ex)
@@ -233,12 +233,12 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                SearchWindowApp searchWindow = new SearchWindowApp(typeof(ProdutoSubGrupoDTO),
+                SearchWindowApp searchWindow = new SearchWindowApp(typeof(ProdutoSubGrupo),
                     typeof(ServicoCadastros));
 
                 if (searchWindow.ShowDialog() == true)
                 {
-                    ProdutoSelected.ProdutoSubGrupo = (ProdutoSubGrupoDTO)searchWindow.itemSelecionado;
+                    ProdutoSelected.produto_subgrupo = (ProdutoSubGrupo)searchWindow.itemSelecionado;
                     notifyPropertyChanged("ProdutoSelected");
                 }
             }
@@ -252,12 +252,12 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                SearchWindowApp searchWindow = new SearchWindowApp(typeof(ProdutoMarcaDTO),
+                SearchWindowApp searchWindow = new SearchWindowApp(typeof(ProdutoMarca),
                     typeof(ServicoCadastros));
 
                 if (searchWindow.ShowDialog() == true)
                 {
-                    ProdutoSelected.ProdutoMarca = (ProdutoMarcaDTO)searchWindow.itemSelecionado;
+                    ProdutoSelected.produto_marca = (ProdutoMarca)searchWindow.itemSelecionado;
                     notifyPropertyChanged("ProdutoSelected");
                 }
             }
@@ -271,12 +271,12 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                SearchWindowApp searchWindow = new SearchWindowApp(typeof(TributGrupoTributarioDTO),
+                SearchWindowApp searchWindow = new SearchWindowApp(typeof(Tribut_GrupoTributario),
                     typeof(ServicoCadastros));
 
                 if (searchWindow.ShowDialog() == true)
                 {
-                    ProdutoSelected.TributGrupoTributario = (TributGrupoTributarioDTO)searchWindow.itemSelecionado;
+                    ProdutoSelected.tribut_grupo_tributario = (Tribut_GrupoTributario)searchWindow.itemSelecionado;
                     notifyPropertyChanged("ProdutoSelected");
                 }
             }
@@ -290,12 +290,12 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                SearchWindowApp searchWindow = new SearchWindowApp(typeof(AlmoxarifadoDTO),
+                SearchWindowApp searchWindow = new SearchWindowApp(typeof(Almoxarifado),
                     typeof(ServicoCadastros));
 
                 if (searchWindow.ShowDialog() == true)
                 {
-                    ProdutoSelected.Almoxarifado = (AlmoxarifadoDTO)searchWindow.itemSelecionado;
+                    ProdutoSelected.almoxarifado = (Almoxarifado)searchWindow.itemSelecionado;
                     notifyPropertyChanged("ProdutoSelected");
                 }
             }
@@ -309,12 +309,12 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                SearchWindowApp searchWindow = new SearchWindowApp(typeof(UnidadeProdutoDTO),
+                SearchWindowApp searchWindow = new SearchWindowApp(typeof(UnidadeProduto),
                     typeof(ServicoCadastros));
 
                 if (searchWindow.ShowDialog() == true)
                 {
-                    ProdutoSelected.UnidadeProduto = (UnidadeProdutoDTO)searchWindow.itemSelecionado;
+                    ProdutoSelected.unidade_produto = (UnidadeProduto)searchWindow.itemSelecionado;
                     notifyPropertyChanged("ProdutoSelected");
                 }
             }
@@ -328,12 +328,12 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                SearchWindowApp searchWindow = new SearchWindowApp(typeof(TributIcmsCustomCabDTO),
+                SearchWindowApp searchWindow = new SearchWindowApp(typeof(Tribut_ICMSCustomCabecalho),
                     typeof(ServicoCadastros));
 
                 if (searchWindow.ShowDialog() == true)
                 {
-                    ProdutoSelected.TributIcmsCustomCab = (TributIcmsCustomCabDTO)searchWindow.itemSelecionado;
+                    ProdutoSelected.tribut_icms_custom_cab = (Tribut_ICMSCustomCabecalho)searchWindow.itemSelecionado;
                     notifyPropertyChanged("ProdutoSelected");
                 }
             }

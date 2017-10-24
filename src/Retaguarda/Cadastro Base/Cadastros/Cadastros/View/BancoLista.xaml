@@ -11,12 +11,15 @@
 			<StackPanel DockPanel.Dock="Top" Grid.Column="0">
 				<viewBotoes:BarraExterna></viewBotoes:BarraExterna>
 			</StackPanel>
-			<DataGrid Name="dataGrid" AutoGenerateColumns="false" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" ItemsSource="{Binding ListaBanco}" SelectedItem="{Binding BancoSelected}">
+			<DataGrid 
+                Name="dataGrid" AutoGenerateColumns="false" IsReadOnly="True" 
+                CanUserAddRows="False" CanUserDeleteRows="False" ItemsSource="{Binding ListaBanco}" 
+                SelectedItem="{Binding BancoSelected}">
 				<DataGrid.Columns>
-					<DataGridTextColumn Header="Id" Binding="{Binding Path=ID}"  />
-					<DataGridTextColumn Header="Codigo" Binding="{Binding Path=CODIGO}"  />
-					<DataGridTextColumn Header="Nome" Binding="{Binding Path=NOME}"  />
-					<DataGridTextColumn Header="Url" Binding="{Binding Path=URL}"  />
+					<DataGridTextColumn Header="Id" Binding="{Binding Path=id}"  />
+					<DataGridTextColumn Header="Codigo" Binding="{Binding Path=codigo}"  />
+					<DataGridTextColumn Header="Nome" Binding="{Binding Path=nome}"  />
+					<DataGridTextColumn Header="Url" Binding="{Binding Path=url}"  />
 				</DataGrid.Columns>
 			</DataGrid>
 		</DockPanel>

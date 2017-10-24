@@ -49,6 +49,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -230,215 +232,76 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Web References\ServidorReference\AlmoxarifadoDTO.datasource">
+    <None Include="Web References\ServidorReference\Almoxarifado.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\AtividadeForCliDTO.datasource">
+    <None Include="Web References\ServidorReference\AtividadeFornecedorCliente.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\BANCO.datasource">
+    <None Include="Web References\ServidorReference\Banco1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\BancoDTO.datasource">
+    <None Include="Web References\ServidorReference\Cargo.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\CargoDTO.datasource">
+    <None Include="Web References\ServidorReference\Colaborador.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\CboDTO.datasource">
+    <None Include="Web References\ServidorReference\Contador.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\ColaboradorDTO.datasource">
+    <None Include="Web References\ServidorReference\Empresa.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\ComissaoObjetivoDTO.datasource">
+    <None Include="Web References\ServidorReference\EstadoCivil.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\ComissaoPerfilDTO.datasource">
+    <None Include="Web References\ServidorReference\OperadoraPlanoSaude.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\CompraCotacaoDetalheDTO.datasource">
+    <None Include="Web References\ServidorReference\Pais.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\CompraCotacaoDTO.datasource">
+    <None Include="Web References\ServidorReference\Pessoa.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\CompraCotacaoPedidoDetalheDTO.datasource">
+    <None Include="Web References\ServidorReference\Produto.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\CompraFornecedorCotacaoDTO.datasource">
+    <None Include="Web References\ServidorReference\ProdutoMarca.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\CompraPedidoDetalheDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\CompraPedidoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\CompraReqCotacaoDetalheDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\CompraRequisicaoDetalheDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\CompraRequisicaoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\CompraTipoPedidoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\CompraTipoRequisicaoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\ContadorDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\DavCabecalhoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\EmpresaDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\EstadoCivilDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\EstoqueReajusteCabecalhoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\EtiquetaTemplateDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\FiscalApuracaoIcmsDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\FiscalLivroDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\FiscalParametroDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\FiscalTermoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\InventarioContagemCabDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\NfeCabecalhoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\NotaFiscalTipoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\OperadoraPlanoSaudeDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\OsAberturaDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\OsAberturaEquipamentoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\OsEquipamentoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\OsEvolucaoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\OsProdutoServicoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\OsStatusDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\PaisDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\PcpInstrucaoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\PcpInstrucaoOpDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\PcpOpCabecalhoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\PcpOpDetalheDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\PcpServicoColaboradorDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\PcpServicoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\PcpServicoEquipamentoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\PessoaDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\PreVendaCabecalhoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\ProdutoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\ProdutoMarcaDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\ProdutoSubGrupoDTO.datasource">
+    <None Include="Web References\ServidorReference\ProdutoSubGrupo.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\ServidorReference\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\ServidorReference\RegistroCartorioDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
     <None Include="Web References\ServidorReference\ServiceServidor.wsdl" />
     <None Include="Web References\ServidorReference\Servidor.xsd" />
     <None Include="Web References\ServidorReference\Servidor0.xsd" />
     <None Include="Web References\ServidorReference\Servidor1.xsd" />
-    <None Include="Web References\ServidorReference\Servidor2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\ServidorReference\SimplesNacionalCabecalhoDTO.datasource">
+    <None Include="Web References\ServidorReference\Tribut_GrupoTributario.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\TributGrupoTributarioDTO.datasource">
+    <None Include="Web References\ServidorReference\Tribut_ICMSCustomCabecalho.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\TributIcmsCustomCabDTO.datasource">
+    <None Include="Web References\ServidorReference\Tribut_OperacaoFiscal.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\TributOperacaoFiscalDTO.datasource">
+    <None Include="Web References\ServidorReference\UnidadeProduto.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ServidorReference\UnidadeProdutoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\UsuarioDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\VendaCabecalhoDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\ViewTributacaoCofinsDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\ViewTributacaoIcmsDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\ViewTributacaoPisDTO.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\ServidorReference\WmsRuaDTO.datasource">
+    <None Include="Web References\ServidorReference\Usuario.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -913,7 +776,6 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

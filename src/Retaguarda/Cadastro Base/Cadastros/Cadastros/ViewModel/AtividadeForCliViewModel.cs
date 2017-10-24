@@ -14,8 +14,8 @@ namespace Cadastros.ViewModel
     {
 
         #region Variáveis
-        public ObservableCollection<AtividadeForCliDTO> ListaAtividadeForCli { get; set; }
-        private AtividadeForCliDTO _AtividadeForCliSelected;
+        public ObservableCollection<AtividadeFornecedorCliente> ListaAtividadeForCli { get; set; }
+        private AtividadeFornecedorCliente _AtividadeForCliSelected;
         #endregion
 
         #region Construtor
@@ -23,7 +23,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                ListaAtividadeForCli = new ObservableCollection<AtividadeForCliDTO>();
+                ListaAtividadeForCli = new ObservableCollection<AtividadeFornecedorCliente>();
                 IndiceNavegacao = 0;
                 QuantidadeCarregada = 0;
                 Filtro = "";
@@ -37,7 +37,7 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Infra
-        public AtividadeForCliDTO AtividadeForCliSelected
+        public AtividadeFornecedorCliente AtividadeForCliSelected
         {
             get { return _AtividadeForCliSelected; }
             set
@@ -55,7 +55,7 @@ namespace Cadastros.ViewModel
             {
                 using (ServiceServidor Servico = new ServiceServidor())
                 {
-                    Servico.SalvarAtualizarAtividadeForCli(AtividadeForCliSelected);
+                    Servico.SalvarAtualizarAtividadeFornecedorCliente(AtividadeForCliSelected);
                     AtividadeForCliSelected = null;
                 }
             }
@@ -78,17 +78,17 @@ namespace Cadastros.ViewModel
                     else if (pagina < 0 && IndiceNavegacao != 0)
                         IndiceNavegacao -= QuantidadePagina;
 
-                    AtividadeForCliDTO AtividadeForCli = new AtividadeForCliDTO();
+                    AtividadeFornecedorCliente AtividadeForCli = new AtividadeFornecedorCliente();
                     if (!Filtro.Trim().Equals(""))
                     {
-                        AtividadeForCli.Nome = Filtro;
+                        AtividadeForCli.nome = Filtro;
                     }
 
-                    IList<AtividadeForCliDTO> ListaServ = Servico.SelectAtividadeForCliPagina(IndiceNavegacao, true, QuantidadePagina, true, AtividadeForCli);
+                    IList<AtividadeFornecedorCliente> ListaServ = Servico.SelectAtividadeFornecedorClientePagina(IndiceNavegacao, true, QuantidadePagina, true, AtividadeForCli);
 
                     ListaAtividadeForCli.Clear();
 
-                    foreach (AtividadeForCliDTO objAdd in ListaServ)
+                    foreach (AtividadeFornecedorCliente objAdd in ListaServ)
                     {
                         ListaAtividadeForCli.Add(objAdd);
                     }
@@ -109,7 +109,7 @@ namespace Cadastros.ViewModel
             {
                 using (ServiceServidor Servico = new ServiceServidor())
                 {
-                    Servico.DeleteAtividadeForCli(AtividadeForCliSelected);
+                    Servico.DeleteAtividadeFornecedorCliente(AtividadeForCliSelected);
                     AtividadeForCliSelected = null;
                 }
             }
@@ -125,7 +125,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                AtividadeForCliSelected = new AtividadeForCliDTO();
+                AtividadeForCliSelected = new AtividadeFornecedorCliente();
                 IsEditar = true;
             }
             catch (Exception ex)

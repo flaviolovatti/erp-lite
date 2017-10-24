@@ -13,7 +13,7 @@ namespace Servidor.Model
         public Pais()
         {
             indice_economico = new HashSet<indice_economico>();
-            ufs = new HashSet<uf>();
+            ufs = new HashSet<UF>();
         }
 
         public int id { get; set; }
@@ -36,6 +36,6 @@ namespace Servidor.Model
         public virtual ICollection<indice_economico> indice_economico { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<uf> ufs { get; set; }
+        public virtual ICollection<UF> ufs { get; set; }
     }
 }

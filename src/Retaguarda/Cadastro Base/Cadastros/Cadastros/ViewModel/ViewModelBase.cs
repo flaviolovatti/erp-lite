@@ -17,7 +17,7 @@ namespace Cadastros.ViewModel
     public class ViewModelBase : INotifyPropertyChanged
     {
 
-        public static EmpresaDTO Empresa = new EmpresaDTO { Id = 1 };
+        public static Empresa Empresa = new Empresa { id = 1 };
 
         #region Infra
         public bool _isEditar { get; set; }

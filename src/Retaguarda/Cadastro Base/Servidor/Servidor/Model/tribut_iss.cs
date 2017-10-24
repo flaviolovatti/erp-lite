@@ -7,7 +7,7 @@ namespace Servidor.Model
     using System.Data.Entity.Spatial;
 
     [Table("public.tribut_iss")]
-    public partial class tribut_iss
+    public partial class Tribut_ISS
     {
         public int id { get; set; }
 
@@ -31,6 +31,6 @@ namespace Servidor.Model
         [StringLength(1)]
         public string codigo_tributacao { get; set; }
 
-        public virtual tribut_operacao_fiscal tribut_operacao_fiscal { get; set; }
+        public virtual Tribut_OperacaoFiscal tribut_operacao_fiscal { get; set; }
     }
 }

@@ -42,3 +42,4 @@ C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\System.Threading.
 C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\EntityFramework6.Npgsql.xml
 C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\Npgsql.xml
 C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\bin\System.Threading.Tasks.Extensions.xml
+C:\erp-lite\src\Retaguarda\Cadastro Base\Servidor\Servidor\obj\Debug\Servidor.csprojResolveAssemblyReference.cache

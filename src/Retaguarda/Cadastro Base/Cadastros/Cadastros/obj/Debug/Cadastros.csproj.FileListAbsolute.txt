@@ -278,3 +278,4 @@ C:\erp-lite\src\Retaguarda\Cadastro Base\Cadastros\Cadastros\obj\Debug\Cadastros
 C:\erp-lite\src\Retaguarda\Cadastro Base\Cadastros\Cadastros\obj\Debug\Cadastros.csproj.CoreCompileInputs.cache
 C:\erp-lite\src\Retaguarda\Cadastro Base\Cadastros\Cadastros\obj\Debug\Cadastros.exe
 C:\erp-lite\src\Retaguarda\Cadastro Base\Cadastros\Cadastros\obj\Debug\Cadastros.pdb
+C:\erp-lite\src\Retaguarda\Cadastro Base\Cadastros\Cadastros\obj\Debug\Cadastros.csprojResolveAssemblyReference.cache

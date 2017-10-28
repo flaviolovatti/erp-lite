@@ -2,6 +2,7 @@
 using Servidor.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Linq;
 using System.ServiceModel;
@@ -73,19 +74,33 @@ namespace Servidor
             }
         }
 
-
         public IList<Empresa> SelectEmpresaPagina(int primeiroResultado, int quantidadeResultados, Empresa empresa)
         {
             try
             {
-                return null;
+                IList<Empresa> empresas = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    empresas = ctx.empresas
+                        .Where(e => e.nome_fantasia.ToUpper().Contains(empresa.nome_fantasia.ToUpper()))
+                        .OrderBy(e => e.nome_fantasia)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return empresas;
             }
             catch (Exception ex)
             {
                 throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
             }
         }
-
 
         #endregion
 
@@ -135,13 +150,22 @@ namespace Servidor
             }
         }
 
-
         public EstadoCivil SalvarAtualizarEstadoCivil(EstadoCivil estadoCivil)
         {
             try
             {
                 var ctx = new ContextoERP();
                 ctx.estado_civil.Add(estadoCivil);
+
+                if (estadoCivil.id == 0)
+                {
+                    ctx.Entry(estadoCivil).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(estadoCivil).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
                 return estadoCivil;
             }
@@ -150,7 +174,6 @@ namespace Servidor
                 throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
             }
         }
-
 
         public IList<EstadoCivil> SelectEstadoCivil(EstadoCivil estadoCivil)
         {
@@ -174,12 +197,27 @@ namespace Servidor
             }
         }
 
-
         public IList<EstadoCivil> SelectEstadoCivilPagina(int primeiroResultado, int quantidadeResultados, EstadoCivil estadoCivil)
         {
             try
             {
-                return null;
+                IList<EstadoCivil> estadosCivis = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    estadosCivis = ctx.estado_civil
+                        .Where(e => e.nome.ToUpper().Contains(estadoCivil.nome.ToUpper()))
+                        .OrderBy(e => e.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return estadosCivis;
             }
             catch (Exception ex)
             {
@@ -206,13 +244,22 @@ namespace Servidor
             }
         }
 
-
         public AtividadeFornecedorCliente SalvarAtualizarAtividadeFornecedorCliente(AtividadeFornecedorCliente atividadeFornecedorCliente)
         {
             try
             {
                 var ctx = new ContextoERP();
                 ctx.atividade_for_cli.Add(atividadeFornecedorCliente);
+
+                if (atividadeFornecedorCliente.id == 0)
+                {
+                    ctx.Entry(atividadeFornecedorCliente).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(atividadeFornecedorCliente).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return atividadeFornecedorCliente;
@@ -223,7 +270,6 @@ namespace Servidor
                 throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
             }
         }
-
 
         public IList<AtividadeFornecedorCliente> SelectAtividadeFornecedorCliente(AtividadeFornecedorCliente atividadeFornecedorCliente)
         {
@@ -251,19 +297,33 @@ namespace Servidor
             }
         }
 
-
         public IList<AtividadeFornecedorCliente> SelectAtividadeFornecedorClientePagina(int primeiroResultado, int quantidadeResultados, AtividadeFornecedorCliente atividadeFornecedorCliente)
         {
             try
             {
-                return null;
+                IList<AtividadeFornecedorCliente> atividadesFornecedorCliente = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    atividadesFornecedorCliente = ctx.atividade_for_cli
+                        .Where(a => a.nome.ToUpper().Contains(atividadeFornecedorCliente.nome.ToUpper()))
+                        .OrderBy(a => a.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return atividadesFornecedorCliente;
             }
             catch (Exception ex)
             {
                 throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
             }
         }
-
 
         #endregion
 
@@ -290,6 +350,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.cargoes.Add(cargo);
+
+                if (cargo.id == 0)
+                {
+                    ctx.Entry(cargo).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(cargo).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return cargo;
@@ -328,7 +398,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Cargo> cargos = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    cargos = ctx.cargoes
+                        .Where(c => c.nome.ToUpper().Contains(cargo.nome.ToUpper()))
+                        .OrderBy(c => c.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return cargos;
             }
             catch (Exception ex)
             {
@@ -362,6 +448,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.operadora_plano_saude.Add(operadoraPlanoSaude);
+
+                if (operadoraPlanoSaude.id == 0)
+                {
+                    ctx.Entry(operadoraPlanoSaude).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(operadoraPlanoSaude).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return operadoraPlanoSaude;
@@ -399,7 +495,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<OperadoraPlanoSaude> operadorasPlanoSaude = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    operadorasPlanoSaude = ctx.operadora_plano_saude
+                        .Where(op => op.nome.ToUpper().Contains(operadoraPlanoSaude.nome.ToUpper()))
+                        .OrderBy(op => op.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return operadorasPlanoSaude;
             }
             catch (Exception ex)
             {
@@ -432,6 +544,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.pais.Add(pais);
+
+                if (pais.id == 0)
+                {
+                    ctx.Entry(pais).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(pais).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return pais;
@@ -470,7 +592,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Pais> paises = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    paises = ctx.pais
+                        .Where(p => p.nome_ptbr.ToUpper().Contains(pais.nome_ptbr.ToUpper()))
+                        .OrderBy(op => op.nome_ptbr)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return paises;
             }
             catch (Exception ex)
             {
@@ -503,6 +641,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.produtoes.Add(produto);
+
+                if (produto.id == 0)
+                {
+                    ctx.Entry(produto).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(produto).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return produto;
@@ -564,7 +712,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Produto> produtos = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    produtos = ctx.produtoes
+                        .Where(p => p.nome.ToUpper().Contains(produto.nome.ToUpper()))
+                        .OrderBy(p => p.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return produtos;
             }
             catch (Exception ex)
             {
@@ -598,6 +762,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.produto_subgrupo.Add(produtoSubGrupo);
+
+                if (produtoSubGrupo.id == 0)
+                {
+                    ctx.Entry(produtoSubGrupo).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(produtoSubGrupo).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return produtoSubGrupo;
@@ -636,7 +810,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<ProdutoSubGrupo> produtosSubGrupo= null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    produtosSubGrupo = ctx.produto_subgrupo
+                        .Where(p => p.nome.ToUpper().Contains(produtoSubGrupo.nome.ToUpper()))
+                        .OrderBy(p => p.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return produtosSubGrupo;
             }
             catch (Exception ex)
             {
@@ -670,6 +860,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.produto_marca.Add(produtoMarca);
+
+                if (produtoMarca.id == 0)
+                {
+                    ctx.Entry(produtoMarca).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(produtoMarca).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return produtoMarca;
@@ -708,7 +908,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<ProdutoMarca> produtosMarcas = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    produtosMarcas = ctx.produto_marca
+                        .Where(pm => pm.nome.ToUpper().Contains(produtoMarca.nome.ToUpper()))
+                        .OrderBy(pm => pm.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return produtosMarcas;
             }
             catch (Exception ex)
             {
@@ -740,6 +956,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.almoxarifadoes.Add(almoxarifado);
+
+                if (almoxarifado.id == 0)
+                {
+                    ctx.Entry(almoxarifado).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(almoxarifado).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return almoxarifado;
@@ -777,7 +1003,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Almoxarifado> almoxarifados= null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    almoxarifados = ctx.almoxarifadoes
+                        .Where(a => a.nome.ToUpper().Contains(almoxarifado.nome.ToUpper()))
+                        .OrderBy(a => a.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return almoxarifados;
             }
             catch (Exception ex)
             {
@@ -816,7 +1058,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Contador> contadores = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    contadores = ctx.contadors
+                        .Where(c => c.nome.ToUpper().Contains(contador.nome.ToUpper()))
+                        .OrderBy(c => c.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return contadores;
             }
             catch (Exception ex)
             {
@@ -848,6 +1106,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.pessoas.Add(pessoa);
+
+                if (pessoa.id == 0)
+                {
+                    ctx.Entry(pessoa).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(pessoa).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return pessoa;
@@ -885,7 +1153,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Pessoa> pessoas = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    pessoas = ctx.pessoas
+                        .Where(p => p.nome.ToUpper().Contains(pessoa.nome.ToUpper()))
+                        .OrderBy(p => p.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return pessoas;
             }
             catch (Exception ex)
             {
@@ -967,7 +1251,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Banco> bancos= null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+                    
+                    bancos = ctx.bancoes
+                        .Where(b => b.nome.Contains(banco.nome))
+                        .OrderBy(b => b.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+                    
+                }
+                return bancos;
             }
             catch (Exception ex)
             {
@@ -1000,6 +1300,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.unidade_produto.Add(unidadeProduto);
+
+                if (unidadeProduto.id == 0)
+                {
+                    ctx.Entry(unidadeProduto).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(unidadeProduto).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return unidadeProduto;
@@ -1037,7 +1347,23 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<UnidadeProduto> unidadesProdutos = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    unidadesProdutos = ctx.unidade_produto
+                        .Where(u => u.descricao.ToUpper().Contains(unidadeProduto.descricao.ToUpper()))
+                        .OrderBy(u => u.descricao)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return unidadesProdutos;
             }
             catch (Exception ex)
             {
@@ -1071,6 +1397,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.colaboradors.Add(colaborador);
+
+                if (colaborador.id == 0)
+                {
+                    ctx.Entry(colaborador).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(colaborador).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return colaborador;
@@ -1108,7 +1444,27 @@ namespace Servidor
         {
             try
             {
-                return null;
+                IList<Colaborador> colaboradores = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    /*
+                    bancos = ctx.bancoes
+                        .Where(b => b.nome.Contains(banco.nome))
+                        .OrderBy(b => b.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                    return bancos;
+                    */
+
+                }
+                return colaboradores;
             }
             catch (Exception ex)
             {
@@ -1148,6 +1504,16 @@ namespace Servidor
             {
                 var ctx = new ContextoERP();
                 ctx.tribut_operacao_fiscal.Add(tribut_OperacaoFiscal);
+
+                if (tribut_OperacaoFiscal.id == 0)
+                {
+                    ctx.Entry(tribut_OperacaoFiscal).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(tribut_OperacaoFiscal).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return tribut_OperacaoFiscal;
@@ -1183,7 +1549,23 @@ namespace Servidor
 
         public IList<Tribut_OperacaoFiscal> SelectTribut_OperacaoFiscalPagina(int primeiroResultado, int quantidadeResultados, Tribut_OperacaoFiscal tribut_OperacaoFiscal)
         {
-            return null;
+            IList<Tribut_OperacaoFiscal> operacoesFiscais = null;
+            var ctx = new ContextoERP();
+            ctx.Configuration.LazyLoadingEnabled = false;
+            ctx.Configuration.ProxyCreationEnabled = false;
+
+            using (ctx)
+            {
+
+                operacoesFiscais = ctx.tribut_operacao_fiscal
+                    .Where(o => o.descricao.ToUpper().Contains(tribut_OperacaoFiscal.descricao))
+                    .OrderBy(o => o.descricao)
+                    .Skip(primeiroResultado)
+                    .Take(quantidadeResultados)
+                    .ToList();
+
+            }
+            return operacoesFiscais;
         }
 
         #endregion
@@ -1209,8 +1591,17 @@ namespace Servidor
             try
             {
                 var ctx = new ContextoERP();
-                ctx.tribut_grupo_tributario.Attach(tribut_GrupoTributario);
-                ctx.tribut_grupo_tributario.Remove(tribut_GrupoTributario);
+                ctx.tribut_grupo_tributario.Add(tribut_GrupoTributario);
+
+                if (tribut_GrupoTributario.id == 0)
+                {
+                    ctx.Entry(tribut_GrupoTributario).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(tribut_GrupoTributario).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return tribut_GrupoTributario;
@@ -1246,7 +1637,23 @@ namespace Servidor
 
         public IList<Tribut_GrupoTributario> SelectTribut_GrupoTributarioPagina(int primeiroResultado, int quantidadeResultados, Tribut_GrupoTributario tribut_GrupoTributario)
         {
-            return null;
+            IList<Tribut_GrupoTributario> gruposTributarios = null;
+            var ctx = new ContextoERP();
+            ctx.Configuration.LazyLoadingEnabled = false;
+            ctx.Configuration.ProxyCreationEnabled = false;
+
+            using (ctx)
+            {
+
+                gruposTributarios = ctx.tribut_grupo_tributario
+                    .Where(gt => gt.descricao.ToUpper().Contains(tribut_GrupoTributario.descricao.ToUpper()))
+                    .OrderBy(gt => gt.descricao)
+                    .Skip(primeiroResultado)
+                    .Take(quantidadeResultados)
+                    .ToList();
+
+            }
+            return gruposTributarios;
         }
 
 
@@ -1268,13 +1675,22 @@ namespace Servidor
             }
         }
 
-
         public Tribut_ICMSCustomCabecalho SalvarAtualizarTribut_ICMSCustomCabecalho(Tribut_ICMSCustomCabecalho tribut_ICMSCustomCabecalho)
         {
             try
             {
                 var ctx = new ContextoERP();
                 ctx.tribut_icms_custom_cab.Add(tribut_ICMSCustomCabecalho);
+
+                if (tribut_ICMSCustomCabecalho.id == 0)
+                {
+                    ctx.Entry(tribut_ICMSCustomCabecalho).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(tribut_ICMSCustomCabecalho).State = EntityState.Modified;
+                }
+
                 ctx.SaveChanges();
 
                 return tribut_ICMSCustomCabecalho;
@@ -1284,7 +1700,6 @@ namespace Servidor
                 throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
             }
         }
-
 
         public IList<Tribut_ICMSCustomCabecalho> SelectTribut_ICMSCustomCabecalho(Tribut_ICMSCustomCabecalho tribut_ICMSCustomCabecalho)
         {
@@ -1311,7 +1726,23 @@ namespace Servidor
 
         public IList<Tribut_ICMSCustomCabecalho> SelectTribut_ICMSCustomCabecalhoPagina(int primeiroResultado, int quantidadeResultados, Tribut_ICMSCustomCabecalho tribut_ICMSCustomCabecalho)
         {
-            return null;
+            IList<Tribut_ICMSCustomCabecalho> ICMSCustomCabecalhos = null;
+            var ctx = new ContextoERP();
+            ctx.Configuration.LazyLoadingEnabled = false;
+            ctx.Configuration.ProxyCreationEnabled = false;
+
+            using (ctx)
+            {
+
+                ICMSCustomCabecalhos = ctx.tribut_icms_custom_cab
+                    .Where(cab => cab.descricao.ToUpper().Contains(tribut_ICMSCustomCabecalho.descricao.ToUpper()))
+                    .OrderBy(cab => cab.descricao)
+                    .Skip(primeiroResultado)
+                    .Take(quantidadeResultados)
+                    .ToList();
+
+            }
+            return ICMSCustomCabecalhos;
         }
 
 

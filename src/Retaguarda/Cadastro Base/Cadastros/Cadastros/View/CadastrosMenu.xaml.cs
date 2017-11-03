@@ -1,8 +1,6 @@
 ﻿using System.Windows;
 using Microsoft.Windows.Controls.Ribbon;
-using Cadastros.View;
 using Cadastros.ViewModel;
-using Cadastros.View;
 
 namespace Cadastros.View
 {

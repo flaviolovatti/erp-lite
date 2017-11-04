@@ -37,6 +37,12 @@
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.1.953, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.3.1.953\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="NPOI">
       <HintPath>..\..\..\..\libs\ButtonExport\NPOI.dll</HintPath>
     </Reference>
@@ -329,6 +335,7 @@
     <Content Include="ExportarParaArquivo\Libs\Ionic.Zip.dll" />
     <Content Include="ExportarParaArquivo\Libs\NPOI.dll" />
     <Content Include="ExportarParaArquivo\Libs\NRtfTree.dll" />
+    <Resource Include="View\Botoes\XMLFile1.xml" />
     <Resource Include="Images\titulos\agencia_banco16.png" />
     <Resource Include="Images\titulos\agencia_banco32.png" />
     <Resource Include="Images\titulos\agencia_banco48.png" />

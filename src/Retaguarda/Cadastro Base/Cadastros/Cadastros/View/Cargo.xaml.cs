@@ -19,7 +19,7 @@ namespace Cadastros.View
         {
             try
             {
-                //((CargoViewModel)DataContext).PesquisarCbo();
+                ((CargoViewModel)DataContext).PesquisarCbo();
             }
             catch (Exception ex)
             {

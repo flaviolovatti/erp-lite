@@ -1179,6 +1179,104 @@ namespace Servidor
 
         #endregion
 
+        #region Cliente
+        public void DeleteCliente(Cliente cliente)
+        {
+            try
+            {
+                var ctx = new ContextoERP();
+                ctx.clientes.Attach(cliente);
+                ctx.clientes.Remove(cliente);
+                ctx.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public Cliente SalvarAtualizarCliente(Cliente cliente)
+        {
+            try
+            {
+                var ctx = new ContextoERP();
+                ctx.clientes.Add(cliente);
+
+                if (cliente.id == 0)
+                {
+                    ctx.Entry(cliente).State = EntityState.Added;
+                }
+                else
+                {
+                    ctx.Entry(cliente).State = EntityState.Modified;
+                }
+
+                ctx.SaveChanges();
+
+                return cliente;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Cliente> SelectCliente(Cliente cliente)
+        {
+            try
+            {
+                IList<Cliente> clientes = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    clientes = ctx.clientes.Where(p => p.id == cliente.id).ToList();
+                }
+
+                return clientes;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        public IList<Cliente> SelectClientePagina(int primeiroResultado, int quantidadeResultados, Cliente cliente)
+        {
+            try
+            {
+                /*
+                IList<Pessoa> pessoas = null;
+                var ctx = new ContextoERP();
+                ctx.Configuration.LazyLoadingEnabled = false;
+                ctx.Configuration.ProxyCreationEnabled = false;
+
+                using (ctx)
+                {
+
+                    pessoas = ctx.pessoas
+                        .Where(p => p.nome.ToUpper().Contains(pessoa.nome.ToUpper()))
+                        .OrderBy(p => p.nome)
+                        .Skip(primeiroResultado)
+                        .Take(quantidadeResultados)
+                        .ToList();
+
+                }
+                return pessoas;
+                */
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException(ex.Message + (ex.InnerException != null ? " " + ex.InnerException.Message : ""));
+            }
+        }
+
+        #endregion
+
         #region Banco
         public void DeleteBanco(Banco banco)
         {

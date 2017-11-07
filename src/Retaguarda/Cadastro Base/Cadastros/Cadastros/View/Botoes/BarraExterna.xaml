@@ -1,178 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<UserControl 
-    x:Class="Cadastros.View.Botoes.BarraExterna" 
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    mc:Ignorable="d"
-    
-    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-    TextElement.FontWeight="Regular"
-    TextElement.FontSize="12"
-    TextOptions.TextFormattingMode="Ideal"
-    TextOptions.TextRenderingMode="Auto"
-    Background="{DynamicResource MaterialDesignPaper}"
-    FontFamily="{DynamicResource MaterialDesignFont}"
-    
-    d:DesignHeight="40" d:DesignWidth="900">
-
-    <Grid>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <Border Grid.Row="0" Background="Transparent">
-            <Grid>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <!-- Navegacao -->
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center">
-                            <Button 
-                            x:Name="Go_PaginaAnterior"
-                            Width="20" 
-                            Height="20"
-                            Padding="3"
-                            Margin="0 0 0 0"
-                            materialDesign:ShadowAssist.ShadowDepth="Depth5"
-                            Command="{Binding PaginaAnteriorCommand}" 
-                            ToolTip="Segue para a página anterior" 
-                            IsEnabled="{Binding NavegaPaginaAnterior}">
-                                <materialDesign:PackIcon 
-                                Kind="SkipPrevious"
-                                Foreground="Black"/>
-                            </Button>
-                            <TextBlock Text="Anterior" FontSize="10"/>
-                        </StackPanel>
-                        <Separator/>
-                        <StackPanel 
-                            Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10 0 0 0">
-                            <Button 
-                            x:Name="Go_PaginaSeguinte"
-                            Width="20" 
-                            Height="20"
-                            Padding="3"
-                            Margin="0 0 0 0"
-                            materialDesign:ShadowAssist.ShadowDepth="Depth5"
-                            Command="{Binding PaginaSeguinteCommand}" 
-                            ToolTip="Segue para a página seguinte" 
-                            IsEnabled="{Binding NavegaPaginaSeguinte}">
-                                <materialDesign:PackIcon 
-                                Kind="SkipNext"
-                                Foreground="Black"/>
-                            </Button>
-                            <TextBlock Text="Seguinte" FontSize="10"/>
-                        </StackPanel>
-                        <Separator/>
-                    </StackPanel>
-                    <!-- Fim da Navegacao -->
-                    <!-- ****** -->
-                    <!-- Botoes de inserir, alterar e excluir -->
-                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="30 0 0 0">
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center">
-                            <Button 
-                                Width="23" 
-                                Height="20"
-                                Padding="3"
-                                Margin="0 0 0 0"
-                                materialDesign:ShadowAssist.ShadowDepth="Depth5"
-                                Command="{Binding InserirCommand}" 
-                                ToolTip="Inserir registro" >
-                                <materialDesign:PackIcon 
-                                Kind="File"
-                                Foreground="Black"/>
-                            </Button>
-                            <TextBlock Text="Novo" FontSize="10"/>
-                        </StackPanel>
-                        <Separator/>
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10 0 0 0">
-                            <Button 
-                                Width="23" 
-                                Height="20"
-                                Padding="3"
-                                Margin="0 0 0 0"
-                                materialDesign:ShadowAssist.ShadowDepth="Depth5"
-                                Command="{Binding AlterarCommand}" 
-                                ToolTip="Alterar registro">
-                                <materialDesign:PackIcon 
-                                    Kind="Pencil" 
-                                    Foreground="Black"/>
-                            </Button>
-                            <TextBlock Text="Editar" FontSize="10"/>
-                        </StackPanel>
-                        <Separator/>
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10 0 0 0">
-                            <Button 
-                                Width="23" 
-                                Height="20"
-                                Padding="3"
-                                Margin="0 0 0 0"
-                                materialDesign:ShadowAssist.ShadowDepth="Depth5"
-                                Command="{Binding ExcluirCommand}" 
-                                ToolTip="Excluir registro">
-                                <materialDesign:PackIcon 
-                                    Kind="Delete" 
-                                    Foreground="Black"/>
-                            </Button>
-                            <TextBlock Text="Remover" FontSize="10"/>
-                        </StackPanel>
-                    </StackPanel>
-                    <!-- Fim dos botoes de inserir, alterar e excluir -->
-                    <!-- Botoes de impressao e busca de dados -->
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="230 0 0 0">
-                        <TextBox 
-                            FlowDirection="LeftToRight" 
-                            Text="{Binding Filtro}" 
-                            Height="40" 
-                            Width="450"
-                            Margin="10 0 0 0"
-                            Padding="1"
-                            Name="TextBoxLocalizar"
-                            materialDesign:HintAssist.Hint="Pesquisa"
-                            materialDesign:HintAssist.IsFloating="True"/>
-                        <StackPanel 
-                            Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10 0 0 0">
-                            <Button 
-                                Width="23" 
-                                Height="20"
-                                Padding="3"
-                                Margin="0 0 0 0"
-                                materialDesign:ShadowAssist.ShadowDepth="Depth5"
-                                Command="{Binding LocalizarCommand}" 
-                                ToolTip="Filtrar Dados" >
-                                <materialDesign:PackIcon 
-                                    Kind="Eye" 
-                                    Foreground="Black"/>
-                            </Button>
-                            <TextBlock Text="Localizar" FontSize="10"/>
-                        </StackPanel>
-                        <Separator/>
-                        <StackPanel 
-                            Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10 0 0 0">
-                            <Button 
-                                Width="23" 
-                                Height="20"
-                                Padding="3"
-                                Margin="0 0 0 0"
-                                Command="{Binding ImprimirCommand}" 
-                                ToolTip="Imprimir relatório" 
-                                Visibility="{Binding ExibeBotaoImprimir}">
-                                <materialDesign:PackIcon 
-                                    Kind="Printer" 
-                                    Foreground="Black"/>
-                            </Button>
-                            <TextBlock Text="Imprimir" FontSize="10"/>
-                        </StackPanel>
-                    </StackPanel>
-                    <!-- Fim dos botoes de impressao e busca de dados -->
-                </StackPanel>
-            </Grid>
-        </Border>
-    </Grid>
-<!--
-<?xml version="1.0" encoding="utf-8"?>
 <UserControl x:Class="Cadastros.View.Botoes.BarraExterna" 
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
@@ -184,11 +10,19 @@
 
 
     <DockPanel Background="White" >
-        <ToolBar DockPanel.Dock="Left">
-            <Button Command="{Binding PaginaAnteriorCommand}" ToolTip="Segue para a página anterior" IsEnabled="{Binding NavegaPaginaAnterior}">
-                <Image Source="/Images/navigator/page-prior16.png" Height="16" Width="16"/>
+        <ToolBar x:Name="tb_NavegacaoRegistros"
+            DockPanel.Dock="Left">
+            <Button x:Name="btn_PaginaAnterior"
+                Command="{Binding PaginaAnteriorCommand}" 
+                ToolTip="Segue para a página anterior" 
+                IsEnabled="{Binding NavegaPaginaAnterior}">
+                <Image 
+                    Source="/Images/navigator/page-prior16.png" 
+                    Height="16" 
+                    Width="16"/>
             </Button>
-            <Button Command="{Binding RegistroPrimeiroCommand}" ToolTip="Segue para o primeiro registro">
+            
+            <!--<Button Command="{Binding RegistroPrimeiroCommand}" ToolTip="Segue para o primeiro registro">
                 <Image Source="/Images/navigator/first16.png" Height="16" Width="16" />
             </Button>
             <Button Command="{Binding RegistroAnteriorCommand}" ToolTip="Segue para o registro anterior">
@@ -199,41 +33,81 @@
             </Button>
             <Button Command="{Binding RegistroUltimoCommand}" ToolTip="Segue para o último registro">
                 <Image Source="/Images/navigator/last16.png" Height="16" Width="16"/>
-            </Button>
-            <Button Command="{Binding PaginaSeguinteCommand}" ToolTip="Segue para a página seguinte" IsEnabled="{Binding NavegaPaginaSeguinte}">
-                <Image Source="/Images/navigator/page-next16.png" Height="16" Width="16"/>
-            </Button>
+            </Button>-->
 
+            <Button x:Name="btn_PaginaSeguinte"
+                Command="{Binding PaginaSeguinteCommand}" 
+                ToolTip="Segue para a página seguinte" 
+                IsEnabled="{Binding NavegaPaginaSeguinte}">
+                <Image 
+                    Source="/Images/navigator/page-next16.png" 
+                    Height="16" 
+                    Width="16"/>
+            </Button>
             <Separator />
-
-            <Button Command="{Binding InserirCommand}" ToolTip="Inserir registro">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Images/internos/inserir.png" Height="16" Width="16"/>
-                    <TextBlock Margin="3,1,0,0">Inserir</TextBlock>
+            <Button x:Name="btn_Inserir"
+                Command="{Binding InserirCommand}" 
+                ToolTip="Inserir registro">
+                <StackPanel 
+                    Orientation="Horizontal">
+                    <Image 
+                        Source="/Images/internos/inserir.png" 
+                        Height="16" 
+                        Width="16"/>
+                    <TextBlock 
+                        Margin="3,1,0,0">Inserir</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Command="{Binding AlterarCommand}" ToolTip="Alterar registro">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Images/internos/alterar.png" Height="16" Width="16"/>
-                    <TextBlock Margin="3,1,0,0">Alterar</TextBlock>
+            
+            <Button x:Name="btn_Alterar"
+                Command="{Binding AlterarCommand}" 
+                ToolTip="Alterar registro">
+                <StackPanel 
+                    Orientation="Horizontal">
+                    <Image 
+                        Source="/Images/internos/alterar.png" 
+                        Height="16" 
+                        Width="16"/>
+                    <TextBlock 
+                        Margin="3,1,0,0">Alterar</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Command="{Binding ExcluirCommand}" ToolTip="Excluir registro">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Images/internos/excluir.png" Height="16" Width="16"/>
-                    <TextBlock Margin="3,1,0,0">Excluir</TextBlock>
+            
+            <Button x:Name="btn_Excluir"
+                Command="{Binding ExcluirCommand}" 
+                ToolTip="Excluir registro">
+                <StackPanel 
+                    Orientation="Horizontal">
+                    <Image 
+                        Source="/Images/internos/excluir.png" 
+                        Height="16" 
+                        Width="16"/>
+                    <TextBlock 
+                        Margin="3,1,0,0">Excluir</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Command="{Binding ImprimirCommand}" ToolTip="Imprimir relatório" Visibility="{Binding ExibeBotaoImprimir}">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Images/internos/imprimir.png" Height="16" Width="16"/>
-                    <TextBlock Margin="3,1,0,0">Imprimir</TextBlock>
+            
+            <Button x:Name="btn_Imprimir"
+                Command="{Binding ImprimirCommand}" 
+                ToolTip="Imprimir relatório" 
+                Visibility="{Binding ExibeBotaoImprimir}">
+                <StackPanel 
+                    Orientation="Horizontal">
+                    <Image 
+                        Source="/Images/internos/imprimir.png" 
+                        Height="16" 
+                        Width="16"/>
+                    <TextBlock  Margin="3,1,0,0">Imprimir</TextBlock>
                 </StackPanel>
             </Button>
 
         </ToolBar>
 
-        <ToolBar DockPanel.Dock="Right" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" FlowDirection="RightToLeft">
+        <ToolBar 
+            DockPanel.Dock="Right" 
+            HorizontalAlignment="Stretch" 
+            HorizontalContentAlignment="Stretch" 
+            FlowDirection="RightToLeft">
 
             <Menu>
                 <MenuItem Header="Exportar" FlowDirection="LeftToRight" Height="23" IsEnabled="{Binding PodeExportar}">
@@ -273,11 +147,15 @@
             </Button>
 
 
-            <TextBox FlowDirection="LeftToRight" Text="{Binding Filtro}" Height="23" Width="250" Name="TextBoxLocalizar" />
+            <TextBox 
+                Padding="0"
+                FlowDirection="LeftToRight" 
+                Text="{Binding Filtro}" 
+                Height="23" 
+                Width="250" 
+                Name="TextBoxLocalizar" />
 
         </ToolBar>
     </DockPanel>
 
-</UserControl>    
--->
 </UserControl>

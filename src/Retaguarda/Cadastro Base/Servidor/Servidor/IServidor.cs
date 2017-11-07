@@ -167,6 +167,19 @@ namespace Servidor
                                             Pessoa pessoa);
         #endregion
 
+        #region Cliente
+        [OperationContract]
+        void DeleteCliente(Cliente cliente);
+        [OperationContract]
+        Cliente SalvarAtualizarCliente(Cliente cliente);
+        [OperationContract]
+        IList<Cliente> SelectCliente(Cliente cliente);
+        [OperationContract]
+        IList<Cliente> SelectClientePagina(int primeiroResultado,
+                                            int quantidadeResultados,
+                                            Cliente cliente);
+        #endregion
+
         #region Banco
         [OperationContract]
         void DeleteBanco(Banco banco);

@@ -96,6 +96,7 @@
     <Compile Include="ViewModel\EstadoCivilViewModel.cs" />
     <Compile Include="ViewModel\OperadoraPlanoSaudeViewModel.cs" />
     <Compile Include="ViewModel\PaisViewModel.cs" />
+    <Compile Include="ViewModel\ClienteViewModel.cs" />
     <Compile Include="ViewModel\PessoaViewModel.cs" />
     <Compile Include="ViewModel\ProdutoViewModel.cs" />
     <Compile Include="ViewModel\UnidadeProdutoViewModel.cs" />
@@ -166,22 +167,22 @@
     <Compile Include="View\PaisPrincipal.xaml.cs">
       <DependentUpon>PaisPrincipal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pessoa\Cliente.xaml.cs">
+    <Compile Include="View\Cliente.xaml.cs">
       <DependentUpon>Cliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pessoa\Fornecedor.xaml.cs">
+    <Compile Include="View\Fornecedor.xaml.cs">
       <DependentUpon>Fornecedor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pessoa\Pessoa.xaml.cs">
+    <Compile Include="View\Pessoa.xaml.cs">
       <DependentUpon>Pessoa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pessoa\PessoaLista.xaml.cs">
+    <Compile Include="View\PessoaLista.xaml.cs">
       <DependentUpon>PessoaLista.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pessoa\PessoaPrincipal.xaml.cs">
+    <Compile Include="View\PessoaPrincipal.xaml.cs">
       <DependentUpon>PessoaPrincipal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pessoa\Transportadora.xaml.cs">
+    <Compile Include="View\Transportadora.xaml.cs">
       <DependentUpon>Transportadora.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Produto.xaml.cs">
@@ -251,6 +252,9 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\ServidorReference\Cargo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServidorReference\Cliente.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\ServidorReference\Colaborador.datasource">
@@ -335,7 +339,6 @@
     <Content Include="ExportarParaArquivo\Libs\Ionic.Zip.dll" />
     <Content Include="ExportarParaArquivo\Libs\NPOI.dll" />
     <Content Include="ExportarParaArquivo\Libs\NRtfTree.dll" />
-    <Resource Include="View\Botoes\XMLFile1.xml" />
     <Resource Include="Images\titulos\agencia_banco16.png" />
     <Resource Include="Images\titulos\agencia_banco32.png" />
     <Resource Include="Images\titulos\agencia_banco48.png" />
@@ -737,27 +740,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Pessoa\Cliente.xaml">
+    <Page Include="View\Cliente.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Pessoa\Fornecedor.xaml">
+    <Page Include="View\Fornecedor.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Pessoa\Pessoa.xaml">
+    <Page Include="View\Pessoa.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Pessoa\PessoaLista.xaml">
+    <Page Include="View\PessoaLista.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Pessoa\PessoaPrincipal.xaml">
+    <Page Include="View\PessoaPrincipal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Pessoa\Transportadora.xaml">
+    <Page Include="View\Transportadora.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -786,6 +789,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

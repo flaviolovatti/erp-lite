@@ -7,41 +7,43 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:viewBotoes="clr-namespace:Cadastros.View.Botoes" 
     mc:Ignorable="d" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" 
     xmlns:util="clr-namespace:Cadastros.Util" 
-    
-    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-    TextElement.FontWeight="Regular"
-    TextElement.FontSize="13"
-    TextOptions.TextFormattingMode="Ideal"
-    TextOptions.TextRenderingMode="Auto"
-    Background="{DynamicResource MaterialDesignPaper}"
-    FontFamily="{DynamicResource MaterialDesignFont}"
-    
     d:DesignHeight="500" 
     d:DesignWidth="700">
     
 	<UserControl.Resources>
 		<util:MoedaFormat x:Key="moedaFormat" />
 	</UserControl.Resources>
-	
-    <Grid>
+	<Grid>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="*" />
+			<ColumnDefinition 
+                Width="*" />
 		</Grid.ColumnDefinitions>
-		<DockPanel LastChildFill="True">
-			<StackPanel DockPanel.Dock="Top" Grid.Column="0">
+		<DockPanel 
+            LastChildFill="True">
+			<StackPanel 
+                DockPanel.Dock="Top"
+                Grid.Column="0">
 				<viewBotoes:BarraExterna></viewBotoes:BarraExterna>
 			</StackPanel>
 			<DataGrid 
-                Name="dataGrid" AutoGenerateColumns="false" IsReadOnly="True" 
-                CanUserAddRows="False" CanUserDeleteRows="False" ItemsSource="{Binding ListaBanco}" 
+                Name="dataGrid" 
+                AutoGenerateColumns="false" 
+                IsReadOnly="True" 
+                CanUserAddRows="False"
+                CanUserDeleteRows="False" 
+                ItemsSource="{Binding ListaBanco}" 
                 SelectedItem="{Binding BancoSelected}">
 				<DataGrid.Columns>
-					<DataGridTextColumn Header="Id" Binding="{Binding Path=id}"  />
-					<DataGridTextColumn Header="Codigo" Binding="{Binding Path=codigo}"  />
-					<DataGridTextColumn Header="Nome" Binding="{Binding Path=nome}"  />
-					<DataGridTextColumn Header="Url" Binding="{Binding Path=url}"  />
+					<DataGridTextColumn 
+                        Header="Id" Binding="{Binding Path=ID}"  />
+					<DataGridTextColumn 
+                        Header="Codigo" Binding="{Binding Path=CODIGO}"  />
+					<DataGridTextColumn 
+                        Header="Nome" Binding="{Binding Path=NOME}"  />
+					<DataGridTextColumn 
+                        Header="Url" Binding="{Binding Path=URL}"  />
 				</DataGrid.Columns>
 			</DataGrid>
 		</DockPanel>

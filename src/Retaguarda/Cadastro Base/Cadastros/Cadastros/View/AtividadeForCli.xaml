@@ -6,36 +6,46 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:viewBotoes="clr-namespace:Cadastros.View.Botoes" 
-    mc:Ignorable="d" d:DesignHeight="500" d:DesignWidth="700">
+    mc:Ignorable="d" 
+    d:DesignHeight="500" 
+    d:DesignWidth="700">
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition 
+                Width="*" />
         </Grid.ColumnDefinitions>
-        
-        <DockPanel LastChildFill="True">
-            <StackPanel DockPanel.Dock="Top" Grid.Column="0">
+        <DockPanel 
+            LastChildFill="True">
+            <StackPanel 
+                DockPanel.Dock="Top" 
+                Grid.Column="0">
                 <viewBotoes:BarraInterna></viewBotoes:BarraInterna>
             </StackPanel>
             <Grid>
                 <TextBox 
                     VerticalAlignment="Top" 
-                    Text="{Binding AtividadeForCliSelected.nome}" 
-                    Height="23" Margin="10,25,10,0"  />
+                    Text="{Binding AtividadeForCliSelected.Nome}" 
+                    Height="23" 
+                    Margin="10,25,10,0"  />
                 <Label 
                     Content="Nome" 
                     HorizontalAlignment="Left" 
-                    VerticalAlignment="Top" Margin="10,6,0,0"  />
+                    VerticalAlignment="Top" 
+                    Margin="10,6,0,0"  />
                 <TextBox 
                     VerticalAlignment="Top" 
-                    Text="{Binding AtividadeForCliSelected.descricao}" 
-                    Height="23" TextWrapping="Wrap" 
-                    VerticalContentAlignment="Top" AcceptsReturn="True" 
+                    Text="{Binding AtividadeForCliSelected.Descricao}" 
+                    Height="23" 
+                    TextWrapping="Wrap" 
+                    VerticalContentAlignment="Top" 
+                    AcceptsReturn="True" 
                     Margin="10,72,10,0"  />
                 <Label 
                     Content="Descricao" 
                     HorizontalAlignment="Left" 
-                    VerticalAlignment="Top" Margin="10,53,0,0"  />
+                    VerticalAlignment="Top" 
+                    Margin="10,53,0,0"  />
             </Grid>
         </DockPanel>
     </Grid>

@@ -1,29 +1,27 @@
-using Cadastros.Command;
-using Cadastros.Model;
 using Cadastros.ServidorReference;
-using SearchWindow;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Input;
 
 namespace Cadastros.ViewModel
 {
-    public class CargoViewModel : ViewModelBase
+    public class ClienteViewModel : ViewModelBase
     {
 
         #region Variáveis
-        public ObservableCollection<Cargo> ListaCargo { get; set; }
-        private Cargo _CargoSelected;
+        public ObservableCollection<Cliente> ListaCliente { get; set; }
+        private Cliente _ClienteSelected;
+        
         #endregion
 
         #region Construtor
-        public CargoViewModel()
+        public ClienteViewModel()
         {
+            
             try
             {
-                ListaCargo = new ObservableCollection<Cargo>();
+                ListaCliente = new ObservableCollection<Cliente>();
                 IndiceNavegacao = 0;
                 QuantidadeCarregada = 0;
                 Filtro = "";
@@ -37,26 +35,28 @@ namespace Cadastros.ViewModel
         #endregion
 
         #region Infra
-        public Cargo CargoSelected
+        public Cliente ClienteSelected
         {
-            get { return _CargoSelected; }
+            get { return _ClienteSelected; }
             set
             {
-                _CargoSelected = value;
-                notifyPropertyChanged("CargoSelected");
+                _ClienteSelected = value;
+                notifyPropertyChanged("ClienteSelected");
             }
         }
         #endregion
 
         #region CRUD
-        public void SalvarAtualizarCargo()
+        public void SalvarAtualizarCliente()
         {
             try
             {
                 using (ServiceServidor Servico = new ServiceServidor())
                 {
-                    Servico.SalvarAtualizarCargo(CargoSelected);
-                    CargoSelected = null;
+                    ClienteSelected.pessoa.tipo = "F";
+
+                    Servico.SalvarAtualizarCliente(ClienteSelected);
+                    ClienteSelected = null;
                 }
             }
             catch (Exception ex)
@@ -65,7 +65,7 @@ namespace Cadastros.ViewModel
             }
         }
 
-        public void AtualizarListaCargo(int pagina)
+        public void AtualizarListaCliente(int pagina)
         {
             try
             {
@@ -73,28 +73,31 @@ namespace Cadastros.ViewModel
                 {
                     if (pagina == 0)
                         IndiceNavegacao = 0;
-                    else if (pagina > 0 && ListaCargo.Count == QuantidadePagina)
+                    else if (pagina > 0 && ListaCliente.Count == QuantidadePagina)
                         IndiceNavegacao += QuantidadePagina;
                     else if (pagina < 0 && IndiceNavegacao != 0)
                         IndiceNavegacao -= QuantidadePagina;
 
-                    Cargo Cargo = new Cargo();
+                    Cliente Cli = new Cliente();
+                    Cli.pessoa = new Pessoa();
+
                     if (!Filtro.Trim().Equals(""))
                     {
-                        Cargo.nome = Filtro;
+                        Cli.pessoa.nome = Filtro;
                     }
 
-                    IList<Cargo> ListaServ = Servico.SelectCargoPagina(IndiceNavegacao, true, QuantidadePagina, true, Cargo);
+                    IList<Cliente> ListaServ = Servico.SelectClientePagina(IndiceNavegacao, true, QuantidadePagina, true, Cli);
 
-                    ListaCargo.Clear();
+                    ListaCliente.Clear();
 
-                    foreach (Cargo objAdd in ListaServ)
+                    foreach (Cliente objAdd in ListaServ)
                     {
-                        ListaCargo.Add(objAdd);
+                        ListaCliente.Add(objAdd);
                     }
-                    CargoSelected = null;
+
+                    ClienteSelected = null;
                 }
-                QuantidadeCarregada = ListaCargo.Count;
+                QuantidadeCarregada = ListaCliente.Count;
                 ControlarNavegacao();
             }
             catch (Exception ex)
@@ -103,14 +106,14 @@ namespace Cadastros.ViewModel
             }
         }
 
-        public void ExcluirCargo()
+        public void ExcluirCliente()
         {
             try
             {
                 using (ServiceServidor Servico = new ServiceServidor())
                 {
-                    Servico.DeleteCargo(CargoSelected);
-                    CargoSelected = null;
+                    Servico.DeleteCliente(ClienteSelected);
+                    ClienteSelected = null;
                 }
             }
             catch (Exception ex)
@@ -125,7 +128,8 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                CargoSelected = new Cargo();
+                ClienteSelected = new Cliente();
+                ClienteSelected.pessoa = new Pessoa();
                 IsEditar = true;
             }
             catch (Exception ex)
@@ -138,7 +142,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                if (CargoSelected != null)
+                if (ClienteSelected != null)
                     IsEditar = true;
                 else
                     MessageBox.Show("Selecione um elemento na lista.", "Alerta do sistema", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -153,13 +157,13 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                if (CargoSelected != null)
+                if (ClienteSelected != null)
                 {
                     if (MessageBox.Show("Tem Certeza Que Deseja Excluir o Registro?", "Pergunta do Sistema", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                     {
-                        ExcluirCargo();
+                        ExcluirCliente();
                         MessageBox.Show("Exclusão efetuada com sucesso!", "Informação do sistema", MessageBoxButton.OK, MessageBoxImage.Information);
-                        AtualizarListaCargo(IndiceNavegacao);
+                        AtualizarListaCliente(IndiceNavegacao);
                     }
                 }
                 else
@@ -177,7 +181,7 @@ namespace Cadastros.ViewModel
             {
                 BotaoLocalizar();
                 IsEditar = false;
-                CargoSelected = null;
+                ClienteSelected = null;
             }
             catch (Exception ex)
             {
@@ -189,9 +193,9 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                SalvarAtualizarCargo();
+                SalvarAtualizarCliente();
                 MessageBox.Show("Salvo com sucesso!", "Informação do sistema", MessageBoxButton.OK, MessageBoxImage.Information);
-                AtualizarListaCargo(IndiceNavegacao);
+                AtualizarListaCliente(IndiceNavegacao);
                 IsEditar = false;
             }
             catch (Exception ex)
@@ -204,7 +208,7 @@ namespace Cadastros.ViewModel
         {
             try
             {
-                AtualizarListaCargo(0);
+                AtualizarListaCliente(0);
             }
             catch (Exception ex)
             {
@@ -214,45 +218,19 @@ namespace Cadastros.ViewModel
 
         public override void BotaoExportar()
         {
-            DataGridExportacao.ItemsSource = ListaCargo;
+            DataGridExportacao.ItemsSource = ListaCliente;
         }
 
         public override void BotaoPaginaSeguinte()
         {
-            AtualizarListaCargo(1);
+            AtualizarListaCliente(1);
         }
 
         public override void BotaoPaginaAnterior()
         {
-            AtualizarListaCargo(-1);
+            AtualizarListaCliente(-1);
         }
         #endregion
-
-        #region Pesquisas
-        
-        public void PesquisarCbo()
-        {
-            try
-            {
-                /*
-                SearchWindowApp searchWindow = new SearchWindowApp(typeof(CboDTO),
-                    typeof(ServicoCadastros));
-
-                if (searchWindow.ShowDialog() == true)
-                {
-                    CargoSelected.Cbo2002 = ((CboDTO)searchWindow.itemSelecionado).Codigo;
-                    CargoSelected.Cbo1994 = ((CboDTO)searchWindow.itemSelecionado).Codigo1994;
-                    notifyPropertyChanged("CargoSelected");
-                }
-                */
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        
-        #endregion       
 
     }
 }

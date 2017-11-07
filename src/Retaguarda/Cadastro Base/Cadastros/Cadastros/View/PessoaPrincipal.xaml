@@ -1,5 +1,5 @@
 <UserControl 
-    x:Class="Cadastros.View.BancoPrincipal"
+    x:Class="Cadastros.View.PessoaPrincipal"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -11,21 +11,21 @@
     
     <TabControl>
         <TabItem 
-            Name="tabBancoLista" 
+            Name="tabPessoaLista" 
             Visibility="Collapsed" 
             IsSelected="{Binding IsListar}">
+            
             <TabItem.Content>
-                <DockPanel 
-                    LastChildFill="True">
-                    <view:BancoLista></view:BancoLista>
+                <DockPanel LastChildFill="True">
+                    <view:PessoaLista></view:PessoaLista>
                 </DockPanel>
             </TabItem.Content>
         </TabItem>
         <TabItem 
-            Name="tabBanco" 
+            Name="tabPessoa" 
             Visibility="Collapsed" 
             IsSelected="{Binding IsEditar}">
-            <view:Banco></view:Banco>
+            <view:Pessoa></view:Pessoa>
         </TabItem>
     </TabControl>
 </UserControl>
